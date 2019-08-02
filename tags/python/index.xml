@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/tags/python/</link>
+    <description>Recent content in Python on Welcome to Xin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 05 Nov 2018 00:00:00 -0800</lastBuildDate>
+    
+	<atom:link href="http://xincoder.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data-free CNN acceleration [Research]</title>
+      <link>http://xincoder.github.io/project/research_dac/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 -0800</pubDate>
+      
+      <guid>http://xincoder.github.io/project/research_dac/</guid>
+      <description>Programming Language:
+ Python  This is a prototype of our &amp;ldquo;Data-free convolutional network acceleration&amp;rdquo; scheme. In this demo, we demonstrate the performance of our scheme in the task of multi-person pose estimation model and object detection. Please refer to our paper for more results and details.
+The following video shows a demo of our scheme.
+ Published paper:
+ Xin Li, Shuai Zhang, Bolan Jiang, Yingyong Qi, Mooi Choo Chuah, Ning Bi (2019).</description>
+    </item>
+    
+    <item>
+      <title>Vehicle Detection[Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_vehicle_detection/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_vehicle_detection/</guid>
+      <description>Vehicle Detection Project Programming Language:
+ Python  The goals of this project are the following:
+ Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier Optionally, you can also apply a color transform and append binned color features, as well as histograms of color, to your HOG feature vector. Note: for those first two steps don&amp;rsquo;t forget to normalize your features and randomize a selection for training and testing.</description>
+    </item>
+    
+    <item>
+      <title>Detect Lane [Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_adv_findline/</link>
+      <pubDate>Mon, 20 Aug 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_adv_findline/</guid>
+      <description>Advanced Lane Finding Project Programming Language:
+ Python   The goals of this project are the following:
+ Compute the camera calibration matrix and distortion coefficients given a set of chessboard images. Apply a distortion correction to raw images. Use color transforms, gradients, etc., to create a thresholded binary image. Apply a perspective transform to rectify binary image (&amp;ldquo;birds-eye view&amp;rdquo;). Detect lane pixels and fit to find the lane boundary.</description>
+    </item>
+    
+    <item>
+      <title>Drive in An Emulator [Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_drive_emulator/</link>
+      <pubDate>Fri, 03 Aug 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_drive_emulator/</guid>
+      <description>Drive in a simulator Programming Language:
+ Python   The goals of this project are the following:
+ Use the simulator to collect data of good driving behavior Build, a convolution neural network in Keras that predicts steering angles from images Train and validate the model with a training and validation set Test that the model successfully drives around track one without leaving the road Summarize the results with a written report  Section 1: Model Architecture and Training Strategy 1.</description>
+    </item>
+    
+    <item>
+      <title>Traffic Sign Recognition [Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_signclassification/</link>
+      <pubDate>Mon, 16 Jul 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_signclassification/</guid>
+      <description>Traffic Sign Recognition Programming Language:
+ Python  The goals of this project are the following:
+ Load the data set (see below for links to the project data set) Explore, summarize and visualize the data set Design, train and test a model architecture Use the model to make predictions on new images Analyze the softmax probabilities of the new images Summarize the results with a written report  Step1: Data Set Summary &amp;amp; Exploration 1.</description>
+    </item>
+    
+    <item>
+      <title>Find Lane Lines [Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_findline/</link>
+      <pubDate>Tue, 12 Jun 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_findline/</guid>
+      <description>Finding Lane Lines on the Road
+Programming Language:
+ Python  The goal of this project is to design a pipeline that finds lane lines on the road. 
+A. Pipeline. My pipline consists of 7 steps as follows:
+ Color selection
+ RGB image to gray image Gaussian Blur Edge detection (Canny) Select ROI Line detection (Hough) Extend detected lines  This pipeline works on images and videos.</description>
+    </item>
+    
+    <item>
+      <title>CASHEIRS Demo [Research]</title>
+      <link>http://xincoder.github.io/project/research_casheirs/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/research_casheirs/</guid>
+      <description>Programming Language:
+ Python Java (Android Client) PHP (Web Interface)  This is a prototype of our CASHEIRS image retrieval system. The initial prototype system consists of a cloud server (a laptop) and a Samsung S5 phone as a data user&amp;rsquo;s mobile device. Samsung S5 has a Snapdragon 801 chip with Quad-core CPU@2.5GHz and 2GB RAM. The smartphone communicates with the server via a WiFi router. In the Android client software, Caffe APIs are called to extract CNN feature from a query image.</description>
+    </item>
+    
+    <item>
+      <title>Five-in-a-Row Game [Others]</title>
+      <link>http://xincoder.github.io/project/others_fivestones/</link>
+      <pubDate>Thu, 05 Nov 2015 00:00:00 -0800</pubDate>
+      
+      <guid>http://xincoder.github.io/project/others_fivestones/</guid>
+      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
+ Python (Server) HTML5 (Interface) JaveScript  In this project, we designed and implemented a very simple AI for the Five-in-a-Row Game. Black plays first if white did not just win, and players alternate in placing a stone of their color on an empty intersection. The winner is the first player to get an unbroken row of five stones horizontally, vertically, or diagonally.</description>
+    </item>
+    
+  </channel>
+</rss>

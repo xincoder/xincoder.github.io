@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research Project on Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/tags/research-project/</link>
+    <description>Recent content in Research Project on Welcome to Xin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 05 Nov 2018 00:00:00 -0800</lastBuildDate>
+    
+	<atom:link href="http://xincoder.github.io/tags/research-project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data-free CNN acceleration [Research]</title>
+      <link>http://xincoder.github.io/project/research_dac/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 -0800</pubDate>
+      
+      <guid>http://xincoder.github.io/project/research_dac/</guid>
+      <description>Programming Language:
+ Python  This is a prototype of our &amp;ldquo;Data-free convolutional network acceleration&amp;rdquo; scheme. In this demo, we demonstrate the performance of our scheme in the task of multi-person pose estimation model and object detection. Please refer to our paper for more results and details.
+The following video shows a demo of our scheme.
+ Published paper:
+ Xin Li, Shuai Zhang, Bolan Jiang, Yingyong Qi, Mooi Choo Chuah, Ning Bi (2019).</description>
+    </item>
+    
+    <item>
+      <title>CASHEIRS Demo [Research]</title>
+      <link>http://xincoder.github.io/project/research_casheirs/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/research_casheirs/</guid>
+      <description>Programming Language:
+ Python Java (Android Client) PHP (Web Interface)  This is a prototype of our CASHEIRS image retrieval system. The initial prototype system consists of a cloud server (a laptop) and a Samsung S5 phone as a data user&amp;rsquo;s mobile device. Samsung S5 has a Snapdragon 801 chip with Quad-core CPU@2.5GHz and 2GB RAM. The smartphone communicates with the server via a WiFi router. In the Android client software, Caffe APIs are called to extract CNN feature from a query image.</description>
+    </item>
+    
+    <item>
+      <title>Vehicles and Pedestrians Detection [Research]</title>
+      <link>http://xincoder.github.io/project/research_vehicle_pedestrian/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/research_vehicle_pedestrian/</guid>
+      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
+ C++ SQL  In this project, we designed and implemented a system to detect and track vehicles and pedestrains from traffic surveillance videos. Once a vehicle/pedestrain is detected/tracked, some visual descriptions, e.g. color, moving direction, etc., are analyzed. All information are stored into a local SQL database for retrieval in the future.
+My responsibilities:
+ Proposed and implemented a detection system for vehicles.</description>
+    </item>
+    
+  </channel>
+</rss>

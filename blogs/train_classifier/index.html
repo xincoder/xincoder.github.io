@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.0.0">
+  <meta name="generator" content="Hugo 0.49.2" />
+  <meta name="author" content="Xin Li">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="How to train an object classifier using our own images 1. Info: I prepared two python scripts (retrain.py, predict.py) for this task.
+ retrain.py: used to train the classifier. predict.py: used to load the trained model and test on new images.  2. Prepare training and testing data:  Training Data: Let&rsquo;s assume that we have two classes, namely &ldquo;cat&rdquo; and &ldquo;dog&rdquo;. We just need to make sure that there are two sub-folders in &ldquo;training_images&rdquo; folder.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://xincoder.github.io/blogs/train_classifier/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-128386120-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+  <link rel="alternate" href="http://xincoder.github.io/index.xml" type="application/rss+xml" title="Welcome to Xin&#39;s Homepage">
+  <link rel="feed" href="http://xincoder.github.io/index.xml" type="application/rss+xml" title="Welcome to Xin&#39;s Homepage">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://xincoder.github.io/blogs/train_classifier/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Welcome to Xin&#39;s Homepage">
+  <meta property="og:url" content="http://xincoder.github.io/blogs/train_classifier/">
+  <meta property="og:title" content=" | Welcome to Xin&#39;s Homepage">
+  <meta property="og:description" content="How to train an object classifier using our own images 1. Info: I prepared two python scripts (retrain.py, predict.py) for this task.
+ retrain.py: used to train the classifier. predict.py: used to load the trained model and test on new images.  2. Prepare training and testing data:  Training Data: Let&rsquo;s assume that we have two classes, namely &ldquo;cat&rdquo; and &ldquo;dog&rdquo;. We just need to make sure that there are two sub-folders in &ldquo;training_images&rdquo; folder.">
+  
+  
+    
+  <meta property="og:image" content="http://xincoder.github.io/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-05-18T00:00:00-07:00">
+  
+  <meta property="article:modified_time" content="2018-05-18T00:00:00-07:00">
+  
+
+  
+
+  
+
+  <title> | Welcome to Xin&#39;s Homepage</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Welcome to Xin&#39;s Homepage</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#intern">
+            
+            <span>Internship</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/blogs/">
+            
+            <span>Blogs</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/blogs/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/blogs/panda_list/">A. Sever Setup</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/blogs/panda_list/">1. My own server</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/setup_environment/">2. Setup environment</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/blogs/environment/">B. Deep Learning</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/blogs/environment/">0. Environment</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/neural_network/">1. Neural Network</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/convolutional_network/">2. CNN</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/image_caption/">3. Image Cpation</a>
+      </li>
+      
+      <li class="active">
+        <a href="/blogs/train_classifier/">4. Train a classifier</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/model_on_android/">5. Model on Android</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/boat_classifier/">6. Boat Classifier</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+      <p class="docs-toc-title">On this page</p>
+      
+
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#how-to-train-an-object-classifier-using-our-own-images">How to train an object classifier using our own images</a></li>
+<li><a href="#1-info">1. Info:</a></li>
+<li><a href="#2-prepare-training-and-testing-data">2. Prepare training and testing data:</a></li>
+<li><a href="#3-train-a-classifier">3. Train a classifier</a></li>
+<li><a href="#4-predict-new-images-using-trained-model">4. Predict new images using trained model</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+      <ul class="nav toc-top">
+        <li><a href="#">Back to top</a></li>
+      </ul>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+      <div id="search-hits">
+        
+      </div>
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name"></h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h3 id="how-to-train-an-object-classifier-using-our-own-images">How to train an object classifier using our own images</h3>
+
+<h3 id="1-info">1. Info:</h3>
+
+<p>I prepared two python scripts (<a href="retrain.py" target="_blank">retrain.py</a>, <a href="predict.py" target="_blank">predict.py</a>) for this task.</p>
+
+<ul>
+<li><a href="retrain.py" target="_blank">retrain.py</a>: used to train the classifier.</li>
+<li><a href="predict.py" target="_blank">predict.py</a>: used to load the trained model and test on new images.</li>
+</ul>
+
+<hr />
+
+<h3 id="2-prepare-training-and-testing-data">2. Prepare training and testing data:</h3>
+
+<ul>
+<li><p><strong>Training Data:</strong> Let&rsquo;s assume that we have two classes, namely &ldquo;cat&rdquo; and &ldquo;dog&rdquo;. We just need to make sure that there are two sub-folders in &ldquo;training_images&rdquo; folder. Each sub-folder only consists of its own images.</p>
+
+<pre><code class="language-plaintext">|- training_images
+    |- cat
+        |- image_0.jpg
+        |- image_1.jpg
+        ...
+    |- dog
+        |- image_2.jpg
+        |- image_3.jpg
+        ...
+</code></pre></li>
+
+<li><p><strong>Testing Data:</strong> All testing images are put in one folder, e.g. &ldquo;testing_images&rdquo;.</p>
+
+<pre><code class="language-plaintext">|- testing_images
+    |- image_0.jpg
+    |- image_1.jpg
+    |- image_2.jpg
+    |- image_3.jpg
+    ...
+</code></pre></li>
+</ul>
+
+<hr />
+
+<h3 id="3-train-a-classifier">3. Train a classifier</h3>
+
+<p>Assume that both &ldquo;training_images&rdquo; and &ldquo;testing_images&rdquo; are in this folder:</p>
+
+<pre><code class="language-bash">&gt; ls
+models/ predict.py  retrain.py  testing_images/  training_images/
+</code></pre>
+
+<p>Then, we can type the following command to starting training process:</p>
+
+<pre><code class="language-bash">&gt; python retrain.py \
+--bottleneck_dir=./bottlenecks \
+--how_many_training_steps=50000 \ 
+--model_dir=./inception \
+--output_graph=./models/retrained_graph.pb \
+--output_labels=./models/retrained_labels.txt \
+--summaries_dir=./retrain_logs \
+--validation_batch_size=5000 \
+--image_dir=training_images # this is the folder of training data
+</code></pre>
+
+<p>After this training process finished, it saves the trained model in &ldquo;./models&rdquo;.</p>
+
+<pre><code class="language-bash">&gt; ls models
+retrained_graph.pb    retrained_labels.txt
+</code></pre>
+
+<hr />
+
+<h3 id="4-predict-new-images-using-trained-model">4. Predict new images using trained model</h3>
+
+<p>Type the following command in a terminal to run the testing code:</p>
+
+<pre><code class="language-Bash">&gt; python predict.py \
+--models_folder='./models' \
+--test_image_folder='./testing_images' \
+--display_image=False
+</code></pre>
+
+          </div>
+
+          
+
+        </div>
+
+        <div class="body-footer">
+          Last updated on May 18, 2018
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "Search Results",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+  </body>
+</html>
+
+

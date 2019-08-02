@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Others on Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/tags/others/</link>
+    <description>Recent content in Others on Welcome to Xin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Thu, 05 Nov 2015 00:00:00 -0800</lastBuildDate>
+    
+	<atom:link href="http://xincoder.github.io/tags/others/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Five-in-a-Row Game [Others]</title>
+      <link>http://xincoder.github.io/project/others_fivestones/</link>
+      <pubDate>Thu, 05 Nov 2015 00:00:00 -0800</pubDate>
+      
+      <guid>http://xincoder.github.io/project/others_fivestones/</guid>
+      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
+ Python (Server) HTML5 (Interface) JaveScript  In this project, we designed and implemented a very simple AI for the Five-in-a-Row Game. Black plays first if white did not just win, and players alternate in placing a stone of their color on an empty intersection. The winner is the first player to get an unbroken row of five stones horizontally, vertically, or diagonally.</description>
+    </item>
+    
+    <item>
+      <title>Family Video Surveillance System [Others]</title>
+      <link>http://xincoder.github.io/project/others_family_surveillance/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/others_family_surveillance/</guid>
+      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
+ C++ (PC server: Object and Motion Detection, Alarm module) Java (Android Client) PHP (Web Interface)  In this project, we designed an embedded family video surveillance system. The system consists of two parts: (1) a PC server and (2)an Android client.
+The PC server can acquire, compress, and process camera frames. Once the PC server detected an abnormal condition, e.</description>
+    </item>
+    
+    <item>
+      <title>Augmented Reality Cinema [Others]</title>
+      <link>http://xincoder.github.io/project/others_ar/</link>
+      <pubDate>Thu, 01 Aug 2013 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/others_ar/</guid>
+      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
+ C# (Unity) Unity Script (Unity)  In this project, we designed and implemented an augmented reality system based on tablet for Autodesk Maya. The app runs on an Android tablet records the trajectory of the virtual camera. In this way, movie directors do not need to manually set the trajectory of the virtual camera in Maya.</description>
+    </item>
+    
+  </channel>
+</rss>

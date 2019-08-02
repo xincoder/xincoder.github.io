@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/home/</link>
+    <description>Recent content in Homes on Welcome to Xin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 24 Oct 2018 10:42:23 -0400</lastBuildDate>
+    
+	<atom:link href="http://xincoder.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/home/about/</link>
+      <pubDate>Wed, 24 Oct 2018 10:42:23 -0400</pubDate>
+      
+      <guid>http://xincoder.github.io/home/about/</guid>
+      <description>Biography I am Xin, a fourth-year Ph.D. student at Lehigh University. I am working in Wins Lab under the advisement of Professor Mooi Choo Chuah.</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>http://xincoder.github.io/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Internship</title>
+      <link>http://xincoder.github.io/home/intern/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xincoder.github.io/home/intern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>http://xincoder.github.io/home/teaching/</link>
+      <pubDate>Thu, 25 Oct 2018 16:56:21 -0400</pubDate>
+      
+      <guid>http://xincoder.github.io/home/teaching/</guid>
+      <description>Artificial Intelligence Theory and Practice (CSE327), Lehigh University
+ Instructor: Prof. Jeff Heflin Teaching Assistant Spring 2018  Data Analytics Smart Cities (CSE498), Lehigh University
+ Instructor: Professor Mooi Choo Chuah Gave a Tutorial about Deep Learning. Fall 2017  Computer Organization and Architecture (CSE202), Lehigh University
+ Instructor: Prof. Jason Loew Teaching Assistant Spring 2017  </description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>http://xincoder.github.io/home/projects/</link>
+      <pubDate>Thu, 25 Oct 2018 17:46:15 -0400</pubDate>
+      
+      <guid>http://xincoder.github.io/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://xincoder.github.io/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/home/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

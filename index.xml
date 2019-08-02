@@ -1,0 +1,2545 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome to Xin&#39;s Homepage on Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/</link>
+    <description>Recent content in Welcome to Xin&#39;s Homepage on Welcome to Xin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 24 Oct 2018 10:42:23 -0400</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GRIP: Graph-based Interaction-aware Trajectory Prediction</title>
+      <link>http://xincoder.github.io/publication/2019itsc_grip/</link>
+      <pubDate>Sun, 28 Jul 2019 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/2019itsc_grip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DAC: Data-free Automatic Acceleration of Convolutional Networks</title>
+      <link>http://xincoder.github.io/publication/2019wacv_dac/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 -0800</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/2019wacv_dac/</guid>
+      <description>&lt;p&gt;Please refer to our &lt;a href=&#34;../../project/research_dac/&#34;&gt;project demo page&lt;/a&gt; for visualized results.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data-free CNN acceleration [Research]</title>
+      <link>http://xincoder.github.io/project/research_dac/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 -0800</pubDate>
+      
+      <guid>http://xincoder.github.io/project/research_dac/</guid>
+      <description>&lt;p&gt;Programming Language:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is a prototype of our &amp;ldquo;Data-free convolutional network acceleration&amp;rdquo; scheme. In this demo, we demonstrate the performance of our scheme in the task of multi-person pose estimation model and object detection. Please refer to our paper for more results and details.&lt;/p&gt;
+
+&lt;p&gt;The following video shows a demo of our scheme.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+&lt;video controls &gt;
+  &lt;source src=&#34;demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Published paper:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Xin Li, Shuai Zhang, Bolan Jiang, Yingyong Qi, Mooi Choo Chuah, Ning Bi (2019). &lt;a href=&#34;../../publication/2019wacv_dac/&#34;&gt;DAC: Data-free Automatic Acceleration of Convolutional Networks&lt;/a&gt;. IEEE Winter Conference on Applications of Computer Vision (WACV). 2019.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LiveFace: A Multi-Task CNN for Fast Face-Authentication</title>
+      <link>http://xincoder.github.io/publication/2018icmla_liveface/</link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/2018icmla_liveface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vehicle Detection[Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_vehicle_detection/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_vehicle_detection/</guid>
+      <description>
+
+&lt;h1 id=&#34;vehicle-detection-project&#34;&gt;&lt;strong&gt;Vehicle Detection Project&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Programming Language:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The goals of this project are the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier&lt;/li&gt;
+&lt;li&gt;Optionally, you can also apply a color transform and append binned color features, as well as histograms of color, to your HOG feature vector.&lt;/li&gt;
+&lt;li&gt;Note: for those first two steps don&amp;rsquo;t forget to normalize your features and randomize a selection for training and testing.&lt;/li&gt;
+&lt;li&gt;Implement a sliding-window technique and use your trained classifier to search for vehicles in images.&lt;/li&gt;
+&lt;li&gt;Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.&lt;/li&gt;
+&lt;li&gt;Estimate a bounding box for vehicles detected.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;1-feature-extraction&#34;&gt;1. Feature Extraction&lt;/h3&gt;
+
+&lt;p&gt;I extract the binned color, histogram of color and HOG as my feature and trained a SVC classifier using the concatenated feature.
+The following shows the parameters that I used:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Feature&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Setting&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Color Space&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;YUV&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;orient&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;pix_per_cell&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;cell_per_block&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;hog_channel&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;lsquo;ALL&amp;rsquo;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;spatial_size&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;(16,16)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;hist_bins&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The SVC classifier is used to predict a give image is a are or not. The following image shows a positive and a negative sample.
+&lt;img src=&#34;sample.png&#34; alt=&#34;sample.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The computed histogram of color is shown as follow:
+&lt;img src=&#34;color_hist.png&#34; alt=&#34;color_hist.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The below figure shows the visualized HOG featgure.
+&lt;img src=&#34;hog.png&#34; alt=&#34;hog.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I applied sliding window on the bottom half part of the image.
+&lt;img src=&#34;window.png&#34; alt=&#34;window.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;For each window, the chosen features are extracted and passed to the pre-trained SVC classifier to predict if the current location is a car or not. Then, we generate a heat map based on the detected results and filter low value out.
+The following shows the visualized detected results.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Detected BBoxes&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Heat Map&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Final Detection&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;detect_1.jpg&#39;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;1.png&#39;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39;, src=&#39;img_1.jpg&#39;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;detect_2.jpg&#39;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;2.png&#39;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39;, src=&#39;img_2.jpg&#39;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;detect_3.jpg&#39;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;3.png&#39;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39;, src=&#39;img_3.jpg&#39;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;detect_4.jpg&#39;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;4.png&#39;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39;, src=&#39;img_4.jpg&#39;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;detect_5.jpg&#39;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;5.png&#39;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39;, src=&#39;img_5.jpg&#39;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;detect_6.jpg&#39;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;6.png&#39;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img width=&#39;640&#39;, src=&#39;img_6.jpg&#39;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;2-make-it-smooth&#34;&gt;2. Make it smooth.&lt;/h3&gt;
+
+&lt;p&gt;Till now, the pipline works on single frame. However, there is no relationship between two continuous frames and the detected results are independent.
+Thus, I came up with an idea that sonsidering several continuous frames to make the detected results more smoothly.
+I record 3 latest heatmap and then sum them together before doing threshold. Using this way, the detected results become much more stable. Please refer the demo video.&lt;/p&gt;
+
+&lt;h3 id=&#34;3-potential-issue&#34;&gt;3. Potential Issue.&lt;/h3&gt;
+
+&lt;p&gt;The parameters of the current pipline are manually chosen, the trained model and chosen parameters may not work for all videos.&lt;/p&gt;
+
+&lt;p&gt;Potential solution: using deep learning object detection models, e.g. SSD.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Detect Lane [Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_adv_findline/</link>
+      <pubDate>Mon, 20 Aug 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_adv_findline/</guid>
+      <description>
+
+&lt;h1 id=&#34;advanced-lane-finding-project&#34;&gt;&lt;strong&gt;Advanced Lane Finding Project&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Programming Language:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+&lt;video controls &gt;
+  &lt;source src=&#34;demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+
+&lt;p&gt;The goals of this project are the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.&lt;/li&gt;
+&lt;li&gt;Apply a distortion correction to raw images.&lt;/li&gt;
+&lt;li&gt;Use color transforms, gradients, etc., to create a thresholded binary image.&lt;/li&gt;
+&lt;li&gt;Apply a perspective transform to rectify binary image (&amp;ldquo;birds-eye view&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Detect lane pixels and fit to find the lane boundary.&lt;/li&gt;
+&lt;li&gt;Determine the curvature of the lane and vehicle position with respect to center.&lt;/li&gt;
+&lt;li&gt;Warp the detected lane boundaries back onto the original image.&lt;/li&gt;
+&lt;li&gt;Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;a-pipeline&#34;&gt;A. Pipeline.&lt;/h3&gt;
+
+&lt;p&gt;My pipline consists of 7 steps as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Step 1: Camera Calibration&lt;/li&gt;
+&lt;li&gt;Step 2: Distortion correction&lt;/li&gt;
+&lt;li&gt;Step 3: Detect lines based on color and gradient&lt;/li&gt;
+&lt;li&gt;Step 4: Perspective transform&lt;/li&gt;
+&lt;li&gt;Step 5: Detect lane lines&lt;/li&gt;
+&lt;li&gt;Step 6: Determine the lane curvature&lt;/li&gt;
+&lt;li&gt;Step 7: Determine vehicle offset from center&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;b-visualized-results&#34;&gt;B. Visualized Results&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Camera calibration and Distortion correction:&lt;/strong&gt;
+Image distortion occurs when a camera looks at 3D objects in the real world and transforms them into a 2D image; this transformation isn’t perfect. Distortion changes what the shape and size of these 3D objects appear to be.
+The following is a sample of the processed results:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Input image&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;After Calibration&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;Before_Calibration.jpg&#34; alt=&#34;0.Before_Calibration.jpg&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;After_Calibration.jpg&#34; alt=&#34;1.After_Calibration.jpg&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;One can see that the lines on the left side of the image become straight after distortion.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2: Detect lines based on color and gradient:&lt;/strong&gt; Detect lines of the current lane based on color and gradient.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I first convert the image from RGB color space to HLS color space. The following shows the HLS color space.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;H channel&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;L channel&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;S channel&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;HLS_h.jpg&#34; alt=&#34;2.HLS_h.jpg&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;HLS_l.jpg&#34; alt=&#34;2.HLS_l.jpg&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;HLS_s.jpg&#34; alt=&#34;2.HLS_s.jpg&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Then, I do color selection on S channel and x gradient on L channel. The following shows the combined result:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Input Imgae&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Color_Gradient Result&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;straight_lines1.jpg&#34; alt=&#34;0straight_lines1.jpg&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;color_gradient.jpg&#34; alt=&#34;3.color_gradient_combine.jpg&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;After that, I do &lt;a href=&#34;https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html&#34; target=&#34;_blank&#34;&gt;open operation&lt;/a&gt; on the previous result to remove noise. One can see that the tiny noise is remove.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Input Imgae&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Open Operation&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;color_gradient.jpg&#34; alt=&#34;3.color_gradient_combine.jpg&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;open_operation.jpg&#34; alt=&#34;3.open_operation.jpg&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Perspective transform:&lt;/strong&gt; To detect lines, I convert the image to birdeye view. I chose the following source and destination points:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Source Points&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Destination Points&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;200, 200&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;566, 470&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;980, 200&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;714, 470&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;980, 700&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1055, 680&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;200, 700&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;253, 680&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The following shows a sample. It is clear that two lines are parallel.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Input Imgae&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Open Operation&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;open_operation.jpg&#34; alt=&#34;3.open_operation.jpg&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;birds_eye.jpg&#34; alt=&#34;4.birds_eye_line.jpg&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Detect lane lines:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;First, I calculate histogram on vertical direction.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Input Imgae&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Histogram&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;birds_eye.jpg&#34; alt=&#34;4.birds_eye_line.jpg&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;hist.jpg&#34; alt=&#34;5.histogram.jpg&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Then, I detect lines and compute their polynomial functions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Input Imgae&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Detect Lines&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;birds_eye.jpg&#34; alt=&#34;4.birds_eye_line.jpg&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;edge.jpg&#34; alt=&#34;6.edge.jpg&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;6. Visualize final result:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Input Imgae&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Detect Lines&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;straight_lines1.jpg&#34; alt=&#34;0straight_lines1.jpg&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;result.jpg&#34; alt=&#34;result.jpg&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;potential-improvements&#34;&gt;Potential improvements&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;This pipeline may be not work perfectly if the line is not very clear. Thus, merging the results generated using different color space will improve the performance.&lt;/li&gt;
+&lt;li&gt;The perspective transform matrix may be not exactly same for different camera. Thus, we need a smarter way to calculate it automatically.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Drive in An Emulator [Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_drive_emulator/</link>
+      <pubDate>Fri, 03 Aug 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_drive_emulator/</guid>
+      <description>
+
+&lt;h1 id=&#34;drive-in-a-simulator&#34;&gt;&lt;strong&gt;Drive in a simulator&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Programming Language:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+&lt;video controls &gt;
+  &lt;source src=&#34;demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+
+&lt;p&gt;The goals of this project are the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use the simulator to collect data of good driving behavior&lt;/li&gt;
+&lt;li&gt;Build, a convolution neural network in Keras that predicts steering angles from images&lt;/li&gt;
+&lt;li&gt;Train and validate the model with a training and validation set&lt;/li&gt;
+&lt;li&gt;Test that the model successfully drives around track one without leaving the road&lt;/li&gt;
+&lt;li&gt;Summarize the results with a written report&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;section-1-model-architecture-and-training-strategy&#34;&gt;Section 1: Model Architecture and Training Strategy&lt;/h2&gt;
+
+&lt;h3 id=&#34;1-model-architecture&#34;&gt;1. Model architecture&lt;/h3&gt;
+
+&lt;p&gt;The following figure shows the architecture of my model.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;First, I normalized all pixels of an input frame to [-1, 1].&lt;/li&gt;
+&lt;li&gt;Second, I use Cropping2D to remove sky and the hood from every single frame.&lt;/li&gt;
+&lt;li&gt;Third, 3 (5x5) convolutional layers are used to extract visual features from input frame. All convolutional layers have a RELU activation function to introduce nonlinearity. Each convolutional layer is followed by a MaxPooling2D layer to reduce the size of feature maps.&lt;/li&gt;
+&lt;li&gt;Then, 1 flatten layer [model.py line 39] convert the feature maps to a vector and two fully connect layers are used to predict the final result.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Predicting the angle of the steering wheel is a regression problem. Thus I used &amp;ldquo;mse&amp;rdquo; loss function.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;sd.jpg&#34; alt=&#34;sd.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;2-attempts-to-reduce-overfitting-in-the-model&#34;&gt;2. Attempts to reduce overfitting in the model&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dropout:&lt;/strong&gt; The model contains dropout layers in order to reduce overfitting.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data collection:&lt;/strong&gt; On both tracks, I drive the car Clockwise (2 loops) and counterclockwise (1 loop) and save data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Training:&lt;/strong&gt; The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Augmentation:&lt;/strong&gt; Every training frame has 50% probability to be horizontally flipped during training.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;3-model-parameter-tuning&#34;&gt;3. Model parameter tuning&lt;/h3&gt;
+
+&lt;p&gt;The model used an adam optimizer, so the learning rate was not tuned manually.&lt;/p&gt;
+
+&lt;h3 id=&#34;4-appropriate-training-data&#34;&gt;4. Appropriate training data&lt;/h3&gt;
+
+&lt;p&gt;Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road. Based on the ground truth:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If the current angle is 0, then the correction value for data from the left and right camera is set to a small value.&lt;/li&gt;
+&lt;li&gt;Otherwise, a larger correction value is used.
+Using this way can avoid the car from performing as a snake.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All data are randomly split into two subsets: 80% for training and 20% for validation. The model normalized input to [-1, 1] and crop out the top and the bottom parts to remove meaningless context.&lt;/p&gt;
+
+&lt;p&gt;The following two figures are the original input and the result after cropped.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Original Input&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Cropped Input&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;original.jpg&#34; alt=&#34;original.jpg&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;crop.jpg&#34; alt=&#34;crop.jpg&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The following shows the number of collected data. As you can see that, after using data from all 3 cameras and randomly horizontally flip frames, the distributation of the data is more balance.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Raw Data&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Use all 3 cameras &amp;amp; Data Augmentation&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;ori_dist.png&#34; alt=&#34;ori_dist.png&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;aug_dist.png&#34; alt=&#34;aug_dist.png&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;section-3-training-history-and-model-visualization&#34;&gt;Section 3: Training History and Model Visualization&lt;/h2&gt;
+
+&lt;p&gt;This figure shows the loss history during training.
+&lt;img src=&#34;loss.png&#34; alt=&#34;loss.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I also visulized the trained model and tried to understand what features the model learned.
+&lt;img src=&#34;vis.jpg&#34; alt=&#34;vis.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;section-4-conclusion-and-future-work&#34;&gt;Section 4: Conclusion and Future work&lt;/h2&gt;
+
+&lt;p&gt;In this project, I proposed a Convolutional Network to predict the angle of the steering wheel running in an emulator.&lt;/p&gt;
+
+&lt;p&gt;The trained model successful negatives the car. Even in the second track (more challenging than the first one), the model still performs great.&lt;/p&gt;
+
+&lt;p&gt;One of the possible drawback of the current model is taht it was only trained on the data collected from 2 tracks. Thus, it may cannot perform perfectly in other unseen scenario.&lt;/p&gt;
+
+&lt;p&gt;Thus, in the future, I would like to train the model using more data collected from different scens.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Traffic Sign Recognition [Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_signclassification/</link>
+      <pubDate>Mon, 16 Jul 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_signclassification/</guid>
+      <description>
+
+&lt;h1 id=&#34;traffic-sign-recognition&#34;&gt;&lt;strong&gt;Traffic Sign Recognition&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Programming Language:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The goals of this project are the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Load the data set (see below for links to the project data set)&lt;/li&gt;
+&lt;li&gt;Explore, summarize and visualize the data set&lt;/li&gt;
+&lt;li&gt;Design, train and test a model architecture&lt;/li&gt;
+&lt;li&gt;Use the model to make predictions on new images&lt;/li&gt;
+&lt;li&gt;Analyze the softmax probabilities of the new images&lt;/li&gt;
+&lt;li&gt;Summarize the results with a written report&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;step1-data-set-summary-exploration&#34;&gt;Step1: Data Set Summary &amp;amp; Exploration&lt;/h2&gt;
+
+&lt;h4 id=&#34;1-a-basic-summary-of-the-data-set&#34;&gt;1. A basic summary of the data set.&lt;/h4&gt;
+
+&lt;p&gt;I use Pickle data load function to read our dataset, and then use basic python function to analyze the dataset. In total, we have:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Training samples: 34,799&lt;/li&gt;
+&lt;li&gt;Validation samples: 4,410&lt;/li&gt;
+&lt;li&gt;Testing samples: 12,630&lt;/li&gt;
+&lt;li&gt;Each sample (image) has (32, 32, 3) shape.&lt;/li&gt;
+&lt;li&gt;We have 43 unique classes/labels:
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;ClassId&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;SignName&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;ClassId&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;SignName&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;ClassId&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;SignName&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Speed limit (20km/h)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Speed limit (30km/h)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Speed limit (50km/h)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Speed limit (60km/h)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Speed limit (70km/h)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Speed limit (80km/h)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;End of speed limit (80km/h)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;7&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Speed limit (100km/h)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;8&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Speed limit (120km/h)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;9&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;No passing&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;No passing for vehicles over 3.5 metric tons&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;11&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Right-of-way at the next intersection&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;12&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Priority road&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;13&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Yield&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;14&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Stop&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;15&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;No vehicles&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;16&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Vehicles over 3.5 metric tons prohibited&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;17&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;No entry&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;18&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;General caution&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;19&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Dangerous curve to the left&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;20&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Dangerous curve to the right&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;21&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Double curve&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;22&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Bumpy road&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;23&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Slippery road&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;24&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Road narrows on the right&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;25&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Road work&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;26&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Traffic signals&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;27&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Pedestrians&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;28&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Children crossing&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;29&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Bicycles crossing&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;30&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Beware of ice/snow&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;31&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Wild animals crossing&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;32&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;End of all speed and passing limits&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;33&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Turn right ahead&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;34&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Turn left ahead&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;35&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Ahead only&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;36&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Go straight or right&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;37&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Go straight or left&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;38&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Keep right&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;39&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Keep left&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;40&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Roundabout mandatory&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;41&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;End of no passing&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;42&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;End of no passing by vehicles over 3.5 metric tons&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&#34;class_samples.png&#34; alt=&#34;class_samples.png&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-here-is-an-exploratory-visualization-of-the-data-set&#34;&gt;2. Here is an exploratory visualization of the data set.&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;data_bar.png&#34; alt=&#34;data_bar.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;step2-design-and-test-a-model-architecture&#34;&gt;Step2: Design and Test a Model Architecture&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-image-data-preprocessing&#34;&gt;1. Image data preprocessing&lt;/h4&gt;
+
+&lt;p&gt;I use two methods to do data augmentation (preprocessing).&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Randomly rotation: all training images have 50% probability to be rotated within (-30, 30) angle. Rotation is needed considering that in daily life, the camera on a self-driving car may capture a traffice sign with a radom angle. Thus, by doing this help the model has the capability of handling such an application scenario.&lt;/li&gt;
+&lt;li&gt;Randomly crop: all training images have 50% probability to be cropped from (0.8, 1) of width and height. After being cropped, the images will be resized back to 32x32. Cropping is necessary because the captured traffic signs have variant sizes. Thus, using cropping adds more training data. In addition, randomly cropping provides some smaples with width and height shifts.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here are some processed images:
+&lt;img src=&#34;augmentation.png&#34; alt=&#34;augmentation.png&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-model-architecture&#34;&gt;2. Model architecture&lt;/h4&gt;
+
+&lt;p&gt;My model consisted of the following layers:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Layer&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Input_Size&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Output_size&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Convolution(5x5)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;32x32x3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;28x28x64&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;(1x1) stride, VALID padding, Relu Activation&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Convolution(3x3)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;28x28x64&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;28x28x64&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;(1x1) stride, SAME padding, Relu Activation&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Pooling&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;28x28x64&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;14x14x6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Convolution(5x5)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;14x14x64&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10x10x128&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;(1x1) stride, VALID padding, Relu Activation&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Convolution(3x3)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10x10x128&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10x10x128&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;(1x1) stride, SAME padding, Relu Activation&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Pooling&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;10x10x128&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5x5x12&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Convolution(3x3)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5x5x128&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3x3x256&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;(1x1) stride, VALID padding, Relu Activation&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Pooling&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3x3x256&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1x1x25&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Flatten&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1x1x256&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;256&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Fully Connected&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;256&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;128&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Relu Activation&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Dropout layer&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Fully Connected&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;128&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;43&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Softmax Activation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;3-training-parameters&#34;&gt;3. Training parameters&lt;/h4&gt;
+
+&lt;p&gt;I use the following experimental settings to train my model:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Optimizer: Adam&lt;/li&gt;
+&lt;li&gt;Initialial Learning Rate: 0.001&lt;/li&gt;
+&lt;li&gt;Batch Size: 128&lt;/li&gt;
+&lt;li&gt;Training Epochs: 100&lt;/li&gt;
+&lt;li&gt;Loss function: cross entropy.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-accuracy&#34;&gt;4. Accuracy&lt;/h4&gt;
+
+&lt;p&gt;During training, I tracked the validation accuracy and only saved the weights achieved the highest validation accuracy. Within 100 training epochs, my architecture achieves the highest val_acc at 84 epoch. (All details about training process can be found in Cell [10])&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;color:orange&#34;&gt;The accuracy on training set: &lt;strong&gt;99.9%&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color:orange&#34;&gt;The accuracy on validation set: &lt;strong&gt;96.2%&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color:orange&#34;&gt;The accuracy on testing set: &lt;strong&gt;93.4%&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The followings are the reasons why I chose such a model for this task:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;In the first convolutional laeyrs, the model focuses on detecting fundamental features, e.g. lines, shapes, or textures. Thus, at the first two blocks (4 convolutional layers), I used two continuous convolutional layers to make sure that the model generates more useful basic features.&lt;/li&gt;
+&lt;li&gt;Following that, a block with one convolutional layer is used to generate semantic information, e.g. arrows, circles, and etc.. Comparing to the basic features, we have more semantic features, thus, more filters were used in this layer.&lt;/li&gt;
+&lt;li&gt;A fully connected layer is used to convert a feature map into a verctor for classification.&lt;/li&gt;
+&lt;li&gt;One Dropout layer is used to avoid overfitting.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;test-a-model-on-new-images&#34;&gt;Test a Model on New Images&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-unseen-data-during-traing&#34;&gt;1. Unseen data during traing&lt;/h4&gt;
+
+&lt;p&gt;Here are five German traffic signs that I found on the web:
+&lt;img src=&#34;online.png&#34; alt=&#34;online.png&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-prediction-results-on-these-new-traffic-signs&#34;&gt;2. Prediction results on these new traffic signs.&lt;/h4&gt;
+
+&lt;p&gt;Here are the results of the prediction:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Image Ground Truth&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Predicted Correctly&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Go straight or right&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Go straight or right&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Speed limit (50km/h)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Speed limit (50km/h)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Stop&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Yield&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Road work&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Road work&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Turn right ahead&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Turn right ahead&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. We can see it drops a lot comparing to the accuracy on our testing dataset. The reason is three-fold:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The training dataset is not balance. For example, class 2 (Speed limit (50km/h)) has 2010 training samples, while class 14 (Stop) only consistes of 330 training samples.&lt;/li&gt;
+&lt;li&gt;The downloaded images are much clearer than the images in our dataset, which may add more noise in the images.&lt;/li&gt;
+&lt;li&gt;5 images are not enough to evaluate the performance of a trained model.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;3-prediction-details&#34;&gt;3. Prediction details&lt;/h4&gt;
+
+&lt;p&gt;For the first image, the model is 100% sure that it is a &amp;ldquo;Go straight or right&amp;rdquo;. It is correctly predict this image.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Probability&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1.0000000&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;36 (Go straight or right)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;2.8858561e-16&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3 (Speed limit (60km/h))&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;2.1692284e-31&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0 (Speed limit (20km/h))&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;7.6920753e-32&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;20 (Dangerous curve to the right)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;2.2140123e-32&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;28 (Children crossing)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For the second image, the model is 100% sure that it is a &amp;ldquo;Speed limit (50km/h)&amp;rdquo;. It is correctly predict this image.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Probability&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;9.9999976e-01&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2 (Speed limit (50km/h))&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;2.8747601e-07&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;5 (Speed limit (80km/h))&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;2.2901984e-10&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1 (Speed limit (30km/h))&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;2.2646303e-18&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3 (Speed limit (60km/h))&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;4.5397839e-35&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;6 (End of speed limit (80km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For the third image, the model is 100% sure that it is a &amp;ldquo;Yield&amp;rdquo;, while the ground truth is &amp;ldquo;Stop&amp;rdquo;. There are only 690 &amp;ldquo;Stop&amp;rdquo; training samples in our dataset, while &amp;ldquo;Yield&amp;rdquo; has 1290 training images. This is caused by our un-balance training data.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Probability&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1.0000000e+00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;13 (Yield)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;4.3748559e-12&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;28 (Children crossing)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1.5492816e-12&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1 (Speed limit (30km/h))&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1.0894177e-12&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;38 (Keep right)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;6.2159755e-13&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2 (Speed limit (50km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For the fourth image, the model is 100% sure that it is a &amp;ldquo;Road work&amp;rdquo;. It is correctly predict this image.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Probability&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1.0000000e+00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;0.0000000e+00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;0 (Speed limit (20km/h))&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;0.0000000e+00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;1 (Speed limit (30km/h))&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;0.0000000e+00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2 (Speed limit (50km/h))&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;0.0000000e+00&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;3 (Speed limit (60km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For the fourth image, the model is 100% sure that it is a &amp;ldquo;Turn right ahead&amp;rdquo;. It is correctly predict this image.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Probability&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;9.9085110e-01&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;33 (Turn right ahead)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;8.0864038e-03&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;14 (Stop)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1.0624588e-03&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;4 (Speed limit (70km/h))&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;2.1159234e-11&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;13 (Yield)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;7.8768702e-12&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;2 (Speed limit (50km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;visualizing-the-model&#34;&gt;Visualizing the model&lt;/h3&gt;
+
+&lt;p&gt;I visulized the output of the first block. The circle and arrows are very clear.
+&lt;img src=&#34;vis.png&#34; alt=&#34;vis.png&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Find Lane Lines [Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_findline/</link>
+      <pubDate>Tue, 12 Jun 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_findline/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Finding Lane Lines on the Road&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Programming Language:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The goal of this project is to design a pipeline that finds lane lines on the road.
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+&lt;video controls &gt;
+  &lt;source src=&#34;result_demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;a-pipeline&#34;&gt;A. Pipeline.&lt;/h3&gt;
+
+&lt;p&gt;My pipline consists of 7 steps as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Color selection&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;RGB image to gray image&lt;/li&gt;
+&lt;li&gt;Gaussian Blur&lt;/li&gt;
+&lt;li&gt;Edge detection (Canny)&lt;/li&gt;
+&lt;li&gt;Select ROI&lt;/li&gt;
+&lt;li&gt;Line detection (Hough)&lt;/li&gt;
+&lt;li&gt;Extend detected lines&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;span style=&#34;color:orange&#34;&gt;This pipeline works on images and videos.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Color selection:&lt;/strong&gt; Color selection is used to filter color so that we can remove those pixels which may become noise. E.g. patches on the road.
+The following is a sample of the processed results:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Input image&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Color Selection&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;input.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;color_selection.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;One can see that the lines of the current lane have already become very clear and there is no extra noise within the ROI (bottom middle part of the image).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2.RGB image to gray image:&lt;/strong&gt; This is a preprocessing for the flowing operations, e.g. edge detection.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Color Selection&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Gray Image&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;color_selection.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;gray.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Gaussian Blur:&lt;/strong&gt; This operation is also for edge detection. Using Gaussain Blur helps to remove noise from the current image.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Edge detection (Canny):&lt;/strong&gt; We detect lines using Canny Transform.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Gaussian Blur&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Edge Detection&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;gray.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;edge.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;5. Select ROI:&lt;/strong&gt; To remove the background, e.g. side of road or sky, we select a ROI that just in front of the driver (the bottom middle part of the current image).&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Edge Detection&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Select ROI&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;edge.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;roi.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;6. Line detection (Hough):&lt;/strong&gt; We use Hough Transform to detect lines. Instead of drawing the detected lines on the image, I implemented a function (detect_hough_line()) to return all detected lines, so that we can do further process.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Select ROI&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Line Detection&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;roi.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;detection.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;7. Extend detected lines:&lt;/strong&gt; The lines of a lane consists of solid lines and dashed lines. We want to use a long line to mark the boundaries (left line and right line) of the current lane.
+Thus:
+1. I implemented a function (namely, extend_lines()) to extend the lines, so that all lines can be extended to the bottom of the image and as far as possible.
+2. In this function, I also calculate the intersaction of these two lines, so that only the bottom part is marked with lines.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Line Detection&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Extended lines (1)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;line_detection.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;extend.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Calculate intersaction (2)&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Merge with original image&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;intersection.jpg&#34; alt=&#34;&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;result.jpg&#34; alt=&#34;1.jpg&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;b-potential-shortcomings-of-the-current-pipeline&#34;&gt;B. Potential shortcomings of the current pipeline&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;One potential shortcoming would be caused by the fixed parameters in the current solution, e.g. Gaussian Blur parameters, Edge Detection parameters, Line Detection parameters, and so on. Such manually designed fixed parameters may not work in any application sceneria, e.g. ranning day or night.&lt;/li&gt;
+&lt;li&gt;Another shortcoming would be caused by the first process (color selection). In real world, the color may change in different environment. Thus, in some specific environment, the current pipline may cannot detect any lines or detect too many lines (caused by noise).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;c-suggest-possible-improvements-to-this-pipeline&#34;&gt;C. Suggest possible improvements to this pipeline&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;For the first optential shortcoming, we would like to come up with an idea to adjust the parameters depening on the environment. Thus, the solution can be robust to the change of the environment.&lt;/li&gt;
+&lt;li&gt;For the second optential shortcoming, we can use the same strategy as the first suggest. By automatically adjusting the paramters of color selection, the method should work. In addition, we can also replace the color selection with other preprocessing methods to avoid the sensitivity of chosen parameters.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/environment/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/environment/</guid>
+      <description>
+
+&lt;p&gt;In this blog, we are going to use &lt;a href=&#34;https://keras.io/&#34; target=&#34;_blank&#34;&gt;Keras&lt;/a&gt;(A Python Deep Learning Library) to implement our deep learning model. It is compatible with Python 2.7-3.5. Keras uses &lt;a href=&#34;https://www.tensorflow.org/install/&#34; target=&#34;_blank&#34;&gt;Tensorflow&lt;/a&gt;, &lt;a href=&#34;http://deeplearning.net/software/theano/install.html#install&#34; target=&#34;_blank&#34;&gt;Theano&lt;/a&gt;, or &lt;a href=&#34;https://docs.microsoft.com/en-us/cognitive-toolkit/setup-cntk-on-your-machine&#34; target=&#34;_blank&#34;&gt;CNTK&lt;/a&gt; as its backend engines, so only need to install one of them.&lt;/p&gt;
+
+&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies:&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Keras 2.0.6 (or higher version).&lt;/li&gt;
+&lt;li&gt;Python 2.7-3.5&lt;/li&gt;
+&lt;li&gt;Tensorflow or Theano or CNTK&lt;/li&gt;
+&lt;li&gt;HDF5&lt;/li&gt;
+&lt;li&gt;h5py&lt;/li&gt;
+&lt;li&gt;graphviz&lt;/li&gt;
+&lt;li&gt;pydot&lt;/li&gt;
+&lt;li&gt;cuDNN (only for running on GPU)&lt;/li&gt;
+&lt;li&gt;opencv&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;HDF5&lt;/strong&gt; and &lt;strong&gt;h5py&lt;/strong&gt; libraries are used to save our model to disk. &lt;strong&gt;graphviz&lt;/strong&gt; and &lt;strong&gt;pydot&lt;/strong&gt; libraries are needed only when you want to plot model graphs to files (.png or .pdf).&lt;/p&gt;
+
+&lt;p&gt;In addition, if your computer has one or multiple NVIDIA graph cards, you may want to install &lt;strong&gt;cuDNN&lt;/strong&gt; library to run Keras on GPU.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Next, I will show you how to setup the environment in &lt;a href=&#34;https://anaconda.org/&#34; target=&#34;_blank&#34;&gt;Anaconda&lt;/a&gt; on MacOS. (For other Operating Systems, please modify the corresponding links or commands.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;# Open a terminal and type the following commands
+
+# Step 1: Download Anaconda
+&amp;gt; curl -O https://repo.continuum.io/archive/Anaconda3-4.4.0-MacOSX-x86_64.sh
+
+# Step 2: Install Anaconda (Use all default settings)
+&amp;gt; bash Anaconda3-4.4.0-MacOSX-x86_64.sh
+
+# Step 3: Restart your terminal
+
+# Step 4: Create a virtual environment. (so that it will not mess up the existing settings) 
+&amp;gt; conda create -n keras python=3.5
+
+# Step 5: Install Tensorflow CPU version on Mac
+&amp;gt; source activate keras
+&amp;gt; pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.3.0-py3-none-any.whl
+# If there is an error, please try it again.
+
+# Step 6: Install Keras
+&amp;gt; pip install keras
+
+# Step 7: Install other Dependencies
+&amp;gt; conda install HDF5
+&amp;gt; conda install h5py
+&amp;gt; pip install pydot
+&amp;gt; pip install graphviz
+&amp;gt; pip install pillow
+&amp;gt; conda install -c https://conda.anaconda.org/menpo opencv3
+
+# Step 8: Test
+&amp;gt; python
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.utils import plot_model
+model = Sequential()
+model.add(Dense(10, input_shape=(700, 1)))
+model.summary()
+plot_model(model, to_file=&#39;abc.pdf&#39;, show_shapes=True)
+exit()
+
+# If you get some error like: install graphviz, you can try this command:
+&amp;gt; brew install graphviz
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/neural_network/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/neural_network/</guid>
+      <description>
+
+&lt;p&gt;In this blog, we are going to use Neural Network to do image classification. The following figure shows a simple example of Neural Network. If you are interested in this field, please see this &lt;a href=&#34;https://neurophysics.ucsd.edu/courses/physics_171/annurev.neuro.28.061604.135703.pdf&#34; target=&#34;_blank&#34;&gt;review&lt;/a&gt; or recently this &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S0959438814000130&#34; target=&#34;_blank&#34;&gt;review&lt;/a&gt;.
+&lt;img src=&#34;nn.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;1-a-simple-neural-network-on-mnist-dataset-http-yann-lecun-com-exdb-mnist-as-an-example&#34;&gt;1. A simple Neural Network on &lt;a href=&#34;http://yann.lecun.com/exdb/mnist/&#34; target=&#34;_blank&#34;&gt;MNIST dataset&lt;/a&gt; as an example.&lt;/h3&gt;
+
+&lt;p&gt;The MNIST database is a large database of handwritten digits. It contains 60,000 training images and 10,000 testing images. The Keras provides a convenience method for loading the MNIST dataset.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;# In this demo we design a Neural Network with 1 hidden layers: 
+#   Input layer (784 dimensions)
+#   layer 1 (1000 hidden neurons)
+#   layer 2 (10 outputs)
+
+import numpy
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.utils import np_utils
+
+# load data
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+# flatten 28*28 images to a 784 vector for each image
+num_pixels = X_train.shape[1] * X_train.shape[2]
+X_train = X_train.reshape(X_train.shape[0], num_pixels).astype(&#39;float32&#39;)
+X_test = X_test.reshape(X_test.shape[0], num_pixels).astype(&#39;float32&#39;)
+
+# normalize inputs from 0-255 to 0-1
+X_train = X_train / 255
+X_test = X_test / 255
+
+# one hot encode outputs
+y_train = np_utils.to_categorical(y_train)
+y_test = np_utils.to_categorical(y_test)
+num_classes = y_test.shape[1]
+
+# design model
+model = Sequential()
+model.add(Dense(1000, input_dim=num_pixels, activation=&#39;relu&#39;))
+model.add(Dense(num_classes, activation=&#39;softmax&#39;))
+
+# print out summary of the model
+print(model.summary())
+
+# Compile model
+model.compile(loss=&#39;categorical_crossentropy&#39;, optimizer=&#39;adam&#39;, metrics=[&#39;accuracy&#39;])
+
+# Fit the model
+model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=10, batch_size=200, verbose=2)
+
+# Final evaluation of the model
+scores = model.evaluate(X_test, y_test, verbose=0)
+print(&amp;quot;Baseline Error: %.2f%%&amp;quot; % (100-scores[1]*100))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2-assignment&#34;&gt;2. Assignment&lt;/h3&gt;
+
+&lt;p&gt;Run the above code to double check your environment and get some sense about how it looks like while training a model. Design your own Neural Network to do Image Classification on &lt;strong&gt;Boat Dataset&lt;/strong&gt;. Boat Dataset consists of 5 different types of boats:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Training Dataset (249.6 MB) &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/training_images.zip&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Class&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Number of images&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;aircraft_carrier&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;banana_boat&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;oil_tanker&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;passenger_ship&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;yacht&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;In total&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Testing Dataset (97.1 MB, 1000 images) &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/testing_images.zip&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Train your model on training dataset and test the trained model on testing dataset.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hint&lt;/strong&gt;
+Try to understand the following API(s):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;# All images in the new dataset are colorful images (consist of Red, Blue, and Green channels) with different sizes. You may would like to use the following API to resize all images into the same size before doing flatten (line 15 in the above code). 
+image = cv2.imread(path) # load an image
+resized_image = cv2.resize(image, (new_height, new_width)) # resize an image
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To improve the performance of your model, you can try different values of the following parameters:&lt;/p&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; number of hidden layers (network structure)&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; number of neurons in each layer (network structure)&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; image size (preprocessing)&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; batch_size (training phase, model.compile)&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; optimizer (training phase, model.compile)&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; other settings you can dig out.&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;3-submite-your-sulotion&#34;&gt;3. Submite your sulotion:&lt;/h3&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Your final python code. Please name it using your Lehigh ID. (&lt;your_LehighID&gt;.py)&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; A short &lt;your_LehighID&gt;.pdf file. Simply describe what you did, what you got, and other things you want to report, e.g. what you have learned.&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/convolutional_network/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/convolutional_network/</guid>
+      <description>
+
+&lt;p&gt;In this blog, we are going to use Convolutional Neural Network (CNN) to do image classification.
+The following figure shows the comparison between a 3-layer Neural Network and a simple Convolutional Neural Network. If you are interested in CNN, you can refer this paper which proposes &lt;a href=&#34;https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks&#34; target=&#34;_blank&#34;&gt;AlexNet&lt;/a&gt;.
+&lt;img src=&#34;cnn.png&#34; alt=&#34;Screen Shot 2017-08-27 at 9.53.44 PM.png&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;1-a-simple-convolutional-neural-network-on-mnist-dataset-http-yann-lecun-com-exdb-mnist-as-an-example&#34;&gt;1. A simple Convolutional Neural Network on &lt;a href=&#34;http://yann.lecun.com/exdb/mnist/&#34; target=&#34;_blank&#34;&gt;MNIST dataset&lt;/a&gt; as an example.&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;import numpy
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Flatten
+from keras.layers.convolutional import Conv2D, MaxPooling2D
+
+# load data
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+# reshape to be [samples][pixels][width][height]
+X_train = X_train.reshape(X_train.shape[0], 28, 28, 1).astype(&#39;float32&#39;)
+X_test = X_test.reshape(X_test.shape[0], 28, 28, 1).astype(&#39;float32&#39;)
+
+# normalize inputs from 0-255 to 0-1
+X_train = X_train / 255
+X_test = X_test / 255
+# one hot encode outputs
+y_train = np_utils.to_categorical(y_train)
+y_test = np_utils.to_categorical(y_test)
+num_classes = y_test.shape[1]
+
+# create model
+model = Sequential()
+model.add(Conv2D(32, (5, 5), input_shape=(28, 28, 1), activation=&#39;relu&#39;))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.2))
+model.add(Flatten())
+model.add(Dense(128, activation=&#39;relu&#39;))
+model.add(Dense(num_classes, activation=&#39;softmax&#39;))
+# Compile model
+model.compile(loss=&#39;categorical_crossentropy&#39;, optimizer=&#39;adam&#39;, metrics=[&#39;accuracy&#39;])
+
+# Fit the model
+model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=10, batch_size=200, verbose=2)
+
+# Final evaluation of the model
+scores = model.evaluate(X_test, y_test, verbose=0)
+print(&amp;quot;Baseline Error: %.2f%%&amp;quot; % (100-scores[1]*100))	
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2-assignment&#34;&gt;2. Assignment&lt;/h3&gt;
+
+&lt;p&gt;Please run the above code before you design yours. You will notice that using a CNN model gains a higher accuracy than the Neural Netowork on MNIST dataset. Design your own CNN to do Image Classification on &lt;strong&gt;Boat Dataset&lt;/strong&gt;. Boat Dataset consists of 5 different types of boats:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Training Dataset (249.6 MB) &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/training_images.zip&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Class&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Number of images&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;aircraft_carrier&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;banana_boat&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;oil_tanker&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;passenger_ship&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;yacht&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;In total&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Testing Dataset (97.1 MB, 1000 images) &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/testing_images.zip&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Train your model on training dataset and test the trained model on testing dataset.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hint&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Data augmentation (search how to do data augmentation in Keras)&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Finetune a pre-trained CNN model. (refer to: keras.applications)&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;3-submite-your-sulotion&#34;&gt;3. Submite your sulotion:&lt;/h3&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Your final python code. Please name it using your Lehigh ID. (&lt;your_LehighID&gt;.py)&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; A short &lt;your_LehighID&gt;.pdf file. Simply describe what you did, what you got, and other things you want to report, e.g. what you have learned.&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/image_caption/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/image_caption/</guid>
+      <description>
+
+&lt;p&gt;In this blog, we are going to use LSTMs (Long Short Term Memory Networks) to generate a caption for a given image. LSTMs are a special kind of Recurrent Neural Networks (RNN). If you are looking for some related papers, please refer to &lt;a href=&#34;https://arxiv.org/pdf/1411.4555.pdf&#34; target=&#34;_blank&#34;&gt;paper1&lt;/a&gt; and &lt;a href=&#34;https://arxiv.org/pdf/1411.4389.pdf&#34; target=&#34;_blank&#34;&gt;paper2&lt;/a&gt;. The following figure shows the solution of image caption generation proposed in &lt;a href=&#34;https://arxiv.org/pdf/1411.4389.pdf&#34; target=&#34;_blank&#34;&gt;paper2&lt;/a&gt;.
+&lt;img src=&#34;paper_figure.png&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, we will implement a simpler one. The following figure shows the architecture of the implemented model.
+&lt;!-- ![model.png](quiver-image-url/65B111ACB5D56D0CCA6D1E63B7D3070E.png =950x2230) --&gt;
+&lt;img src=&#34;model.png&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;1-dataset&#34;&gt;1. Dataset&lt;/h3&gt;
+
+&lt;p&gt;We use the &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/flickr30k_images.zip&#34; target=&#34;_blank&#34;&gt;flickr30k&lt;/a&gt; dataset (4.39 GB) to train an image caption generator. The &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/flickr30k_images.zip&#34; target=&#34;_blank&#34;&gt;flickr30k&lt;/a&gt; dataset consists of 31,783 images and each one has 5 corresponding captions. We split this dataset into a training subset (21,783 images) and a testing subset (10,000 images).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2-a-simple-code&#34;&gt;2. A simple code&lt;/h3&gt;
+
+&lt;p&gt;Please run the following command first:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Batch&#34;&gt;&amp;gt; pip install pillow
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, the following shows a simple demo code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;import os  
+import numpy as np 
+from keras.applications.vgg16 import VGG16, preprocess_input
+from keras.models import Sequential, Model
+from keras.layers import LSTM, Dense, Embedding, Merge, Flatten, RepeatVector, TimeDistributed, Concatenate
+from keras.applications.vgg16 import VGG16, preprocess_input
+from keras.preprocessing import image as Image
+from keras.preprocessing import sequence as Sequence
+from keras.callbacks import TensorBoard, ModelCheckpoint
+from keras.utils import plot_model, to_categorical
+from collections import Counter
+
+CUDA_VISIBLE_DEVICES=&#39;0&#39;
+os.environ[&amp;quot;CUDA_VISIBLE_DEVICES&amp;quot;] = CUDA_VISIBLE_DEVICES
+
+# If you are running on your own computer, please change the following paths to your local paths.
+# If you are running on HPC, you can keep the following paths.
+# IMAGE_ROOT = &#39;/Users/xincoder/Documents/Dataset/flickr30k_images/flickr30k_images&#39;
+# TRAIN_CAPTION_PATH = &#39;/Users/xincoder/Documents/Dataset/flickr30k_images/train.txt&#39;
+# TEST_CAPTION_PATH = &#39;/Users/xincoder/Documents/Dataset/flickr30k_images/test.txt&#39;
+
+IMAGE_ROOT = &#39;/share/ceph/mcc7cse498/xil915/flickr30k_images/flickr30k_images&#39;
+TRAIN_CAPTION_PATH = &#39;/share/ceph/mcc7cse498/xil915/flickr30k_images/train.txt&#39;
+TEST_CAPTION_PATH = &#39;/share/ceph/mcc7cse498/xil915/flickr30k_images/test.txt&#39;
+
+WORDS_PATH = &#39;words.txt&#39;
+SENTENCE_MAX_LENGTH = 100 # In this dataset, the maximum length is 84.
+EMBEDDING_SIZE = 256
+IMAGE_SIZE = 224
+
+CHECK_ROOT = &#39;checkpoint/&#39;
+if not os.path.exists(CHECK_ROOT):
+	os.makedirs(CHECK_ROOT)
+
+class Data_generator(object):
+	def __init__(self, pra_batch_size=20, pra_word_frequency=2):
+		self.word_frequency = pra_word_frequency # remove words whose frequency less than this value
+		self.train_image_names, self.train_image_captions, self.test_image_names, self.test_image_captions = self.get_name_caption()
+		self.train_image_captions_index = self.caption2index(self.train_image_captions)
+		self.test_image_captions_index = self.caption2index(self.test_image_captions)
+		self.batch_size = pra_batch_size # how many samples we want to train in each step
+		self.train_steps_epoch = len(self.train_image_names)//pra_batch_size # steps per epoch
+		self.test_steps_epoch = len(self.test_image_names)//pra_batch_size # steps per epoch
+		
+	def get_name_caption(self):
+		&#39;&#39;&#39;
+		Load training and testing data from files. 
+		We add a &amp;lt;SOS&amp;gt; and &amp;lt;EOS&amp;gt; to the beginning and the end of each sentence respectively.
+		(&amp;lt;SOS&amp;gt; stands for &amp;quot;start of sentence&amp;quot;, &amp;lt;EOS&amp;gt; stands for &amp;quot;end of sentence&amp;quot;)
+		Returns:
+			train_image_name_list: all paths of training images
+			train_caption_list: corresponding training captions
+			test_image_name_list: all paths of testing images
+			test_caption_list: corresponding testing captions
+		&#39;&#39;&#39;
+		with open(TRAIN_CAPTION_PATH, &#39;r&#39;) as reader:
+			content = [x.strip().split(&#39;\t&#39;) for x in reader.readlines()]
+			train_image_name_list = [os.path.join(IMAGE_ROOT, x[0].split(&#39;#&#39;)[0]) for x in content]
+			train_caption_list = [&#39;&amp;lt;SOS&amp;gt; {} &amp;lt;EOS&amp;gt;&#39;.format(x[1].lower()) for x in content]
+
+		with open(TEST_CAPTION_PATH, &#39;r&#39;) as reader:
+			content = [x.strip().split(&#39;\t&#39;) for x in reader.readlines()]
+			test_image_name_list = [os.path.join(IMAGE_ROOT, x[0].split(&#39;#&#39;)[0]) for x in content]
+			test_caption_list = [&#39;&amp;lt;SOS&amp;gt; {} &amp;lt;EOS&amp;gt;&#39;.format(x[1].lower()) for x in content]	
+
+		all_words = &#39; &#39;.join(train_caption_list+test_caption_list).split(&#39; &#39;)
+		words_num = Counter(all_words)
+		words = [x for x in words_num if words_num[x]&amp;gt;=self.word_frequency]
+		print(&#39;{} unique words (all).&#39;.format(len(words_num)))
+		print(&#39;{} unique words (count&amp;gt;={}).&#39;.format(len(words), self.word_frequency))
+
+		with open(WORDS_PATH, &#39;w&#39;) as writer:
+			writer.write(&#39;\n&#39;.join(words))
+
+		return train_image_name_list, train_caption_list, test_image_name_list, test_caption_list
+
+	def get_dictionary(self, pra_captions):
+		&#39;&#39;&#39; 
+		Generate a dictionary for all words in our dataset. 
+		Return:
+			words2index: word-&amp;gt;index dictionary 
+			index2words: index-&amp;gt;word dictionary
+		&#39;&#39;&#39;
+		if not os.path.exists(WORDS_PATH):
+			words = set(&#39; &#39;.join(pra_captions).split(&#39; &#39;))
+			with open(WORDS_PATH, &#39;w&#39;) as writer:
+				writer.write(&#39;\n&#39;.join(words))
+		else:
+			with open(WORDS_PATH, &#39;r&#39;) as reader:
+				words = [x.strip() for x in reader.readlines()]
+
+		self.voc_size = len(words)
+		words2index = dict((w, ind) for ind, w in enumerate(words, start=0))
+		index2words = dict((ind, w) for ind, w in enumerate(words, start=0))
+		return words2index, index2words
+
+	def caption2index(self, pra_captions):
+		words2index, index2words = self.get_dictionary(pra_captions)
+		captions = [x.split(&#39; &#39;) for x in pra_captions]
+		index_captions = [[words2index[w] for w in cap if w in words2index.keys()] for cap in captions]
+		return index_captions
+
+	def index2caption(self, pra_index):
+		words2index, index2words = self.get_dictionary(&#39;&#39;)
+		captions = [&#39; &#39;.join([index2words[w] for w in cap]) for cap in pra_index]
+		return captions	
+
+	def convert2onehot(self, pra_caption):
+		captions = np.zeros((len(pra_caption), self.voc_size))
+		for ind, cap in enumerate(pra_caption, start=0):
+			captions[ind, cap] = 1
+		return np.array(captions)
+
+	def get_epoch_steps(self):
+		return self.train_steps_epoch, self.test_steps_epoch
+
+	def generate(self, pra_train=True):
+		&#39;&#39;&#39;
+		This is a generator which is used to continuously generate training or testing data.
+			pra_train = True : generate training data
+			pra_train = False : generate testing data
+		&#39;&#39;&#39;
+		while True:
+			if pra_train:
+				# we shuffle training data at the beginning of each epoch.
+				shuffle_index = np.random.permutation(len(self.train_image_names))
+				image_name_list = np.array(self.train_image_names)[shuffle_index]
+				image_caption_list = np.array(self.train_image_captions)[shuffle_index]
+				image_caption_index_list = np.array(self.train_image_captions_index)[shuffle_index]
+			else:
+				image_name_list = self.test_image_names
+				image_caption_list = self.test_image_captions
+				image_caption_index_list = self.test_image_captions_index
+
+			image_caption_index_list = Sequence.pad_sequences(image_caption_index_list, maxlen=SENTENCE_MAX_LENGTH, padding=&#39;post&#39;)
+			
+			input_image_list = []
+			input_caption_list = []
+			target_caption_list = []
+			for index, (image_name, image_caption) in enumerate(zip(image_name_list, image_caption_index_list), start=1):
+				# image
+				input_image = Image.img_to_array(Image.load_img(image_name, target_size=(IMAGE_SIZE, IMAGE_SIZE, 3)))
+				input_caption_onehot = self.convert2onehot(image_caption)
+				target_caption_onehot = np.zeros_like(input_caption_onehot)
+				target_caption_onehot[:-1] = input_caption_onehot[1:]
+				
+				input_image_list.append(input_image)
+				input_caption_list.append(input_caption_onehot)
+				target_caption_list.append(target_caption_onehot)
+
+				if len(input_image_list) == self.batch_size:
+					tmp_images = np.array(input_image_list)
+					tmp_captions = np.array(input_caption_list)
+					tmp_targets = np.array(target_caption_list)
+					input_image_list = []
+					input_caption_list = []
+					target_caption_list = []
+					yield [preprocess_input(tmp_images), tmp_captions], tmp_targets
+
+
+class Image_Caption(object):
+	def __init__(self, pra_voc_size):
+		self.voc_size = pra_voc_size
+
+		# Model design start from here.
+		# we use the VGG16 as the base model to extract CNN feature from an image
+		base_model = VGG16(weights=&#39;imagenet&#39;, include_top=True)
+		base_model = Model(inputs=base_model.input, outputs=base_model.get_layer(&#39;fc2&#39;).output)
+		for layer in base_model.layers[1:]:
+			layer.trainable = False
+
+		# add a fully connected layer on the top of our base model 
+		# and repeat it several times, so that it has the same shape as our language model
+		image_model = Sequential()
+		image_model.add(base_model)
+		image_model.add(Dense(EMBEDDING_SIZE, activation=&#39;relu&#39;))
+		image_model.add(RepeatVector(SENTENCE_MAX_LENGTH))
+		
+		# we use an Embedding layer to generate a good representation for captions.
+		language_model = Sequential()
+		# language_model.add(Embedding(self.voc_size, EMBEDDING_SIZE, input_length=SENTENCE_MAX_LENGTH))
+		language_model.add(LSTM(128, input_shape=(SENTENCE_MAX_LENGTH, self.voc_size), return_sequences=True))
+		language_model.add(TimeDistributed(Dense(128)))
+
+
+		# after merging CNN feature (image) and embedded vector (caption), we feed them into a LSTM model
+		# at its end, we use a fully connected layer with softmax activation to convert the output into probability 
+		model = Sequential()
+		model.add(Merge([image_model, language_model], mode=&#39;concat&#39;))
+		# model.add(Concatenate([image_model, language_model]))
+		model.add(LSTM(1000, return_sequences=True))
+		# model.add(Dense(self.voc_size, activation=&#39;softmax&#39;, name=&#39;final_output&#39;))
+		model.add(TimeDistributed(Dense(self.voc_size, activation=&#39;softmax&#39;)))
+
+		# draw the model and save it to a file.
+		# plot_model(model, to_file=&#39;model.pdf&#39;, show_shapes=True)
+		
+		self.model = model
+		self.model.compile(loss=&#39;categorical_crossentropy&#39;, optimizer=&#39;rmsprop&#39;, metrics=[&#39;accuracy&#39;])
+
+	def train_model(self, pra_datagen):
+		# callback: draw curve on TensorBoard
+		tensorboard = TensorBoard(log_dir=&#39;log&#39;, histogram_freq=0, write_graph=True, write_images=True)
+		# callback: save the weight with the highest validation accuracy
+		filepath=os.path.join(CHECK_ROOT, &#39;weights-improvement-{val_acc:.4f}-{epoch:04d}.hdf5&#39;)
+		checkpoint = ModelCheckpoint(filepath, monitor=&#39;val_acc&#39;, verbose=2, save_best_only=True, mode=&#39;max&#39;)
+
+		# train model 
+		self.model.fit_generator(
+			pra_datagen.generate(True), 
+			steps_per_epoch=pra_datagen.get_epoch_steps()[0], 
+			epochs=5, 
+			validation_data=pra_datagen.generate(False), 
+			validation_steps=pra_datagen.get_epoch_steps()[1],
+			callbacks=[tensorboard, checkpoint])
+	
+if __name__ == &#39;__main__&#39;:
+	my_generator = Data_generator()
+	model = Image_Caption(my_generator.voc_size)
+	model.train_model(my_generator)
+
+	# for [img, cap], tar in my_generator.generate():
+	# 	print(img.shape, cap.shape, tar.shape)
+	# 	print(np.argmax(cap[0, 0]), np.argmax(tar[0, 0]))
+	# 	print(np.argmax(cap[0, 1]), np.argmax(tar[0, 0]))
+	# 	print(&#39;&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2-assignment&#34;&gt;2. Assignment&lt;/h3&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Run the above code to train the model and use it as a baseline.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Modify the above code to improve the accuracy.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Add a function to generate a sentence for a given image.&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt;
+To improve the accuracy, you can try:
+- different base models. (refer to: keras.applications)
+- different RNNs. (refer to: keras.layers.recurrent)
+- data augmentation by randomly rotating, fliping, or shifting training images.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;3-submite-your-sulotion&#34;&gt;3. Submite your sulotion:&lt;/h3&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Your final python code. Please name it using your Lehigh ID. (&lt;your_LehighID&gt;.py)&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; A short &lt;your_LehighID&gt;.pdf file. Simply describe what you did, what you got, and other things you want to report, e.g. what you have learned.&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;4-train-your-model-on-hpc&#34;&gt;4. Train your model on HPC&lt;/h3&gt;
+
+&lt;p&gt;It will take weeks (or months) if you only use the CPU on your laptops to train the model. Considering this, Prof. Chuah has already applied Lehigh University Research Computing (HPC) resource for all of you. (You may have already received an email from &lt;a href=&#34;root@polaris.cc.lehigh.edu&#34; target=&#34;_blank&#34;&gt;root@polaris.cc.lehigh.edu&lt;/a&gt;). Please run your code on your own computer first to make sure that there is no error before you run it on HPC.&lt;/p&gt;
+
+&lt;p&gt;You can access HPC via SSH.
+- For Windows users: please download &lt;a href=&#34;http://www.putty.org/&#34; target=&#34;_blank&#34;&gt;Putty&lt;/a&gt;.
+- For Mac users: you can use SSH in a terminal.&lt;/p&gt;
+
+&lt;p&gt;The username and password for HPC is your LehighID and the corresponding password. For example, my LehighID id &lt;strong&gt;xil915&lt;/strong&gt;, then I can access HPC using the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;ssh &amp;lt;your_LehighID&amp;gt;@sol.cc.lehigh.edu
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;All training and testing data have been saved in a shared directory:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;/share/ceph/.../.../flickr30k_images
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Once you login, you need to create two files in your own directories:
+- your python code, namely image_caption.py.
+- a bash file, namely run.sh&lt;/p&gt;
+
+&lt;p&gt;Save the following script into your run.sh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;#!/bin/tcsh
+#SBATCH --partition=imlab-gpu 
+#SBATCH --time=100:00:00 # maximum time
+#SBATCH --nodes=1 # 1 CPU can be be paired with only 1 GPU
+#SBATCH --ntasks-per-node=1
+#SBATCH --gres=gpu:1 # Need both GPUs, use --gres=gpu:2
+#SBATCH --job-name xin_image_caption
+#SBATCH --output=&amp;quot;log.%j.%N.out&amp;quot;
+
+module load python/cse498
+python image_caption.py
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run your code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;sbatch run.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This command will sumbit your job to a waitinglist. Please use the following command to check the status of your jobs:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;&amp;gt; squeue # list all jobs
+&amp;gt; squeue -u xil915 # your LehighID, only list your job(s).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is my output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;[xil915@sol CSE498]$ squeue -u xil915
+    JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+    187364 imlab-gpu xin_imag   xil915 PD       0:00      1 (Priority)
+# ST == PD : this job is pending
+# ST == R : this job is running
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cancel your job using:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;&amp;gt; scancel 187364 # JOBID
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When your job is running, all standard outputs will be saved in to file namely, log.*.out (e.g. log.187364.sol-b411.out). You can print it out using:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;&amp;gt; cat log.187364.sol-b411.out
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;span-style-color-orange-help-span&#34;&gt;&lt;span style=&#34;color:orange&#34;&gt; HELP !!!&lt;/span&gt;&lt;/h3&gt;
+
+&lt;p&gt;Considering that the long waiting list on HPC, I provide a pre-trained model using my demo code to you.&lt;/p&gt;
+
+&lt;p&gt;During your model is training, you can use my pre-trained model to test your implemented function. (generating a sentence for a given image)&lt;/p&gt;
+
+&lt;p&gt;Downloads: &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/xin_weights.hdf5&#34; target=&#34;_blank&#34;&gt;pre-trained model&lt;/a&gt;, &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/words.txt&#34; target=&#34;_blank&#34;&gt;words index&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The pre-trained model only was trained for 2 epochs.&lt;/li&gt;
+&lt;li&gt;The words index is a file which list the indices of words.
+(&lt;span style=&#34;color:red&#34;&gt; A good result is not expected using this pre-trained model, considering that this is only trained for 2 epochs.&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Load weights:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;model.load_weights(filepath)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;span style=&#34;color:orange&#34;&gt;Please note it in your report, if you use this pre-trained model to generate the final results.&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/train_classifier/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/train_classifier/</guid>
+      <description>
+
+&lt;h3 id=&#34;how-to-train-an-object-classifier-using-our-own-images&#34;&gt;How to train an object classifier using our own images&lt;/h3&gt;
+
+&lt;h3 id=&#34;1-info&#34;&gt;1. Info:&lt;/h3&gt;
+
+&lt;p&gt;I prepared two python scripts (&lt;a href=&#34;retrain.py&#34; target=&#34;_blank&#34;&gt;retrain.py&lt;/a&gt;, &lt;a href=&#34;predict.py&#34; target=&#34;_blank&#34;&gt;predict.py&lt;/a&gt;) for this task.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;retrain.py&#34; target=&#34;_blank&#34;&gt;retrain.py&lt;/a&gt;: used to train the classifier.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;predict.py&#34; target=&#34;_blank&#34;&gt;predict.py&lt;/a&gt;: used to load the trained model and test on new images.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2-prepare-training-and-testing-data&#34;&gt;2. Prepare training and testing data:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Training Data:&lt;/strong&gt; Let&amp;rsquo;s assume that we have two classes, namely &amp;ldquo;cat&amp;rdquo; and &amp;ldquo;dog&amp;rdquo;. We just need to make sure that there are two sub-folders in &amp;ldquo;training_images&amp;rdquo; folder. Each sub-folder only consists of its own images.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-plaintext&#34;&gt;|- training_images
+    |- cat
+        |- image_0.jpg
+        |- image_1.jpg
+        ...
+    |- dog
+        |- image_2.jpg
+        |- image_3.jpg
+        ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Testing Data:&lt;/strong&gt; All testing images are put in one folder, e.g. &amp;ldquo;testing_images&amp;rdquo;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-plaintext&#34;&gt;|- testing_images
+    |- image_0.jpg
+    |- image_1.jpg
+    |- image_2.jpg
+    |- image_3.jpg
+    ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;3-train-a-classifier&#34;&gt;3. Train a classifier&lt;/h3&gt;
+
+&lt;p&gt;Assume that both &amp;ldquo;training_images&amp;rdquo; and &amp;ldquo;testing_images&amp;rdquo; are in this folder:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; ls
+models/ predict.py  retrain.py  testing_images/  training_images/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, we can type the following command to starting training process:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; python retrain.py \
+--bottleneck_dir=./bottlenecks \
+--how_many_training_steps=50000 \ 
+--model_dir=./inception \
+--output_graph=./models/retrained_graph.pb \
+--output_labels=./models/retrained_labels.txt \
+--summaries_dir=./retrain_logs \
+--validation_batch_size=5000 \
+--image_dir=training_images # this is the folder of training data
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After this training process finished, it saves the trained model in &amp;ldquo;./models&amp;rdquo;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; ls models
+retrained_graph.pb    retrained_labels.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;4-predict-new-images-using-trained-model&#34;&gt;4. Predict new images using trained model&lt;/h3&gt;
+
+&lt;p&gt;Type the following command in a terminal to run the testing code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;&amp;gt; python predict.py \
+--models_folder=&#39;./models&#39; \
+--test_image_folder=&#39;./testing_images&#39; \
+--display_image=False
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/model_on_android/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/model_on_android/</guid>
+      <description>
+
+&lt;h3 id=&#34;how-to-use-a-pre-trained-mode-on-an-android-device&#34;&gt;How to use a pre-trained mode on an Android device&lt;/h3&gt;
+
+&lt;p&gt;In previous chapter, we discussed how to train an object classifier using our own images. At the end, we got trained model and labels file (retrained_graph.pb, retrained_labels.txt).&lt;/p&gt;
+
+&lt;p&gt;In this chapter, We are going to load pre-trained classifer in our Android app. Unfortunately, we can not use the trained model on Android directly. We need to optimize it using a tool, namely &amp;ldquo;optimize_for_inference&amp;rdquo;, provided by Tensorflow.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;1-build-tool-optimize-for-inference&#34;&gt;1. Build tool &amp;ldquo;optimize_for_inference&amp;rdquo;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Download Tensorflow source code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/tensorflow/tensorflow.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Install bazel so that we can use it to build &amp;ldquo;optimize_for_inference&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;echo &amp;quot;deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8&amp;quot; | sudo tee /etc/apt/sources.list.d/bazel.list
+curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install bazel
+sudo apt-get upgrade bazel
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Build &amp;ldquo;optimize_for_inference&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd tensorflow
+./configure # We can choose all default settings
+bazel build tensorflow/python/tools:optimize_for_inference # this process takes a while, be patient
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-optimize-trained-model&#34;&gt;2. Optimize trained model&lt;/h3&gt;
+
+&lt;p&gt;Let&amp;rsquo;s assume that our pre-trained model is &lt;strong&gt;&amp;lt;folder_path&amp;gt;/retrained_graph.pb&lt;/strong&gt;. Then, we can use the following command to optimize the model and save it as &lt;strong&gt;&amp;lt;folder_path&amp;gt;/retrained_graph_android.pb&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bazel-bin/tensorflow/python/tools/optimize_for_inference \
+--input=&amp;lt;folder_path&amp;gt;/retrained_graph.pb \
+--output=&amp;lt;folder_path&amp;gt;/retrained_graph_android.pb \
+--input_names=Mul \
+--output_names=final_result
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;3-modify-tensorflow-android-demo&#34;&gt;3. Modify Tensorflow Android Demo&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Download Android Demo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/Nilhcem/tensorflow-classifier-android.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If we import this project into Android Studio, compile and run, the demo will load a pre-trained classifier which can recognize 1000 classes.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Load our own model:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Delete the previous ImageNet model from &lt;strong&gt;assets/&lt;/strong&gt; folder.&lt;/li&gt;
+&lt;li&gt;Copy our optimized trained model &lt;strong&gt;retrained_graph_android.pb&lt;/strong&gt; and label file &lt;strong&gt;retrained_labels.txt&lt;/strong&gt; into &lt;strong&gt;assets/&lt;/strong&gt; folder.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Open &lt;strong&gt;ClassifierActivity.java&lt;/strong&gt; and set the following variables:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;private static final int INPUT_SIZE = 299; 
+private static final int IMAGE_MEAN = 128; 
+private static final float IMAGE_STD = 128; 
+private static final String INPUT_NAME = &amp;quot;Mul&amp;quot;;
+private static final String OUTPUT_NAME = &amp;quot;final_result&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Compile and run. The demo will open the camera and show the confidence score of each corresponding class.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

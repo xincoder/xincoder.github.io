@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/publication/</link>
+    <description>Recent content in Publications on Welcome to Xin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 28 Jul 2019 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="http://xincoder.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GRIP: Graph-based Interaction-aware Trajectory Prediction</title>
+      <link>http://xincoder.github.io/publication/2019itsc_grip/</link>
+      <pubDate>Sun, 28 Jul 2019 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/2019itsc_grip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DAC: Data-free Automatic Acceleration of Convolutional Networks</title>
+      <link>http://xincoder.github.io/publication/2019wacv_dac/</link>
+      <pubDate>Tue, 08 Jan 2019 00:00:00 -0800</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/2019wacv_dac/</guid>
+      <description>Please refer to our project demo page for visualized results.</description>
+    </item>
+    
+    <item>
+      <title>LiveFace: A Multi-Task CNN for Fast Face-Authentication</title>
+      <link>http://xincoder.github.io/publication/2018icmla_liveface/</link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/2018icmla_liveface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ReHAR: Robust and Efficient Human Activity Recognition</title>
+      <link>http://xincoder.github.io/publication/2018wacv_rehar/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/2018wacv_rehar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SBGAR: Semantics based group activity recognition</title>
+      <link>http://xincoder.github.io/publication/2017iccv_sbgar/</link>
+      <pubDate>Sun, 22 Oct 2017 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/2017iccv_sbgar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UAV assisted smart parking solution</title>
+      <link>http://xincoder.github.io/publication/2017icuas_uav/</link>
+      <pubDate>Tue, 13 Jun 2017 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/2017icuas_uav/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CASHEIRS: Cloud assisted scalable hierarchical encrypted based image retrieval system</title>
+      <link>http://xincoder.github.io/publication/2017infocom_casheirs/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/2017infocom_casheirs/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

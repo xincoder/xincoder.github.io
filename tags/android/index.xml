@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/tags/android/</link>
+    <description>Recent content in Android on Welcome to Xin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 01 May 2017 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="http://xincoder.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CASHEIRS Demo [Research]</title>
+      <link>http://xincoder.github.io/project/research_casheirs/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/research_casheirs/</guid>
+      <description>Programming Language:
+ Python Java (Android Client) PHP (Web Interface)  This is a prototype of our CASHEIRS image retrieval system. The initial prototype system consists of a cloud server (a laptop) and a Samsung S5 phone as a data user&amp;rsquo;s mobile device. Samsung S5 has a Snapdragon 801 chip with Quad-core CPU@2.5GHz and 2GB RAM. The smartphone communicates with the server via a WiFi router. In the Android client software, Caffe APIs are called to extract CNN feature from a query image.</description>
+    </item>
+    
+    <item>
+      <title>Family Video Surveillance System [Others]</title>
+      <link>http://xincoder.github.io/project/others_family_surveillance/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/others_family_surveillance/</guid>
+      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
+ C++ (PC server: Object and Motion Detection, Alarm module) Java (Android Client) PHP (Web Interface)  In this project, we designed an embedded family video surveillance system. The system consists of two parts: (1) a PC server and (2)an Android client.
+The PC server can acquire, compress, and process camera frames. Once the PC server detected an abnormal condition, e.</description>
+    </item>
+    
+    <item>
+      <title>Augmented Reality Cinema [Others]</title>
+      <link>http://xincoder.github.io/project/others_ar/</link>
+      <pubDate>Thu, 01 Aug 2013 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/others_ar/</guid>
+      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
+ C# (Unity) Unity Script (Unity)  In this project, we designed and implemented an augmented reality system based on tablet for Autodesk Maya. The app runs on an Android tablet records the trajectory of the virtual camera. In this way, movie directors do not need to manually set the trajectory of the virtual camera in Maya.</description>
+    </item>
+    
+  </channel>
+</rss>

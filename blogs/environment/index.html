@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.0.0">
+  <meta name="generator" content="Hugo 0.49.2" />
+  <meta name="author" content="Xin Li">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="In this blog, we are going to use Keras(A Python Deep Learning Library) to implement our deep learning model. It is compatible with Python 2.7-3.5. Keras uses Tensorflow, Theano, or CNTK as its backend engines, so only need to install one of them.
+Dependencies:  Keras 2.0.6 (or higher version). Python 2.7-3.5 Tensorflow or Theano or CNTK HDF5 h5py graphviz pydot cuDNN (only for running on GPU) opencv  HDF5 and h5py libraries are used to save our model to disk.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://xincoder.github.io/blogs/environment/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-128386120-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+  <link rel="alternate" href="http://xincoder.github.io/index.xml" type="application/rss+xml" title="Welcome to Xin&#39;s Homepage">
+  <link rel="feed" href="http://xincoder.github.io/index.xml" type="application/rss+xml" title="Welcome to Xin&#39;s Homepage">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://xincoder.github.io/blogs/environment/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Welcome to Xin&#39;s Homepage">
+  <meta property="og:url" content="http://xincoder.github.io/blogs/environment/">
+  <meta property="og:title" content=" | Welcome to Xin&#39;s Homepage">
+  <meta property="og:description" content="In this blog, we are going to use Keras(A Python Deep Learning Library) to implement our deep learning model. It is compatible with Python 2.7-3.5. Keras uses Tensorflow, Theano, or CNTK as its backend engines, so only need to install one of them.
+Dependencies:  Keras 2.0.6 (or higher version). Python 2.7-3.5 Tensorflow or Theano or CNTK HDF5 h5py graphviz pydot cuDNN (only for running on GPU) opencv  HDF5 and h5py libraries are used to save our model to disk.">
+  
+  
+    
+  <meta property="og:image" content="http://xincoder.github.io/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-05-18T00:00:00-07:00">
+  
+  <meta property="article:modified_time" content="2018-05-18T00:00:00-07:00">
+  
+
+  
+
+  
+
+  <title> | Welcome to Xin&#39;s Homepage</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Welcome to Xin&#39;s Homepage</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#intern">
+            
+            <span>Internship</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/blogs/">
+            
+            <span>Blogs</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/blogs/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/blogs/panda_list/">A. Sever Setup</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/blogs/panda_list/">1. My own server</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/setup_environment/">2. Setup environment</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/blogs/environment/">B. Deep Learning</a>
+    <ul class="nav docs-sidenav">
+      
+      <li class="active">
+        <a href="/blogs/environment/">0. Environment</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/neural_network/">1. Neural Network</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/convolutional_network/">2. CNN</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/image_caption/">3. Image Cpation</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/train_classifier/">4. Train a classifier</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/model_on_android/">5. Model on Android</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/boat_classifier/">6. Boat Classifier</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+      <p class="docs-toc-title">On this page</p>
+      
+
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#dependencies">Dependencies:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+      <ul class="nav toc-top">
+        <li><a href="#">Back to top</a></li>
+      </ul>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+      <div id="search-hits">
+        
+      </div>
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name"></h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<p>In this blog, we are going to use <a href="https://keras.io/" target="_blank">Keras</a>(A Python Deep Learning Library) to implement our deep learning model. It is compatible with Python 2.7-3.5. Keras uses <a href="https://www.tensorflow.org/install/" target="_blank">Tensorflow</a>, <a href="http://deeplearning.net/software/theano/install.html#install" target="_blank">Theano</a>, or <a href="https://docs.microsoft.com/en-us/cognitive-toolkit/setup-cntk-on-your-machine" target="_blank">CNTK</a> as its backend engines, so only need to install one of them.</p>
+
+<h3 id="dependencies">Dependencies:</h3>
+
+<ol>
+<li>Keras 2.0.6 (or higher version).</li>
+<li>Python 2.7-3.5</li>
+<li>Tensorflow or Theano or CNTK</li>
+<li>HDF5</li>
+<li>h5py</li>
+<li>graphviz</li>
+<li>pydot</li>
+<li>cuDNN (only for running on GPU)</li>
+<li>opencv</li>
+</ol>
+
+<p><strong>HDF5</strong> and <strong>h5py</strong> libraries are used to save our model to disk. <strong>graphviz</strong> and <strong>pydot</strong> libraries are needed only when you want to plot model graphs to files (.png or .pdf).</p>
+
+<p>In addition, if your computer has one or multiple NVIDIA graph cards, you may want to install <strong>cuDNN</strong> library to run Keras on GPU.</p>
+
+<hr />
+
+<p>Next, I will show you how to setup the environment in <a href="https://anaconda.org/" target="_blank">Anaconda</a> on MacOS. (For other Operating Systems, please modify the corresponding links or commands.)</p>
+
+<pre><code class="language-Bash"># Open a terminal and type the following commands
+
+# Step 1: Download Anaconda
+&gt; curl -O https://repo.continuum.io/archive/Anaconda3-4.4.0-MacOSX-x86_64.sh
+
+# Step 2: Install Anaconda (Use all default settings)
+&gt; bash Anaconda3-4.4.0-MacOSX-x86_64.sh
+
+# Step 3: Restart your terminal
+
+# Step 4: Create a virtual environment. (so that it will not mess up the existing settings) 
+&gt; conda create -n keras python=3.5
+
+# Step 5: Install Tensorflow CPU version on Mac
+&gt; source activate keras
+&gt; pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.3.0-py3-none-any.whl
+# If there is an error, please try it again.
+
+# Step 6: Install Keras
+&gt; pip install keras
+
+# Step 7: Install other Dependencies
+&gt; conda install HDF5
+&gt; conda install h5py
+&gt; pip install pydot
+&gt; pip install graphviz
+&gt; pip install pillow
+&gt; conda install -c https://conda.anaconda.org/menpo opencv3
+
+# Step 8: Test
+&gt; python
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.utils import plot_model
+model = Sequential()
+model.add(Dense(10, input_shape=(700, 1)))
+model.summary()
+plot_model(model, to_file='abc.pdf', show_shapes=True)
+exit()
+
+# If you get some error like: install graphviz, you can try this command:
+&gt; brew install graphviz
+</code></pre>
+
+          </div>
+
+          
+
+        </div>
+
+        <div class="body-footer">
+          Last updated on May 18, 2018
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "Search Results",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+  </body>
+</html>
+
+

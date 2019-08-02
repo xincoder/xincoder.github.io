@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.0.0">
+  <meta name="generator" content="Hugo 0.49.2" />
+  <meta name="author" content="Xin Li">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="In this blog, we are going to use Convolutional Neural Network (CNN) to do image classification. The following figure shows the comparison between a 3-layer Neural Network and a simple Convolutional Neural Network. If you are interested in CNN, you can refer this paper which proposes AlexNet. 1. A simple Convolutional Neural Network on MNIST dataset as an example. import numpy from keras.datasets import mnist from keras.models import Sequential from keras.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://xincoder.github.io/blogs/convolutional_network/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-128386120-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+  <link rel="alternate" href="http://xincoder.github.io/index.xml" type="application/rss+xml" title="Welcome to Xin&#39;s Homepage">
+  <link rel="feed" href="http://xincoder.github.io/index.xml" type="application/rss+xml" title="Welcome to Xin&#39;s Homepage">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://xincoder.github.io/blogs/convolutional_network/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Welcome to Xin&#39;s Homepage">
+  <meta property="og:url" content="http://xincoder.github.io/blogs/convolutional_network/">
+  <meta property="og:title" content=" | Welcome to Xin&#39;s Homepage">
+  <meta property="og:description" content="In this blog, we are going to use Convolutional Neural Network (CNN) to do image classification. The following figure shows the comparison between a 3-layer Neural Network and a simple Convolutional Neural Network. If you are interested in CNN, you can refer this paper which proposes AlexNet. 1. A simple Convolutional Neural Network on MNIST dataset as an example. import numpy from keras.datasets import mnist from keras.models import Sequential from keras.">
+  
+  
+    
+  <meta property="og:image" content="http://xincoder.github.io/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-05-18T00:00:00-07:00">
+  
+  <meta property="article:modified_time" content="2018-05-18T00:00:00-07:00">
+  
+
+  
+
+  
+
+  <title> | Welcome to Xin&#39;s Homepage</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Welcome to Xin&#39;s Homepage</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#intern">
+            
+            <span>Internship</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/blogs/">
+            
+            <span>Blogs</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/blogs/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/blogs/panda_list/">A. Sever Setup</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/blogs/panda_list/">1. My own server</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/setup_environment/">2. Setup environment</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/blogs/environment/">B. Deep Learning</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/blogs/environment/">0. Environment</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/neural_network/">1. Neural Network</a>
+      </li>
+      
+      <li class="active">
+        <a href="/blogs/convolutional_network/">2. CNN</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/image_caption/">3. Image Cpation</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/train_classifier/">4. Train a classifier</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/model_on_android/">5. Model on Android</a>
+      </li>
+      
+      <li >
+        <a href="/blogs/boat_classifier/">6. Boat Classifier</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+      <p class="docs-toc-title">On this page</p>
+      
+
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1-a-simple-convolutional-neural-network-on-mnist-dataset-http-yann-lecun-com-exdb-mnist-as-an-example">1. A simple Convolutional Neural Network on <a href="http://yann.lecun.com/exdb/mnist/" target="_blank">MNIST dataset</a> as an example.</a></li>
+<li><a href="#2-assignment">2. Assignment</a></li>
+<li><a href="#3-submite-your-sulotion">3. Submite your sulotion:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+      <ul class="nav toc-top">
+        <li><a href="#">Back to top</a></li>
+      </ul>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+      <div id="search-hits">
+        
+      </div>
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name"></h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<p>In this blog, we are going to use Convolutional Neural Network (CNN) to do image classification.
+The following figure shows the comparison between a 3-layer Neural Network and a simple Convolutional Neural Network. If you are interested in CNN, you can refer this paper which proposes <a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks" target="_blank">AlexNet</a>.
+<img src="cnn.png" alt="Screen Shot 2017-08-27 at 9.53.44 PM.png" /></p>
+
+<hr />
+
+<h3 id="1-a-simple-convolutional-neural-network-on-mnist-dataset-http-yann-lecun-com-exdb-mnist-as-an-example">1. A simple Convolutional Neural Network on <a href="http://yann.lecun.com/exdb/mnist/" target="_blank">MNIST dataset</a> as an example.</h3>
+
+<pre><code class="language-Python">import numpy
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Flatten
+from keras.layers.convolutional import Conv2D, MaxPooling2D
+
+# load data
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+# reshape to be [samples][pixels][width][height]
+X_train = X_train.reshape(X_train.shape[0], 28, 28, 1).astype('float32')
+X_test = X_test.reshape(X_test.shape[0], 28, 28, 1).astype('float32')
+
+# normalize inputs from 0-255 to 0-1
+X_train = X_train / 255
+X_test = X_test / 255
+# one hot encode outputs
+y_train = np_utils.to_categorical(y_train)
+y_test = np_utils.to_categorical(y_test)
+num_classes = y_test.shape[1]
+
+# create model
+model = Sequential()
+model.add(Conv2D(32, (5, 5), input_shape=(28, 28, 1), activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.2))
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
+model.add(Dense(num_classes, activation='softmax'))
+# Compile model
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+# Fit the model
+model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=10, batch_size=200, verbose=2)
+
+# Final evaluation of the model
+scores = model.evaluate(X_test, y_test, verbose=0)
+print(&quot;Baseline Error: %.2f%%&quot; % (100-scores[1]*100))	
+</code></pre>
+
+<hr />
+
+<h3 id="2-assignment">2. Assignment</h3>
+
+<p>Please run the above code before you design yours. You will notice that using a CNN model gains a higher accuracy than the Neural Netowork on MNIST dataset. Design your own CNN to do Image Classification on <strong>Boat Dataset</strong>. Boat Dataset consists of 5 different types of boats:</p>
+
+<ul>
+<li><p>Training Dataset (249.6 MB) <a href="http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/training_images.zip" target="_blank">Download</a></p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Class</th>
+<th align="left">Number of images</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">aircraft_carrier</td>
+<td align="left">500</td>
+</tr>
+
+<tr>
+<td align="left">banana_boat</td>
+<td align="left">500</td>
+</tr>
+
+<tr>
+<td align="left">oil_tanker</td>
+<td align="left">500</td>
+</tr>
+
+<tr>
+<td align="left">passenger_ship</td>
+<td align="left">500</td>
+</tr>
+
+<tr>
+<td align="left">yacht</td>
+<td align="left">500</td>
+</tr>
+
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+
+<tr>
+<td align="left">In total</td>
+<td align="left">2500</td>
+</tr>
+</tbody>
+</table></li>
+
+<li><p>Testing Dataset (97.1 MB, 1000 images) <a href="http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/testing_images.zip" target="_blank">Download</a></p></li>
+</ul>
+
+<p>Train your model on training dataset and test the trained model on testing dataset.</p>
+
+<p><strong>Hint</strong></p>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> Data augmentation (search how to do data augmentation in Keras)</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Finetune a pre-trained CNN model. (refer to: keras.applications)</label></li>
+</ul>
+
+<hr />
+
+<h3 id="3-submite-your-sulotion">3. Submite your sulotion:</h3>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> Your final python code. Please name it using your Lehigh ID. (<your_LehighID>.py)</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> A short <your_LehighID>.pdf file. Simply describe what you did, what you got, and other things you want to report, e.g. what you have learned.</label></li>
+</ul>
+
+          </div>
+
+          
+
+        </div>
+
+        <div class="body-footer">
+          Last updated on May 18, 2018
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "Search Results",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+
+    
+    
+
+    
+    
+
+  </body>
+</html>
+
+

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Overview on Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/blogs/</link>
+    <description>Recent content in Overview on Welcome to Xin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Thu, 25 Oct 2018 17:46:15 -0400</lastBuildDate>
+    
+	<atom:link href="http://xincoder.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/environment/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/environment/</guid>
+      <description>In this blog, we are going to use Keras(A Python Deep Learning Library) to implement our deep learning model. It is compatible with Python 2.7-3.5. Keras uses Tensorflow, Theano, or CNTK as its backend engines, so only need to install one of them.
+Dependencies:  Keras 2.0.6 (or higher version). Python 2.7-3.5 Tensorflow or Theano or CNTK HDF5 h5py graphviz pydot cuDNN (only for running on GPU) opencv  HDF5 and h5py libraries are used to save our model to disk.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/neural_network/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/neural_network/</guid>
+      <description>In this blog, we are going to use Neural Network to do image classification. The following figure shows a simple example of Neural Network. If you are interested in this field, please see this review or recently this review. 1. A simple Neural Network on MNIST dataset as an example. The MNIST database is a large database of handwritten digits. It contains 60,000 training images and 10,000 testing images. The Keras provides a convenience method for loading the MNIST dataset.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/convolutional_network/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/convolutional_network/</guid>
+      <description>In this blog, we are going to use Convolutional Neural Network (CNN) to do image classification. The following figure shows the comparison between a 3-layer Neural Network and a simple Convolutional Neural Network. If you are interested in CNN, you can refer this paper which proposes AlexNet. 1. A simple Convolutional Neural Network on MNIST dataset as an example. import numpy from keras.datasets import mnist from keras.models import Sequential from keras.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/image_caption/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/image_caption/</guid>
+      <description>In this blog, we are going to use LSTMs (Long Short Term Memory Networks) to generate a caption for a given image. LSTMs are a special kind of Recurrent Neural Networks (RNN). If you are looking for some related papers, please refer to paper1 and paper2. The following figure shows the solution of image caption generation proposed in paper2. Next, we will implement a simpler one. The following figure shows the architecture of the implemented model.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/train_classifier/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/train_classifier/</guid>
+      <description>How to train an object classifier using our own images 1. Info: I prepared two python scripts (retrain.py, predict.py) for this task.
+ retrain.py: used to train the classifier. predict.py: used to load the trained model and test on new images.  2. Prepare training and testing data:  Training Data: Let&amp;rsquo;s assume that we have two classes, namely &amp;ldquo;cat&amp;rdquo; and &amp;ldquo;dog&amp;rdquo;. We just need to make sure that there are two sub-folders in &amp;ldquo;training_images&amp;rdquo; folder.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/model_on_android/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/model_on_android/</guid>
+      <description>How to use a pre-trained mode on an Android device In previous chapter, we discussed how to train an object classifier using our own images. At the end, we got trained model and labels file (retrained_graph.pb, retrained_labels.txt).
+In this chapter, We are going to load pre-trained classifer in our Android app. Unfortunately, we can not use the trained model on Android directly. We need to optimize it using a tool, namely &amp;ldquo;optimize_for_inference&amp;rdquo;, provided by Tensorflow.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/boat_classifier/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/boat_classifier/</guid>
+      <description>In this chapter, I list all materials related to the trained classifier which is used to classify an image into 5 different types of boats:
+ iceboat shrimper patrol boat fishing boat weather ship  0. Trained model The trained model consists of two files:
+ retrained_graph.pb retrained_labels.txt  1. Downloaded Dataset  Training dataset (475.6 MB) Download
+   Class Number of images     iceboat 1692   shrimper 2380   patrol_boat 1820   fishing_boat 1320   weather_ship 1101       In total 8313    Testing dataset (34.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/panda_list/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/panda_list/</guid>
+      <description>I built a server with 2 Nvidia Titan Xp for my research. The following table shows the details of my own sever:
+   Hardware Detail Quantity Price     CPU Intel - Xeon E5-2630 V4 2.2GHz 10-Core Processor 1 $679.99   Liquid CPU Cooler NZXT - Kraken X62 Liquid CPU Cooler 1 $156.29   Memory Corsair - Vengeance LPX 32GB (2 x 16GB) DDR4-2400 Memory 2 $347.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/setup_environment/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/blogs/setup_environment/</guid>
+      <description>After building a sever, I did the following operations to setup the environment.
+1. Create a USB ubuntu Installer (on Mac) Create a bootable USB on MacOS, so that we can use it to install Ubuntu 16.04.
+# Eject the USB from your MAC cd ~/Downloads # rename the ISO file with a shorter name hdiutil convert -format UDRW -o ubuntu.iso ubuntu-16.04.3-desktop-amd64.iso mv ubuntu.iso.dmg ubuntu.iso diskutil list # Plug in the USB and figure out the disk ID.</description>
+    </item>
+    
+  </channel>
+</rss>

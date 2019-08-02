@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unity on Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/tags/unity/</link>
+    <description>Recent content in Unity on Welcome to Xin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Thu, 01 Aug 2013 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="http://xincoder.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Augmented Reality Cinema [Others]</title>
+      <link>http://xincoder.github.io/project/others_ar/</link>
+      <pubDate>Thu, 01 Aug 2013 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/others_ar/</guid>
+      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
+ C# (Unity) Unity Script (Unity)  In this project, we designed and implemented an augmented reality system based on tablet for Autodesk Maya. The app runs on an Android tablet records the trajectory of the virtual camera. In this way, movie directors do not need to manually set the trajectory of the virtual camera in Maya.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.0.0">
+  <meta name="generator" content="Hugo 0.49.2" />
+  <meta name="author" content="Xin Li">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="Train a CNN model to recognize traffic signs.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://xincoder.github.io/project/selfdriving_signclassification/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-128386120-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+  <link rel="alternate" href="http://xincoder.github.io/index.xml" type="application/rss+xml" title="Welcome to Xin&#39;s Homepage">
+  <link rel="feed" href="http://xincoder.github.io/index.xml" type="application/rss+xml" title="Welcome to Xin&#39;s Homepage">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://xincoder.github.io/project/selfdriving_signclassification/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Welcome to Xin&#39;s Homepage">
+  <meta property="og:url" content="http://xincoder.github.io/project/selfdriving_signclassification/">
+  <meta property="og:title" content="Traffic Sign Recognition [Self Driving] | Welcome to Xin&#39;s Homepage">
+  <meta property="og:description" content="Train a CNN model to recognize traffic signs.">
+  
+  
+    
+  <meta property="og:image" content="http://xincoder.github.io/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-07-16T00:00:00-07:00">
+  
+  <meta property="article:modified_time" content="2018-07-16T00:00:00-07:00">
+  
+
+  
+
+  
+
+  <title>Traffic Sign Recognition [Self Driving] | Welcome to Xin&#39;s Homepage</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Welcome to Xin&#39;s Homepage</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#intern">
+            
+            <span>Internship</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/blogs/">
+            
+            <span>Blogs</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article article-project" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-header d-xl-none">
+  <img src="/project/selfdriving_signclassification/featured_hua3ea79a7ed0037084cb57388786915d9_42768_1600x400_fill_q90_box_center_2.png" class="article-banner" itemprop="image" alt="">
+  
+</div>
+
+
+<div class="container-fluid split-header d-none d-xl-block">
+  <div class="row">
+    <div class="col-6">
+      <div class="split-header-content">
+        <h1 itemprop="name">Traffic Sign Recognition [Self Driving]</h1>
+
+        
+
+        
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Xin Li">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-07-16 00:00:00 -0700 PDT" itemprop="datePublished">
+    <time datetime="2018-07-16 00:00:00 -0700 PDT" itemprop="dateModified">
+      Jul 16, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Xin Li">
+  </span>
+
+  
+
+  
+  
+
+  
+
+  
+
+</div>
+
+
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Traffic%20Sign%20Recognition%20%5bSelf%20Driving%5d&amp;url=http%3a%2f%2fxincoder.github.io%2fproject%2fselfdriving_signclassification%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fxincoder.github.io%2fproject%2fselfdriving_signclassification%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fxincoder.github.io%2fproject%2fselfdriving_signclassification%2f&amp;title=Traffic%20Sign%20Recognition%20%5bSelf%20Driving%5d"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fxincoder.github.io%2fproject%2fselfdriving_signclassification%2f&amp;title=Traffic%20Sign%20Recognition%20%5bSelf%20Driving%5d"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Traffic%20Sign%20Recognition%20%5bSelf%20Driving%5d&amp;body=http%3a%2f%2fxincoder.github.io%2fproject%2fselfdriving_signclassification%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="split-header-image">
+        <img src="/project/selfdriving_signclassification/featured_hua3ea79a7ed0037084cb57388786915d9_42768_680x500_fill_q90_box_center_2.png" itemprop="image" alt="">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-container d-xl-none">
+  <h1 itemprop="name">Traffic Sign Recognition [Self Driving]</h1>
+
+  
+
+  
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Xin Li">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-07-16 00:00:00 -0700 PDT" itemprop="datePublished">
+    <time datetime="2018-07-16 00:00:00 -0700 PDT" itemprop="dateModified">
+      Jul 16, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Xin Li">
+  </span>
+
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Traffic%20Sign%20Recognition%20%5bSelf%20Driving%5d&amp;url=http%3a%2f%2fxincoder.github.io%2fproject%2fselfdriving_signclassification%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fxincoder.github.io%2fproject%2fselfdriving_signclassification%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fxincoder.github.io%2fproject%2fselfdriving_signclassification%2f&amp;title=Traffic%20Sign%20Recognition%20%5bSelf%20Driving%5d"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2fxincoder.github.io%2fproject%2fselfdriving_signclassification%2f&amp;title=Traffic%20Sign%20Recognition%20%5bSelf%20Driving%5d"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Traffic%20Sign%20Recognition%20%5bSelf%20Driving%5d&amp;body=http%3a%2f%2fxincoder.github.io%2fproject%2fselfdriving_signclassification%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+</div>
+
+
+
+  <div class="article-container">
+    
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="traffic-sign-recognition"><strong>Traffic Sign Recognition</strong></h1>
+
+<p>Programming Language:</p>
+
+<ul>
+<li>Python</li>
+</ul>
+
+<p>The goals of this project are the following:</p>
+
+<ul>
+<li>Load the data set (see below for links to the project data set)</li>
+<li>Explore, summarize and visualize the data set</li>
+<li>Design, train and test a model architecture</li>
+<li>Use the model to make predictions on new images</li>
+<li>Analyze the softmax probabilities of the new images</li>
+<li>Summarize the results with a written report</li>
+</ul>
+
+<hr />
+
+<h2 id="step1-data-set-summary-exploration">Step1: Data Set Summary &amp; Exploration</h2>
+
+<h4 id="1-a-basic-summary-of-the-data-set">1. A basic summary of the data set.</h4>
+
+<p>I use Pickle data load function to read our dataset, and then use basic python function to analyze the dataset. In total, we have:</p>
+
+<ul>
+<li>Training samples: 34,799</li>
+<li>Validation samples: 4,410</li>
+<li>Testing samples: 12,630</li>
+<li>Each sample (image) has (32, 32, 3) shape.</li>
+<li>We have 43 unique classes/labels:
+<br /></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">ClassId</td>
+<td align="center">SignName</td>
+<td align="center">ClassId</td>
+<td align="center">SignName</td>
+<td align="center">ClassId</td>
+<td align="center">SignName</td>
+</tr>
+
+<tr>
+<td align="center">0</td>
+<td align="center">Speed limit (20km/h)</td>
+<td align="center">1</td>
+<td align="center">Speed limit (30km/h)</td>
+<td align="center">2</td>
+<td align="center">Speed limit (50km/h)</td>
+</tr>
+
+<tr>
+<td align="center">3</td>
+<td align="center">Speed limit (60km/h)</td>
+<td align="center">4</td>
+<td align="center">Speed limit (70km/h)</td>
+<td align="center">5</td>
+<td align="center">Speed limit (80km/h)</td>
+</tr>
+
+<tr>
+<td align="center">6</td>
+<td align="center">End of speed limit (80km/h)</td>
+<td align="center">7</td>
+<td align="center">Speed limit (100km/h)</td>
+<td align="center">8</td>
+<td align="center">Speed limit (120km/h)</td>
+</tr>
+
+<tr>
+<td align="center">9</td>
+<td align="center">No passing</td>
+<td align="center">10</td>
+<td align="center">No passing for vehicles over 3.5 metric tons</td>
+<td align="center">11</td>
+<td align="center">Right-of-way at the next intersection</td>
+</tr>
+
+<tr>
+<td align="center">12</td>
+<td align="center">Priority road</td>
+<td align="center">13</td>
+<td align="center">Yield</td>
+<td align="center">14</td>
+<td align="center">Stop</td>
+</tr>
+
+<tr>
+<td align="center">15</td>
+<td align="center">No vehicles</td>
+<td align="center">16</td>
+<td align="center">Vehicles over 3.5 metric tons prohibited</td>
+<td align="center">17</td>
+<td align="center">No entry</td>
+</tr>
+
+<tr>
+<td align="center">18</td>
+<td align="center">General caution</td>
+<td align="center">19</td>
+<td align="center">Dangerous curve to the left</td>
+<td align="center">20</td>
+<td align="center">Dangerous curve to the right</td>
+</tr>
+
+<tr>
+<td align="center">21</td>
+<td align="center">Double curve</td>
+<td align="center">22</td>
+<td align="center">Bumpy road</td>
+<td align="center">23</td>
+<td align="center">Slippery road</td>
+</tr>
+
+<tr>
+<td align="center">24</td>
+<td align="center">Road narrows on the right</td>
+<td align="center">25</td>
+<td align="center">Road work</td>
+<td align="center">26</td>
+<td align="center">Traffic signals</td>
+</tr>
+
+<tr>
+<td align="center">27</td>
+<td align="center">Pedestrians</td>
+<td align="center">28</td>
+<td align="center">Children crossing</td>
+<td align="center">29</td>
+<td align="center">Bicycles crossing</td>
+</tr>
+
+<tr>
+<td align="center">30</td>
+<td align="center">Beware of ice/snow</td>
+<td align="center">31</td>
+<td align="center">Wild animals crossing</td>
+<td align="center">32</td>
+<td align="center">End of all speed and passing limits</td>
+</tr>
+
+<tr>
+<td align="center">33</td>
+<td align="center">Turn right ahead</td>
+<td align="center">34</td>
+<td align="center">Turn left ahead</td>
+<td align="center">35</td>
+<td align="center">Ahead only</td>
+</tr>
+
+<tr>
+<td align="center">36</td>
+<td align="center">Go straight or right</td>
+<td align="center">37</td>
+<td align="center">Go straight or left</td>
+<td align="center">38</td>
+<td align="center">Keep right</td>
+</tr>
+
+<tr>
+<td align="center">39</td>
+<td align="center">Keep left</td>
+<td align="center">40</td>
+<td align="center">Roundabout mandatory</td>
+<td align="center">41</td>
+<td align="center">End of no passing</td>
+</tr>
+
+<tr>
+<td align="center">42</td>
+<td align="center">End of no passing by vehicles over 3.5 metric tons</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+<p><img src="class_samples.png" alt="class_samples.png" /></p>
+
+<h4 id="2-here-is-an-exploratory-visualization-of-the-data-set">2. Here is an exploratory visualization of the data set.</h4>
+
+<p><img src="data_bar.png" alt="data_bar.png" /></p>
+
+<hr />
+
+<h3 id="step2-design-and-test-a-model-architecture">Step2: Design and Test a Model Architecture</h3>
+
+<h4 id="1-image-data-preprocessing">1. Image data preprocessing</h4>
+
+<p>I use two methods to do data augmentation (preprocessing).</p>
+
+<ol>
+<li>Randomly rotation: all training images have 50% probability to be rotated within (-30, 30) angle. Rotation is needed considering that in daily life, the camera on a self-driving car may capture a traffice sign with a radom angle. Thus, by doing this help the model has the capability of handling such an application scenario.</li>
+<li>Randomly crop: all training images have 50% probability to be cropped from (0.8, 1) of width and height. After being cropped, the images will be resized back to 32x32. Cropping is necessary because the captured traffic signs have variant sizes. Thus, using cropping adds more training data. In addition, randomly cropping provides some smaples with width and height shifts.</li>
+</ol>
+
+<p>Here are some processed images:
+<img src="augmentation.png" alt="augmentation.png" /></p>
+
+<h4 id="2-model-architecture">2. Model architecture</h4>
+
+<p>My model consisted of the following layers:</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Layer</th>
+<th align="center">Input_Size</th>
+<th align="center">Output_size</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">Convolution(5x5)</td>
+<td align="center">32x32x3</td>
+<td align="center">28x28x64</td>
+<td align="center">(1x1) stride, VALID padding, Relu Activation</td>
+</tr>
+
+<tr>
+<td align="center">Convolution(3x3)</td>
+<td align="center">28x28x64</td>
+<td align="center">28x28x64</td>
+<td align="center">(1x1) stride, SAME padding, Relu Activation</td>
+</tr>
+
+<tr>
+<td align="center">Pooling</td>
+<td align="center">28x28x64</td>
+<td align="center">14x14x6</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">Convolution(5x5)</td>
+<td align="center">14x14x64</td>
+<td align="center">10x10x128</td>
+<td align="center">(1x1) stride, VALID padding, Relu Activation</td>
+</tr>
+
+<tr>
+<td align="center">Convolution(3x3)</td>
+<td align="center">10x10x128</td>
+<td align="center">10x10x128</td>
+<td align="center">(1x1) stride, SAME padding, Relu Activation</td>
+</tr>
+
+<tr>
+<td align="center">Pooling</td>
+<td align="center">10x10x128</td>
+<td align="center">5x5x12</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">Convolution(3x3)</td>
+<td align="center">5x5x128</td>
+<td align="center">3x3x256</td>
+<td align="center">(1x1) stride, VALID padding, Relu Activation</td>
+</tr>
+
+<tr>
+<td align="center">Pooling</td>
+<td align="center">3x3x256</td>
+<td align="center">1x1x25</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">Flatten</td>
+<td align="center">1x1x256</td>
+<td align="center">256</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">Fully Connected</td>
+<td align="center">256</td>
+<td align="center">128</td>
+<td align="center">Relu Activation</td>
+</tr>
+
+<tr>
+<td align="center">Dropout layer</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">Fully Connected</td>
+<td align="center">128</td>
+<td align="center">43</td>
+<td align="center">Softmax Activation</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="3-training-parameters">3. Training parameters</h4>
+
+<p>I use the following experimental settings to train my model:</p>
+
+<ul>
+<li>Optimizer: Adam</li>
+<li>Initialial Learning Rate: 0.001</li>
+<li>Batch Size: 128</li>
+<li>Training Epochs: 100</li>
+<li>Loss function: cross entropy.</li>
+</ul>
+
+<h4 id="4-accuracy">4. Accuracy</h4>
+
+<p>During training, I tracked the validation accuracy and only saved the weights achieved the highest validation accuracy. Within 100 training epochs, my architecture achieves the highest val_acc at 84 epoch. (All details about training process can be found in Cell [10])</p>
+
+<ul>
+<li><span style="color:orange">The accuracy on training set: <strong>99.9%</strong></span></li>
+<li><span style="color:orange">The accuracy on validation set: <strong>96.2%</strong></span></li>
+<li><span style="color:orange">The accuracy on testing set: <strong>93.4%</strong></span></li>
+</ul>
+
+<p>The followings are the reasons why I chose such a model for this task:</p>
+
+<ol>
+<li>In the first convolutional laeyrs, the model focuses on detecting fundamental features, e.g. lines, shapes, or textures. Thus, at the first two blocks (4 convolutional layers), I used two continuous convolutional layers to make sure that the model generates more useful basic features.</li>
+<li>Following that, a block with one convolutional layer is used to generate semantic information, e.g. arrows, circles, and etc.. Comparing to the basic features, we have more semantic features, thus, more filters were used in this layer.</li>
+<li>A fully connected layer is used to convert a feature map into a verctor for classification.</li>
+<li>One Dropout layer is used to avoid overfitting.</li>
+</ol>
+
+<h3 id="test-a-model-on-new-images">Test a Model on New Images</h3>
+
+<h4 id="1-unseen-data-during-traing">1. Unseen data during traing</h4>
+
+<p>Here are five German traffic signs that I found on the web:
+<img src="online.png" alt="online.png" /></p>
+
+<h4 id="2-prediction-results-on-these-new-traffic-signs">2. Prediction results on these new traffic signs.</h4>
+
+<p>Here are the results of the prediction:</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><strong>Image Ground Truth</strong></td>
+<td align="center"><strong>Prediction</strong></td>
+<td align="center"><strong>Predicted Correctly</strong></td>
+</tr>
+
+<tr>
+<td align="center">Go straight or right</td>
+<td align="center">Go straight or right</td>
+<td align="center">True</td>
+</tr>
+
+<tr>
+<td align="center">Speed limit (50km/h)</td>
+<td align="center">Speed limit (50km/h)</td>
+<td align="center">True</td>
+</tr>
+
+<tr>
+<td align="center">Stop</td>
+<td align="center">Yield</td>
+<td align="center">False</td>
+</tr>
+
+<tr>
+<td align="center">Road work</td>
+<td align="center">Road work</td>
+<td align="center">True</td>
+</tr>
+
+<tr>
+<td align="center">Turn right ahead</td>
+<td align="center">Turn right ahead</td>
+<td align="center">True</td>
+</tr>
+</tbody>
+</table>
+
+<p>The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. We can see it drops a lot comparing to the accuracy on our testing dataset. The reason is three-fold:</p>
+
+<ol>
+<li>The training dataset is not balance. For example, class 2 (Speed limit (50km/h)) has 2010 training samples, while class 14 (Stop) only consistes of 330 training samples.</li>
+<li>The downloaded images are much clearer than the images in our dataset, which may add more noise in the images.</li>
+<li>5 images are not enough to evaluate the performance of a trained model.</li>
+</ol>
+
+<h4 id="3-prediction-details">3. Prediction details</h4>
+
+<p>For the first image, the model is 100% sure that it is a &ldquo;Go straight or right&rdquo;. It is correctly predict this image.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><strong>Probability</strong></td>
+<td align="center"><strong>Prediction</strong></td>
+</tr>
+
+<tr>
+<td align="center">1.0000000</td>
+<td align="center">36 (Go straight or right)</td>
+</tr>
+
+<tr>
+<td align="center">2.8858561e-16</td>
+<td align="center">3 (Speed limit (60km/h))</td>
+</tr>
+
+<tr>
+<td align="center">2.1692284e-31</td>
+<td align="center">0 (Speed limit (20km/h))</td>
+</tr>
+
+<tr>
+<td align="center">7.6920753e-32</td>
+<td align="center">20 (Dangerous curve to the right)</td>
+</tr>
+
+<tr>
+<td align="center">2.2140123e-32</td>
+<td align="center">28 (Children crossing)</td>
+</tr>
+</tbody>
+</table>
+
+<p>For the second image, the model is 100% sure that it is a &ldquo;Speed limit (50km/h)&rdquo;. It is correctly predict this image.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><strong>Probability</strong></td>
+<td align="center"><strong>Prediction</strong></td>
+</tr>
+
+<tr>
+<td align="center">9.9999976e-01</td>
+<td align="center">2 (Speed limit (50km/h))</td>
+</tr>
+
+<tr>
+<td align="center">2.8747601e-07</td>
+<td align="center">5 (Speed limit (80km/h))</td>
+</tr>
+
+<tr>
+<td align="center">2.2901984e-10</td>
+<td align="center">1 (Speed limit (30km/h))</td>
+</tr>
+
+<tr>
+<td align="center">2.2646303e-18</td>
+<td align="center">3 (Speed limit (60km/h))</td>
+</tr>
+
+<tr>
+<td align="center">4.5397839e-35</td>
+<td align="center">6 (End of speed limit (80km/h))</td>
+</tr>
+</tbody>
+</table>
+
+<p>For the third image, the model is 100% sure that it is a &ldquo;Yield&rdquo;, while the ground truth is &ldquo;Stop&rdquo;. There are only 690 &ldquo;Stop&rdquo; training samples in our dataset, while &ldquo;Yield&rdquo; has 1290 training images. This is caused by our un-balance training data.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><strong>Probability</strong></td>
+<td align="center"><strong>Prediction</strong></td>
+</tr>
+
+<tr>
+<td align="center">1.0000000e+00</td>
+<td align="center">13 (Yield)</td>
+</tr>
+
+<tr>
+<td align="center">4.3748559e-12</td>
+<td align="center">28 (Children crossing)</td>
+</tr>
+
+<tr>
+<td align="center">1.5492816e-12</td>
+<td align="center">1 (Speed limit (30km/h))</td>
+</tr>
+
+<tr>
+<td align="center">1.0894177e-12</td>
+<td align="center">38 (Keep right)</td>
+</tr>
+
+<tr>
+<td align="center">6.2159755e-13</td>
+<td align="center">2 (Speed limit (50km/h))</td>
+</tr>
+</tbody>
+</table>
+
+<p>For the fourth image, the model is 100% sure that it is a &ldquo;Road work&rdquo;. It is correctly predict this image.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><strong>Probability</strong></td>
+<td align="center"><strong>Prediction</strong></td>
+</tr>
+
+<tr>
+<td align="center">1.0000000e+00</td>
+<td align="center">25</td>
+</tr>
+
+<tr>
+<td align="center">0.0000000e+00</td>
+<td align="center">0 (Speed limit (20km/h))</td>
+</tr>
+
+<tr>
+<td align="center">0.0000000e+00</td>
+<td align="center">1 (Speed limit (30km/h))</td>
+</tr>
+
+<tr>
+<td align="center">0.0000000e+00</td>
+<td align="center">2 (Speed limit (50km/h))</td>
+</tr>
+
+<tr>
+<td align="center">0.0000000e+00</td>
+<td align="center">3 (Speed limit (60km/h))</td>
+</tr>
+</tbody>
+</table>
+
+<p>For the fourth image, the model is 100% sure that it is a &ldquo;Turn right ahead&rdquo;. It is correctly predict this image.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center"><strong>Probability</strong></td>
+<td align="center"><strong>Prediction</strong></td>
+</tr>
+
+<tr>
+<td align="center">9.9085110e-01</td>
+<td align="center">33 (Turn right ahead)</td>
+</tr>
+
+<tr>
+<td align="center">8.0864038e-03</td>
+<td align="center">14 (Stop)</td>
+</tr>
+
+<tr>
+<td align="center">1.0624588e-03</td>
+<td align="center">4 (Speed limit (70km/h))</td>
+</tr>
+
+<tr>
+<td align="center">2.1159234e-11</td>
+<td align="center">13 (Yield)</td>
+</tr>
+
+<tr>
+<td align="center">7.8768702e-12</td>
+<td align="center">2 (Speed limit (50km/h))</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="visualizing-the-model">Visualizing the model</h3>
+
+<p>I visulized the output of the first block. The circle and arrows are very clear.
+<img src="vis.png" alt="vis.png" /></p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/self-driving/">Self Driving</a>
+  
+  <a class="badge badge-light" href="/tags/python/">Python</a>
+  
+</div>
+
+
+
+    
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  <img class="portrait mr-3" src="/img/portrait.jpg" itemprop="image" alt="Avatar">
+  
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/">Xin Li</a></h5>
+    <h6 class="card-subtitle">Ph.D. Student</h6>
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+      <li>
+        <a itemprop="sameAs" href="files/cv.pdf" target="_blank" rel="noopener">
+          <i class="ai ai-cv"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+  </div>
+</article>
+
+
+
+<div class="container">
+  <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "Search Results",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+  </body>
+</html>
+

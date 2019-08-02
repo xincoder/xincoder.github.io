@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Self Driving on Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/tags/self-driving/</link>
+    <description>Recent content in Self Driving on Welcome to Xin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 02 Sep 2018 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="http://xincoder.github.io/tags/self-driving/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vehicle Detection[Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_vehicle_detection/</link>
+      <pubDate>Sun, 02 Sep 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_vehicle_detection/</guid>
+      <description>Vehicle Detection Project Programming Language:
+ Python  The goals of this project are the following:
+ Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier Optionally, you can also apply a color transform and append binned color features, as well as histograms of color, to your HOG feature vector. Note: for those first two steps don&amp;rsquo;t forget to normalize your features and randomize a selection for training and testing.</description>
+    </item>
+    
+    <item>
+      <title>Detect Lane [Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_adv_findline/</link>
+      <pubDate>Mon, 20 Aug 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_adv_findline/</guid>
+      <description>Advanced Lane Finding Project Programming Language:
+ Python   The goals of this project are the following:
+ Compute the camera calibration matrix and distortion coefficients given a set of chessboard images. Apply a distortion correction to raw images. Use color transforms, gradients, etc., to create a thresholded binary image. Apply a perspective transform to rectify binary image (&amp;ldquo;birds-eye view&amp;rdquo;). Detect lane pixels and fit to find the lane boundary.</description>
+    </item>
+    
+    <item>
+      <title>Drive in An Emulator [Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_drive_emulator/</link>
+      <pubDate>Fri, 03 Aug 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_drive_emulator/</guid>
+      <description>Drive in a simulator Programming Language:
+ Python   The goals of this project are the following:
+ Use the simulator to collect data of good driving behavior Build, a convolution neural network in Keras that predicts steering angles from images Train and validate the model with a training and validation set Test that the model successfully drives around track one without leaving the road Summarize the results with a written report  Section 1: Model Architecture and Training Strategy 1.</description>
+    </item>
+    
+    <item>
+      <title>Traffic Sign Recognition [Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_signclassification/</link>
+      <pubDate>Mon, 16 Jul 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_signclassification/</guid>
+      <description>Traffic Sign Recognition Programming Language:
+ Python  The goals of this project are the following:
+ Load the data set (see below for links to the project data set) Explore, summarize and visualize the data set Design, train and test a model architecture Use the model to make predictions on new images Analyze the softmax probabilities of the new images Summarize the results with a written report  Step1: Data Set Summary &amp;amp; Exploration 1.</description>
+    </item>
+    
+    <item>
+      <title>Find Lane Lines [Self Driving]</title>
+      <link>http://xincoder.github.io/project/selfdriving_findline/</link>
+      <pubDate>Tue, 12 Jun 2018 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/selfdriving_findline/</guid>
+      <description>Finding Lane Lines on the Road
+Programming Language:
+ Python  The goal of this project is to design a pipeline that finds lane lines on the road. 
+A. Pipeline. My pipline consists of 7 steps as follows:
+ Color selection
+ RGB image to gray image Gaussian Blur Edge detection (Canny) Select ROI Line detection (Hough) Extend detected lines  This pipeline works on images and videos.</description>
+    </item>
+    
+  </channel>
+</rss>

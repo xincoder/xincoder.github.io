@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL on Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/tags/sql/</link>
+    <description>Recent content in SQL on Welcome to Xin&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 01 Jun 2015 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="http://xincoder.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vehicles and Pedestrians Detection [Research]</title>
+      <link>http://xincoder.github.io/project/research_vehicle_pedestrian/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/project/research_vehicle_pedestrian/</guid>
+      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
+ C++ SQL  In this project, we designed and implemented a system to detect and track vehicles and pedestrains from traffic surveillance videos. Once a vehicle/pedestrain is detected/tracked, some visual descriptions, e.g. color, moving direction, etc., are analyzed. All information are stored into a local SQL database for retrieval in the future.
+My responsibilities:
+ Proposed and implemented a detection system for vehicles.</description>
+    </item>
+    
+  </channel>
+</rss>
