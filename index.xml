@@ -11,6 +11,24 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>GRIP&#43;&#43;: Enhanced Graph-based Interaction-aware Trajectory Prediction for Autonomous Driving</title>
+      <link>http://xincoder.github.io/publication/2020arxiv_griplus/</link>
+      <pubDate>Tue, 19 May 2020 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/2020arxiv_griplus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Combining convolution and deconvolution for object detection</title>
+      <link>http://xincoder.github.io/publication/patent_2020combining_objectdetection/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/patent_2020combining_objectdetection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>GRIP: Graph-based Interaction-aware Trajectory Prediction</title>
       <link>http://xincoder.github.io/publication/2019itsc_grip/</link>
       <pubDate>Sun, 28 Jul 2019 00:00:00 -0700</pubDate>
@@ -2361,183 +2379,6 @@ python image_caption.py
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;span style=&#34;color:orange&#34;&gt;Please note it in your report, if you use this pre-trained model to generate the final results.&lt;/span&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://xincoder.github.io/blogs/train_classifier/</link>
-      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
-      
-      <guid>http://xincoder.github.io/blogs/train_classifier/</guid>
-      <description>
-
-&lt;h3 id=&#34;how-to-train-an-object-classifier-using-our-own-images&#34;&gt;How to train an object classifier using our own images&lt;/h3&gt;
-
-&lt;h3 id=&#34;1-info&#34;&gt;1. Info:&lt;/h3&gt;
-
-&lt;p&gt;I prepared two python scripts (&lt;a href=&#34;retrain.py&#34; target=&#34;_blank&#34;&gt;retrain.py&lt;/a&gt;, &lt;a href=&#34;predict.py&#34; target=&#34;_blank&#34;&gt;predict.py&lt;/a&gt;) for this task.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;retrain.py&#34; target=&#34;_blank&#34;&gt;retrain.py&lt;/a&gt;: used to train the classifier.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;predict.py&#34; target=&#34;_blank&#34;&gt;predict.py&lt;/a&gt;: used to load the trained model and test on new images.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;2-prepare-training-and-testing-data&#34;&gt;2. Prepare training and testing data:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Training Data:&lt;/strong&gt; Let&amp;rsquo;s assume that we have two classes, namely &amp;ldquo;cat&amp;rdquo; and &amp;ldquo;dog&amp;rdquo;. We just need to make sure that there are two sub-folders in &amp;ldquo;training_images&amp;rdquo; folder. Each sub-folder only consists of its own images.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-plaintext&#34;&gt;|- training_images
-    |- cat
-        |- image_0.jpg
-        |- image_1.jpg
-        ...
-    |- dog
-        |- image_2.jpg
-        |- image_3.jpg
-        ...
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Testing Data:&lt;/strong&gt; All testing images are put in one folder, e.g. &amp;ldquo;testing_images&amp;rdquo;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-plaintext&#34;&gt;|- testing_images
-    |- image_0.jpg
-    |- image_1.jpg
-    |- image_2.jpg
-    |- image_3.jpg
-    ...
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;3-train-a-classifier&#34;&gt;3. Train a classifier&lt;/h3&gt;
-
-&lt;p&gt;Assume that both &amp;ldquo;training_images&amp;rdquo; and &amp;ldquo;testing_images&amp;rdquo; are in this folder:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; ls
-models/ predict.py  retrain.py  testing_images/  training_images/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then, we can type the following command to starting training process:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; python retrain.py \
---bottleneck_dir=./bottlenecks \
---how_many_training_steps=50000 \ 
---model_dir=./inception \
---output_graph=./models/retrained_graph.pb \
---output_labels=./models/retrained_labels.txt \
---summaries_dir=./retrain_logs \
---validation_batch_size=5000 \
---image_dir=training_images # this is the folder of training data
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After this training process finished, it saves the trained model in &amp;ldquo;./models&amp;rdquo;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; ls models
-retrained_graph.pb    retrained_labels.txt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;4-predict-new-images-using-trained-model&#34;&gt;4. Predict new images using trained model&lt;/h3&gt;
-
-&lt;p&gt;Type the following command in a terminal to run the testing code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;&amp;gt; python predict.py \
---models_folder=&#39;./models&#39; \
---test_image_folder=&#39;./testing_images&#39; \
---display_image=False
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://xincoder.github.io/blogs/model_on_android/</link>
-      <pubDate>Fri, 18 May 2018 00:00:00 -0700</pubDate>
-      
-      <guid>http://xincoder.github.io/blogs/model_on_android/</guid>
-      <description>
-
-&lt;h3 id=&#34;how-to-use-a-pre-trained-mode-on-an-android-device&#34;&gt;How to use a pre-trained mode on an Android device&lt;/h3&gt;
-
-&lt;p&gt;In previous chapter, we discussed how to train an object classifier using our own images. At the end, we got trained model and labels file (retrained_graph.pb, retrained_labels.txt).&lt;/p&gt;
-
-&lt;p&gt;In this chapter, We are going to load pre-trained classifer in our Android app. Unfortunately, we can not use the trained model on Android directly. We need to optimize it using a tool, namely &amp;ldquo;optimize_for_inference&amp;rdquo;, provided by Tensorflow.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;1-build-tool-optimize-for-inference&#34;&gt;1. Build tool &amp;ldquo;optimize_for_inference&amp;rdquo;&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Download Tensorflow source code:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/tensorflow/tensorflow.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Install bazel so that we can use it to build &amp;ldquo;optimize_for_inference&amp;rdquo;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;echo &amp;quot;deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8&amp;quot; | sudo tee /etc/apt/sources.list.d/bazel.list
-curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
-sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install bazel
-sudo apt-get upgrade bazel
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Build &amp;ldquo;optimize_for_inference&amp;rdquo;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd tensorflow
-./configure # We can choose all default settings
-bazel build tensorflow/python/tools:optimize_for_inference # this process takes a while, be patient
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;2-optimize-trained-model&#34;&gt;2. Optimize trained model&lt;/h3&gt;
-
-&lt;p&gt;Let&amp;rsquo;s assume that our pre-trained model is &lt;strong&gt;&amp;lt;folder_path&amp;gt;/retrained_graph.pb&lt;/strong&gt;. Then, we can use the following command to optimize the model and save it as &lt;strong&gt;&amp;lt;folder_path&amp;gt;/retrained_graph_android.pb&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bazel-bin/tensorflow/python/tools/optimize_for_inference \
---input=&amp;lt;folder_path&amp;gt;/retrained_graph.pb \
---output=&amp;lt;folder_path&amp;gt;/retrained_graph_android.pb \
---input_names=Mul \
---output_names=final_result
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;3-modify-tensorflow-android-demo&#34;&gt;3. Modify Tensorflow Android Demo&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Download Android Demo:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/Nilhcem/tensorflow-classifier-android.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If we import this project into Android Studio, compile and run, the demo will load a pre-trained classifier which can recognize 1000 classes.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Load our own model:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Delete the previous ImageNet model from &lt;strong&gt;assets/&lt;/strong&gt; folder.&lt;/li&gt;
-&lt;li&gt;Copy our optimized trained model &lt;strong&gt;retrained_graph_android.pb&lt;/strong&gt; and label file &lt;strong&gt;retrained_labels.txt&lt;/strong&gt; into &lt;strong&gt;assets/&lt;/strong&gt; folder.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Open &lt;strong&gt;ClassifierActivity.java&lt;/strong&gt; and set the following variables:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;private static final int INPUT_SIZE = 299; 
-private static final int IMAGE_MEAN = 128; 
-private static final float IMAGE_STD = 128; 
-private static final String INPUT_NAME = &amp;quot;Mul&amp;quot;;
-private static final String OUTPUT_NAME = &amp;quot;final_result&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Compile and run. The demo will open the camera and show the confidence score of each corresponding class.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

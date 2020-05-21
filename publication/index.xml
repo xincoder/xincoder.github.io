@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 28 Jul 2019 00:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2020 00:00:00 -0700</lastBuildDate>
     
 	<atom:link href="http://xincoder.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GRIP&#43;&#43;: Enhanced Graph-based Interaction-aware Trajectory Prediction for Autonomous Driving</title>
+      <link>http://xincoder.github.io/publication/2020arxiv_griplus/</link>
+      <pubDate>Tue, 19 May 2020 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/2020arxiv_griplus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Combining convolution and deconvolution for object detection</title>
+      <link>http://xincoder.github.io/publication/patent_2020combining_objectdetection/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication/patent_2020combining_objectdetection/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>GRIP: Graph-based Interaction-aware Trajectory Prediction</title>

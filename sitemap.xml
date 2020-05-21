@@ -4,6 +4,22 @@
     
     <url>
     
+      <loc>http://xincoder.github.io/publication/2020arxiv_griplus/</loc>
+      <lastmod>2020-05-19T00:00:00-07:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://xincoder.github.io/publication/patent_2020combining_objectdetection/</loc>
+      <lastmod>2020-04-20T00:00:00-07:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>http://xincoder.github.io/publication/2019itsc_grip/</loc>
       <lastmod>2019-07-28T00:00:00-07:00</lastmod>
     </url>
@@ -229,7 +245,16 @@
     <url>
     
       <loc>http://xincoder.github.io/publication_types/1/</loc>
-      <lastmod>2019-07-28T00:00:00-07:00</lastmod>
+      <lastmod>2020-05-19T00:00:00-07:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://xincoder.github.io/publication_types/8/</loc>
+      <lastmod>2020-04-20T00:00:00-07:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -291,7 +316,7 @@
     <url>
     
       <loc>http://xincoder.github.io/publication_types/</loc>
-      <lastmod>2019-07-28T00:00:00-07:00</lastmod>
+      <lastmod>2020-05-19T00:00:00-07:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -300,7 +325,7 @@
     <url>
     
       <loc>http://xincoder.github.io/publication/</loc>
-      <lastmod>2019-07-28T00:00:00-07:00</lastmod>
+      <lastmod>2020-05-19T00:00:00-07:00</lastmod>
       <priority>0</priority>
     </url>
     

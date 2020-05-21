@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 28 Jul 2019 00:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2020 00:00:00 -0700</lastBuildDate>
     
 	<atom:link href="http://xincoder.github.io/publication_types/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,18 @@
     <item>
       <title>1</title>
       <link>http://xincoder.github.io/publication_types/1/</link>
-      <pubDate>Sun, 28 Jul 2019 00:00:00 -0700</pubDate>
+      <pubDate>Tue, 19 May 2020 00:00:00 -0700</pubDate>
       
       <guid>http://xincoder.github.io/publication_types/1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>8</title>
+      <link>http://xincoder.github.io/publication_types/8/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 -0700</pubDate>
+      
+      <guid>http://xincoder.github.io/publication_types/8/</guid>
       <description></description>
     </item>
     
