@@ -109,7 +109,7 @@ A. Pipeline. My pipline consists of 7 steps as follows:
       <pubDate>Mon, 01 Jun 2015 00:00:00 -0700</pubDate>
       
       <guid>http://xincoder.github.io/project/research_vehicle_pedestrian/</guid>
-      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
+      <description>Detection and Description of Visual Attributes for Vehicles and Pedestrian Programming Language:
  C++ SQL  In this project, we designed and implemented a system to detect and track vehicles and pedestrains from traffic surveillance videos. Once a vehicle/pedestrain is detected/tracked, some visual descriptions, e.g. color, moving direction, etc., are analyzed. All information are stored into a local SQL database for retrieval in the future.
 My responsibilities:
  Proposed and implemented a detection system for vehicles.</description>
@@ -132,8 +132,10 @@ The PC server can acquire, compress, and process camera frames. Once the PC serv
       <pubDate>Thu, 01 Aug 2013 00:00:00 -0700</pubDate>
       
       <guid>http://xincoder.github.io/project/others_ar/</guid>
-      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
- C# (Unity) Unity Script (Unity)  In this project, we designed and implemented an augmented reality system based on tablet for Autodesk Maya. The app runs on an Android tablet records the trajectory of the virtual camera. In this way, movie directors do not need to manually set the trajectory of the virtual camera in Maya.</description>
+      <description>Augmented Reality Cinema Programming Language:
+ C# (Unity) Unity Script (Unity)  In this project, we designed and implemented an augmented reality system based on tablet for Autodesk Maya. The app runs on an Android tablet records the trajectory of the virtual camera. In this way, movie directors do not need to manually set the trajectory of the virtual camera in Maya.
+My responsibilities:
+ Developed an Android app to interactively record the trajectory of the virtual camera based on the device sensors&amp;rsquo; data.</description>
     </item>
     
   </channel>

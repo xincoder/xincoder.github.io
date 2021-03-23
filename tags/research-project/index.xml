@@ -41,7 +41,7 @@ The following video shows a demo of our scheme.
       <pubDate>Mon, 01 Jun 2015 00:00:00 -0700</pubDate>
       
       <guid>http://xincoder.github.io/project/research_vehicle_pedestrian/</guid>
-      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
+      <description>Detection and Description of Visual Attributes for Vehicles and Pedestrian Programming Language:
  C++ SQL  In this project, we designed and implemented a system to detect and track vehicles and pedestrains from traffic surveillance videos. Once a vehicle/pedestrain is detected/tracked, some visual descriptions, e.g. color, moving direction, etc., are analyzed. All information are stored into a local SQL database for retrieval in the future.
 My responsibilities:
  Proposed and implemented a detection system for vehicles.</description>
