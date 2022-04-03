@@ -1,141 +1,2930 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on Welcome to Xin&#39;s Homepage</title>
+    <title>Projects | Welcome to Xin&#39;s Homepage</title>
     <link>http://xincoder.github.io/project/</link>
-    <description>Recent content in Projects on Welcome to Xin&#39;s Homepage</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 05 Nov 2018 00:00:00 -0800</lastBuildDate>
-    
-	<atom:link href="http://xincoder.github.io/project/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="http://xincoder.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 05 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://xincoder.github.io/media/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_3.png</url>
+      <title>Projects</title>
+      <link>http://xincoder.github.io/project/</link>
+    </image>
     
     <item>
       <title>Data-free CNN acceleration [Research]</title>
       <link>http://xincoder.github.io/project/research_dac/</link>
-      <pubDate>Mon, 05 Nov 2018 00:00:00 -0800</pubDate>
-      
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
       <guid>http://xincoder.github.io/project/research_dac/</guid>
-      <description>Programming Language:
- Python  This is a prototype of our &amp;ldquo;Data-free convolutional network acceleration&amp;rdquo; scheme. In this demo, we demonstrate the performance of our scheme in the task of multi-person pose estimation model and object detection. Please refer to our paper for more results and details.
-The following video shows a demo of our scheme.
- Published paper:
- Xin Li, Shuai Zhang, Bolan Jiang, Yingyong Qi, Mooi Choo Chuah, Ning Bi (2019).</description>
+      <description>&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is a prototype of our &amp;ldquo;Data-free convolutional network acceleration&amp;rdquo; scheme. In this demo, we demonstrate the performance of our scheme in the task of multi-person pose estimation model and object detection. Please refer to our paper for more results and details.&lt;/p&gt;
+&lt;p&gt;The following video shows a demo of our scheme.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/research_dac/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+&lt;hr&gt;
+&lt;p&gt;Published paper:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Xin Li, Shuai Zhang, Bolan Jiang, Yingyong Qi, Mooi Choo Chuah, Ning Bi (2019). &lt;a href=&#34;../../publication/2019wacv_dac/&#34;&gt;DAC: Data-free Automatic Acceleration of Convolutional Networks&lt;/a&gt;. IEEE Winter Conference on Applications of Computer Vision (WACV). 2019.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>Vehicle Detection[Self Driving]</title>
       <link>http://xincoder.github.io/project/selfdriving_vehicle_detection/</link>
-      <pubDate>Sun, 02 Sep 2018 00:00:00 -0700</pubDate>
-      
+      <pubDate>Sun, 02 Sep 2018 00:00:00 +0000</pubDate>
       <guid>http://xincoder.github.io/project/selfdriving_vehicle_detection/</guid>
-      <description>Vehicle Detection Project Programming Language:
- Python  The goals of this project are the following:
- Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier Optionally, you can also apply a color transform and append binned color features, as well as histograms of color, to your HOG feature vector. Note: for those first two steps don&amp;rsquo;t forget to normalize your features and randomize a selection for training and testing.</description>
+      <description>&lt;h1 id=&#34;vehicle-detection-project&#34;&gt;&lt;strong&gt;Vehicle Detection Project&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The goals of this project are the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier&lt;/li&gt;
+&lt;li&gt;Optionally, you can also apply a color transform and append binned color features, as well as histograms of color, to your HOG feature vector.&lt;/li&gt;
+&lt;li&gt;Note: for those first two steps don&amp;rsquo;t forget to normalize your features and randomize a selection for training and testing.&lt;/li&gt;
+&lt;li&gt;Implement a sliding-window technique and use your trained classifier to search for vehicles in images.&lt;/li&gt;
+&lt;li&gt;Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.&lt;/li&gt;
+&lt;li&gt;Estimate a bounding box for vehicles detected.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-feature-extraction&#34;&gt;1. Feature Extraction&lt;/h3&gt;
+&lt;p&gt;I extract the binned color, histogram of color and HOG as my feature and trained a SVC classifier using the concatenated feature.
+The following shows the parameters that I used:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Feature&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Setting&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Color Space&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;YUV&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;orient&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;pix_per_cell&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;cell_per_block&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;hog_channel&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lsquo;ALL&amp;rsquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;spatial_size&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;(16,16)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;hist_bins&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The SVC classifier is used to predict a give image is a are or not. The following image shows a positive and a negative sample.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;sample.png&#34; srcset=&#34;
+               /project/selfdriving_vehicle_detection/sample_hu4975a1962bb17d2ff5bd5f1c08ca7a1c_59581_1a9bb69455e94e85d2f0899a757c9d6b.webp 400w,
+               /project/selfdriving_vehicle_detection/sample_hu4975a1962bb17d2ff5bd5f1c08ca7a1c_59581_ae46e48a3332b59af1612a354f23d074.webp 760w,
+               /project/selfdriving_vehicle_detection/sample_hu4975a1962bb17d2ff5bd5f1c08ca7a1c_59581_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_vehicle_detection/sample_hu4975a1962bb17d2ff5bd5f1c08ca7a1c_59581_1a9bb69455e94e85d2f0899a757c9d6b.webp&#34;
+               width=&#34;512&#34;
+               height=&#34;288&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;The computed histogram of color is shown as follow:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;color_hist.png&#34; srcset=&#34;
+               /project/selfdriving_vehicle_detection/color_hist_hubb13abf26d88b75b75a81753379fbc2e_12171_c3239e6aa0b025a9a8f3ac070e5eeceb.webp 400w,
+               /project/selfdriving_vehicle_detection/color_hist_hubb13abf26d88b75b75a81753379fbc2e_12171_16d9f07515e42c86163acc6374490860.webp 760w,
+               /project/selfdriving_vehicle_detection/color_hist_hubb13abf26d88b75b75a81753379fbc2e_12171_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_vehicle_detection/color_hist_hubb13abf26d88b75b75a81753379fbc2e_12171_c3239e6aa0b025a9a8f3ac070e5eeceb.webp&#34;
+               width=&#34;512&#34;
+               height=&#34;128&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;The below figure shows the visualized HOG featgure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;hog.png&#34; srcset=&#34;
+               /project/selfdriving_vehicle_detection/hog_hu239401ce6ddad2cae211aeab52917c98_71997_4838bc0665627f5176a6f0023d276cb6.webp 400w,
+               /project/selfdriving_vehicle_detection/hog_hu239401ce6ddad2cae211aeab52917c98_71997_df3f6c013aa4e74de58b6d6d9f7f35ae.webp 760w,
+               /project/selfdriving_vehicle_detection/hog_hu239401ce6ddad2cae211aeab52917c98_71997_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_vehicle_detection/hog_hu239401ce6ddad2cae211aeab52917c98_71997_4838bc0665627f5176a6f0023d276cb6.webp&#34;
+               width=&#34;512&#34;
+               height=&#34;288&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I applied sliding window on the bottom half part of the image.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;window.png&#34; srcset=&#34;
+               /project/selfdriving_vehicle_detection/window_huc28e8406471c1c681b813622def959e9_119313_563497326ca28d17cab3f09a7e364683.webp 400w,
+               /project/selfdriving_vehicle_detection/window_huc28e8406471c1c681b813622def959e9_119313_16ec6135f324690d89413392475be628.webp 760w,
+               /project/selfdriving_vehicle_detection/window_huc28e8406471c1c681b813622def959e9_119313_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_vehicle_detection/window_huc28e8406471c1c681b813622def959e9_119313_563497326ca28d17cab3f09a7e364683.webp&#34;
+               width=&#34;460&#34;
+               height=&#34;259&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;For each window, the chosen features are extracted and passed to the pre-trained SVC classifier to predict if the current location is a car or not. Then, we generate a heat map based on the detected results and filter low value out.
+The following shows the visualized detected results.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Detected BBoxes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Heat Map&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Final Detection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;detect_1.jpg&#39;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;1.png&#39;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;img width=&amp;lsquo;640&amp;rsquo;, src=&amp;lsquo;img_1.jpg&amp;rsquo;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;detect_2.jpg&#39;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;2.png&#39;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;img width=&amp;lsquo;640&amp;rsquo;, src=&amp;lsquo;img_2.jpg&amp;rsquo;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;detect_3.jpg&#39;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;3.png&#39;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;img width=&amp;lsquo;640&amp;rsquo;, src=&amp;lsquo;img_3.jpg&amp;rsquo;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;detect_4.jpg&#39;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;4.png&#39;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;img width=&amp;lsquo;640&amp;rsquo;, src=&amp;lsquo;img_4.jpg&amp;rsquo;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;detect_5.jpg&#39;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;5.png&#39;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;img width=&amp;lsquo;640&amp;rsquo;, src=&amp;lsquo;img_5.jpg&amp;rsquo;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;detect_6.jpg&#39;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img width=&#39;640&#39; src=&#39;6.png&#39;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;img width=&amp;lsquo;640&amp;rsquo;, src=&amp;lsquo;img_6.jpg&amp;rsquo;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;2-make-it-smooth&#34;&gt;2. Make it smooth.&lt;/h3&gt;
+&lt;p&gt;Till now, the pipline works on single frame. However, there is no relationship between two continuous frames and the detected results are independent.
+Thus, I came up with an idea that sonsidering several continuous frames to make the detected results more smoothly.
+I record 3 latest heatmap and then sum them together before doing threshold. Using this way, the detected results become much more stable. Please refer the demo video.&lt;/p&gt;
+&lt;h3 id=&#34;3-potential-issue&#34;&gt;3. Potential Issue.&lt;/h3&gt;
+&lt;p&gt;The parameters of the current pipline are manually chosen, the trained model and chosen parameters may not work for all videos.&lt;/p&gt;
+&lt;p&gt;Potential solution: using deep learning object detection models, e.g. SSD.&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Detect Lane [Self Driving]</title>
       <link>http://xincoder.github.io/project/selfdriving_adv_findline/</link>
-      <pubDate>Mon, 20 Aug 2018 00:00:00 -0700</pubDate>
-      
+      <pubDate>Mon, 20 Aug 2018 00:00:00 +0000</pubDate>
       <guid>http://xincoder.github.io/project/selfdriving_adv_findline/</guid>
-      <description>Advanced Lane Finding Project Programming Language:
- Python   The goals of this project are the following:
- Compute the camera calibration matrix and distortion coefficients given a set of chessboard images. Apply a distortion correction to raw images. Use color transforms, gradients, etc., to create a thresholded binary image. Apply a perspective transform to rectify binary image (&amp;ldquo;birds-eye view&amp;rdquo;). Detect lane pixels and fit to find the lane boundary.</description>
+      <description>&lt;h1 id=&#34;advanced-lane-finding-project&#34;&gt;&lt;strong&gt;Advanced Lane Finding Project&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+&lt;p&gt;The goals of this project are the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.&lt;/li&gt;
+&lt;li&gt;Apply a distortion correction to raw images.&lt;/li&gt;
+&lt;li&gt;Use color transforms, gradients, etc., to create a thresholded binary image.&lt;/li&gt;
+&lt;li&gt;Apply a perspective transform to rectify binary image (&amp;ldquo;birds-eye view&amp;rdquo;).&lt;/li&gt;
+&lt;li&gt;Detect lane pixels and fit to find the lane boundary.&lt;/li&gt;
+&lt;li&gt;Determine the curvature of the lane and vehicle position with respect to center.&lt;/li&gt;
+&lt;li&gt;Warp the detected lane boundaries back onto the original image.&lt;/li&gt;
+&lt;li&gt;Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;a-pipeline&#34;&gt;A. Pipeline.&lt;/h3&gt;
+&lt;p&gt;My pipline consists of 7 steps as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 1: Camera Calibration&lt;/li&gt;
+&lt;li&gt;Step 2: Distortion correction&lt;/li&gt;
+&lt;li&gt;Step 3: Detect lines based on color and gradient&lt;/li&gt;
+&lt;li&gt;Step 4: Perspective transform&lt;/li&gt;
+&lt;li&gt;Step 5: Detect lane lines&lt;/li&gt;
+&lt;li&gt;Step 6: Determine the lane curvature&lt;/li&gt;
+&lt;li&gt;Step 7: Determine vehicle offset from center&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;b-visualized-results&#34;&gt;B. Visualized Results&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;1. Camera calibration and Distortion correction:&lt;/strong&gt;
+Image distortion occurs when a camera looks at 3D objects in the real world and transforms them into a 2D image; this transformation isn’t perfect. Distortion changes what the shape and size of these 3D objects appear to be.
+The following is a sample of the processed results:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Input image&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;After Calibration&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;0.Before_Calibration.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/Before_Calibration_hu5909208fb16d2109d0cdca2186f9358e_62300_9b41b4523f114eb4b92b93a4ac2581e2.webp 400w,
+               /project/selfdriving_adv_findline/Before_Calibration_hu5909208fb16d2109d0cdca2186f9358e_62300_5715871c6ed2e5a7b05d2cdcbce79b4b.webp 760w,
+               /project/selfdriving_adv_findline/Before_Calibration_hu5909208fb16d2109d0cdca2186f9358e_62300_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/Before_Calibration_hu5909208fb16d2109d0cdca2186f9358e_62300_9b41b4523f114eb4b92b93a4ac2581e2.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;1.After_Calibration.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/After_Calibration_hu4a7d233c13a18409b0b78ae5fc313105_130803_0329c9bae4400fb31543ab86510bdd9e.webp 400w,
+               /project/selfdriving_adv_findline/After_Calibration_hu4a7d233c13a18409b0b78ae5fc313105_130803_8b48f2b94210a4ccf41eacc0ddda65cb.webp 760w,
+               /project/selfdriving_adv_findline/After_Calibration_hu4a7d233c13a18409b0b78ae5fc313105_130803_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/After_Calibration_hu4a7d233c13a18409b0b78ae5fc313105_130803_0329c9bae4400fb31543ab86510bdd9e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;One can see that the lines on the left side of the image become straight after distortion.&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;2: Detect lines based on color and gradient:&lt;/strong&gt; Detect lines of the current lane based on color and gradient.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I first convert the image from RGB color space to HLS color space. The following shows the HLS color space.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;H channel&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;L channel&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;S channel&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;2.HLS_h.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/HLS_h_hu58d88cff1baa750dd7a4e938ffd91c52_105428_6cb10ddb2ea20176adbc8c6b1c7b732e.webp 400w,
+               /project/selfdriving_adv_findline/HLS_h_hu58d88cff1baa750dd7a4e938ffd91c52_105428_393f71e25f88ff187cb62d6bd5f386f8.webp 760w,
+               /project/selfdriving_adv_findline/HLS_h_hu58d88cff1baa750dd7a4e938ffd91c52_105428_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/HLS_h_hu58d88cff1baa750dd7a4e938ffd91c52_105428_6cb10ddb2ea20176adbc8c6b1c7b732e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;2.HLS_l.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/HLS_l_hu829c6fa94ec01f0d65bcece61c769ffb_170290_b20a252f599e75c129f4953e26978566.webp 400w,
+               /project/selfdriving_adv_findline/HLS_l_hu829c6fa94ec01f0d65bcece61c769ffb_170290_ef68c1c6c449aa4a74d4a692330eaa6c.webp 760w,
+               /project/selfdriving_adv_findline/HLS_l_hu829c6fa94ec01f0d65bcece61c769ffb_170290_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/HLS_l_hu829c6fa94ec01f0d65bcece61c769ffb_170290_b20a252f599e75c129f4953e26978566.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;2.HLS_s.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/HLS_s_hua1e8bc3b10460f621c6185659a6d1f70_160952_7247abdda4eab5ef70e07fb4da3a19ad.webp 400w,
+               /project/selfdriving_adv_findline/HLS_s_hua1e8bc3b10460f621c6185659a6d1f70_160952_48b41de8ca57d5188af7ebfe7c2ac426.webp 760w,
+               /project/selfdriving_adv_findline/HLS_s_hua1e8bc3b10460f621c6185659a6d1f70_160952_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/HLS_s_hua1e8bc3b10460f621c6185659a6d1f70_160952_7247abdda4eab5ef70e07fb4da3a19ad.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Then, I do color selection on S channel and x gradient on L channel. The following shows the combined result:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Input Imgae&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Color_Gradient Result&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;0straight_lines1.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/straight_lines1_hu9475e40123017607cf3e014e405fbc8c_155253_360217771e6d6044345bb328d7a64d9b.webp 400w,
+               /project/selfdriving_adv_findline/straight_lines1_hu9475e40123017607cf3e014e405fbc8c_155253_176bf5ade271534d4f08d9c27c1243ea.webp 760w,
+               /project/selfdriving_adv_findline/straight_lines1_hu9475e40123017607cf3e014e405fbc8c_155253_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/straight_lines1_hu9475e40123017607cf3e014e405fbc8c_155253_360217771e6d6044345bb328d7a64d9b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;3.color_gradient_combine.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/color_gradient_hue1747a3e0f6e2f88771a88afb007e724_207073_489c6cec23df5a0729b8c165d0f4b0ad.webp 400w,
+               /project/selfdriving_adv_findline/color_gradient_hue1747a3e0f6e2f88771a88afb007e724_207073_e5e4e1c4f4883b077f58474e84964989.webp 760w,
+               /project/selfdriving_adv_findline/color_gradient_hue1747a3e0f6e2f88771a88afb007e724_207073_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/color_gradient_hue1747a3e0f6e2f88771a88afb007e724_207073_489c6cec23df5a0729b8c165d0f4b0ad.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;After that, I do &lt;a href=&#34;https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;open operation&lt;/a&gt; on the previous result to remove noise. One can see that the tiny noise is remove.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Input Imgae&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Open Operation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;3.color_gradient_combine.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/color_gradient_hue1747a3e0f6e2f88771a88afb007e724_207073_489c6cec23df5a0729b8c165d0f4b0ad.webp 400w,
+               /project/selfdriving_adv_findline/color_gradient_hue1747a3e0f6e2f88771a88afb007e724_207073_e5e4e1c4f4883b077f58474e84964989.webp 760w,
+               /project/selfdriving_adv_findline/color_gradient_hue1747a3e0f6e2f88771a88afb007e724_207073_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/color_gradient_hue1747a3e0f6e2f88771a88afb007e724_207073_489c6cec23df5a0729b8c165d0f4b0ad.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;3.open_operation.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/open_operation_hu08a859bdec93387bee731a63eaf2b693_166321_5f6495b0d6f611f33ad4b0ba74174b01.webp 400w,
+               /project/selfdriving_adv_findline/open_operation_hu08a859bdec93387bee731a63eaf2b693_166321_4f1d2c6ced323e24e6c5e979fb2908f1.webp 760w,
+               /project/selfdriving_adv_findline/open_operation_hu08a859bdec93387bee731a63eaf2b693_166321_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/open_operation_hu08a859bdec93387bee731a63eaf2b693_166321_5f6495b0d6f611f33ad4b0ba74174b01.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;4. Perspective transform:&lt;/strong&gt; To detect lines, I convert the image to birdeye view. I chose the following source and destination points:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Source Points&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Destination Points&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;200, 200&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;566, 470&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;980, 200&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;714, 470&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;980, 700&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1055, 680&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;200, 700&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;253, 680&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The following shows a sample. It is clear that two lines are parallel.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Input Imgae&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Open Operation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;3.open_operation.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/open_operation_hu08a859bdec93387bee731a63eaf2b693_166321_5f6495b0d6f611f33ad4b0ba74174b01.webp 400w,
+               /project/selfdriving_adv_findline/open_operation_hu08a859bdec93387bee731a63eaf2b693_166321_4f1d2c6ced323e24e6c5e979fb2908f1.webp 760w,
+               /project/selfdriving_adv_findline/open_operation_hu08a859bdec93387bee731a63eaf2b693_166321_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/open_operation_hu08a859bdec93387bee731a63eaf2b693_166321_5f6495b0d6f611f33ad4b0ba74174b01.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;4.birds_eye_line.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/birds_eye_hu6033c61c9ea10d059a4e5392096d2869_75487_0fd17af6eb8f5d70b276e9d902b97d3b.webp 400w,
+               /project/selfdriving_adv_findline/birds_eye_hu6033c61c9ea10d059a4e5392096d2869_75487_b452b5fcf0cfa64b2e0e37919309c096.webp 760w,
+               /project/selfdriving_adv_findline/birds_eye_hu6033c61c9ea10d059a4e5392096d2869_75487_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/birds_eye_hu6033c61c9ea10d059a4e5392096d2869_75487_0fd17af6eb8f5d70b276e9d902b97d3b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;5. Detect lane lines:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First, I calculate histogram on vertical direction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Input Imgae&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Histogram&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;4.birds_eye_line.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/birds_eye_hu6033c61c9ea10d059a4e5392096d2869_75487_0fd17af6eb8f5d70b276e9d902b97d3b.webp 400w,
+               /project/selfdriving_adv_findline/birds_eye_hu6033c61c9ea10d059a4e5392096d2869_75487_b452b5fcf0cfa64b2e0e37919309c096.webp 760w,
+               /project/selfdriving_adv_findline/birds_eye_hu6033c61c9ea10d059a4e5392096d2869_75487_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/birds_eye_hu6033c61c9ea10d059a4e5392096d2869_75487_0fd17af6eb8f5d70b276e9d902b97d3b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;5.histogram.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/hist_hu520cb2412bad4e2ee7178972c29a4720_27226_ca14a79ba1922fc663939744cba6a44d.webp 400w,
+               /project/selfdriving_adv_findline/hist_hu520cb2412bad4e2ee7178972c29a4720_27226_c59e52eafa406fb0c804f2505b879730.webp 760w,
+               /project/selfdriving_adv_findline/hist_hu520cb2412bad4e2ee7178972c29a4720_27226_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/hist_hu520cb2412bad4e2ee7178972c29a4720_27226_ca14a79ba1922fc663939744cba6a44d.webp&#34;
+               width=&#34;640&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;Then, I detect lines and compute their polynomial functions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Input Imgae&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Detect Lines&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;4.birds_eye_line.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/birds_eye_hu6033c61c9ea10d059a4e5392096d2869_75487_0fd17af6eb8f5d70b276e9d902b97d3b.webp 400w,
+               /project/selfdriving_adv_findline/birds_eye_hu6033c61c9ea10d059a4e5392096d2869_75487_b452b5fcf0cfa64b2e0e37919309c096.webp 760w,
+               /project/selfdriving_adv_findline/birds_eye_hu6033c61c9ea10d059a4e5392096d2869_75487_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/birds_eye_hu6033c61c9ea10d059a4e5392096d2869_75487_0fd17af6eb8f5d70b276e9d902b97d3b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;6.edge.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/edge_hued7d517ea887094a0252907e1378fa8b_155856_58bc2b3f6aa73a3333ec5cbe033cc4a8.webp 400w,
+               /project/selfdriving_adv_findline/edge_hued7d517ea887094a0252907e1378fa8b_155856_804278ea02b0c5a84614aef90b3a39b6.webp 760w,
+               /project/selfdriving_adv_findline/edge_hued7d517ea887094a0252907e1378fa8b_155856_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/edge_hued7d517ea887094a0252907e1378fa8b_155856_58bc2b3f6aa73a3333ec5cbe033cc4a8.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;6. Visualize final result:&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Input Imgae&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Detect Lines&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;0straight_lines1.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/straight_lines1_hu9475e40123017607cf3e014e405fbc8c_155253_360217771e6d6044345bb328d7a64d9b.webp 400w,
+               /project/selfdriving_adv_findline/straight_lines1_hu9475e40123017607cf3e014e405fbc8c_155253_176bf5ade271534d4f08d9c27c1243ea.webp 760w,
+               /project/selfdriving_adv_findline/straight_lines1_hu9475e40123017607cf3e014e405fbc8c_155253_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/straight_lines1_hu9475e40123017607cf3e014e405fbc8c_155253_360217771e6d6044345bb328d7a64d9b.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;result.jpg&#34; srcset=&#34;
+               /project/selfdriving_adv_findline/result_huba0a951122241e474b34a3fc57363f12_216296_d585c68c0149697fbb4e12e67e92f475.webp 400w,
+               /project/selfdriving_adv_findline/result_huba0a951122241e474b34a3fc57363f12_216296_767f647a0bb8dcffb046dbd1ad3271c1.webp 760w,
+               /project/selfdriving_adv_findline/result_huba0a951122241e474b34a3fc57363f12_216296_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_adv_findline/result_huba0a951122241e474b34a3fc57363f12_216296_d585c68c0149697fbb4e12e67e92f475.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;potential-improvements&#34;&gt;Potential improvements&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;This pipeline may be not work perfectly if the line is not very clear. Thus, merging the results generated using different color space will improve the performance.&lt;/li&gt;
+&lt;li&gt;The perspective transform matrix may be not exactly same for different camera. Thus, we need a smarter way to calculate it automatically.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
       <title>Drive in An Emulator [Self Driving]</title>
       <link>http://xincoder.github.io/project/selfdriving_drive_emulator/</link>
-      <pubDate>Fri, 03 Aug 2018 00:00:00 -0700</pubDate>
-      
+      <pubDate>Fri, 03 Aug 2018 00:00:00 +0000</pubDate>
       <guid>http://xincoder.github.io/project/selfdriving_drive_emulator/</guid>
-      <description>Drive in a simulator Programming Language:
- Python   The goals of this project are the following:
- Use the simulator to collect data of good driving behavior Build, a convolution neural network in Keras that predicts steering angles from images Train and validate the model with a training and validation set Test that the model successfully drives around track one without leaving the road Summarize the results with a written report  Section 1: Model Architecture and Training Strategy 1.</description>
+      <description>&lt;h1 id=&#34;drive-in-a-simulator&#34;&gt;&lt;strong&gt;Drive in a simulator&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/selfdriving_drive_emulator/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+&lt;p&gt;The goals of this project are the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use the simulator to collect data of good driving behavior&lt;/li&gt;
+&lt;li&gt;Build, a convolution neural network in Keras that predicts steering angles from images&lt;/li&gt;
+&lt;li&gt;Train and validate the model with a training and validation set&lt;/li&gt;
+&lt;li&gt;Test that the model successfully drives around track one without leaving the road&lt;/li&gt;
+&lt;li&gt;Summarize the results with a written report&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;section-1-model-architecture-and-training-strategy&#34;&gt;Section 1: Model Architecture and Training Strategy&lt;/h2&gt;
+&lt;h3 id=&#34;1-model-architecture&#34;&gt;1. Model architecture&lt;/h3&gt;
+&lt;p&gt;The following figure shows the architecture of my model.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First, I normalized all pixels of an input frame to [-1, 1].&lt;/li&gt;
+&lt;li&gt;Second, I use Cropping2D to remove sky and the hood from every single frame.&lt;/li&gt;
+&lt;li&gt;Third, 3 (5x5) convolutional layers are used to extract visual features from input frame. All convolutional layers have a RELU activation function to introduce nonlinearity. Each convolutional layer is followed by a MaxPooling2D layer to reduce the size of feature maps.&lt;/li&gt;
+&lt;li&gt;Then, 1 flatten layer [model.py line 39] convert the feature maps to a vector and two fully connect layers are used to predict the final result.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Predicting the angle of the steering wheel is a regression problem. Thus I used &amp;ldquo;mse&amp;rdquo; loss function.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;sd.jpg&#34; srcset=&#34;
+               /project/selfdriving_drive_emulator/sd_hub1e8d8ad8e16aee8aafc074e34b8fd48_195785_d76f3849838c210e2df2b0018c3a79c6.webp 400w,
+               /project/selfdriving_drive_emulator/sd_hub1e8d8ad8e16aee8aafc074e34b8fd48_195785_597e20706fa172e5f569ffacf4cced31.webp 760w,
+               /project/selfdriving_drive_emulator/sd_hub1e8d8ad8e16aee8aafc074e34b8fd48_195785_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_drive_emulator/sd_hub1e8d8ad8e16aee8aafc074e34b8fd48_195785_d76f3849838c210e2df2b0018c3a79c6.webp&#34;
+               width=&#34;303&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;2-attempts-to-reduce-overfitting-in-the-model&#34;&gt;2. Attempts to reduce overfitting in the model&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dropout:&lt;/strong&gt; The model contains dropout layers in order to reduce overfitting.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data collection:&lt;/strong&gt; On both tracks, I drive the car Clockwise (2 loops) and counterclockwise (1 loop) and save data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Training:&lt;/strong&gt; The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Augmentation:&lt;/strong&gt; Every training frame has 50% probability to be horizontally flipped during training.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-model-parameter-tuning&#34;&gt;3. Model parameter tuning&lt;/h3&gt;
+&lt;p&gt;The model used an adam optimizer, so the learning rate was not tuned manually.&lt;/p&gt;
+&lt;h3 id=&#34;4-appropriate-training-data&#34;&gt;4. Appropriate training data&lt;/h3&gt;
+&lt;p&gt;Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road. Based on the ground truth:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the current angle is 0, then the correction value for data from the left and right camera is set to a small value.&lt;/li&gt;
+&lt;li&gt;Otherwise, a larger correction value is used.
+Using this way can avoid the car from performing as a snake.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All data are randomly split into two subsets: 80% for training and 20% for validation. The model normalized input to [-1, 1] and crop out the top and the bottom parts to remove meaningless context.&lt;/p&gt;
+&lt;p&gt;The following two figures are the original input and the result after cropped.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Original Input&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Cropped Input&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;original.jpg&#34; srcset=&#34;
+               /project/selfdriving_drive_emulator/original_hu2d4c98e0176e40f450353bb1d77926f3_12786_661432fc67c43b0954f61c71aec63206.webp 400w,
+               /project/selfdriving_drive_emulator/original_hu2d4c98e0176e40f450353bb1d77926f3_12786_d88f965afd2e2baa4ef0abfbb4e367f3.webp 760w,
+               /project/selfdriving_drive_emulator/original_hu2d4c98e0176e40f450353bb1d77926f3_12786_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_drive_emulator/original_hu2d4c98e0176e40f450353bb1d77926f3_12786_661432fc67c43b0954f61c71aec63206.webp&#34;
+               width=&#34;320&#34;
+               height=&#34;160&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;crop.jpg&#34; srcset=&#34;
+               /project/selfdriving_drive_emulator/crop_hu9d3ac626c1d7dbb90526af418b26edbc_11027_48a7c659a7b2cc0007103ce8c26fe039.webp 400w,
+               /project/selfdriving_drive_emulator/crop_hu9d3ac626c1d7dbb90526af418b26edbc_11027_af72391f79de7c88b7cb8de6d5f3d721.webp 760w,
+               /project/selfdriving_drive_emulator/crop_hu9d3ac626c1d7dbb90526af418b26edbc_11027_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_drive_emulator/crop_hu9d3ac626c1d7dbb90526af418b26edbc_11027_48a7c659a7b2cc0007103ce8c26fe039.webp&#34;
+               width=&#34;320&#34;
+               height=&#34;65&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The following shows the number of collected data. As you can see that, after using data from all 3 cameras and randomly horizontally flip frames, the distributation of the data is more balance.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Raw Data&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Use all 3 cameras &amp;amp; Data Augmentation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;ori_dist.png&#34; srcset=&#34;
+               /project/selfdriving_drive_emulator/ori_dist_hu4485c15b2113c9348d28a8e788915803_17092_a44665b874635e0c9cc60487c8cb7f05.webp 400w,
+               /project/selfdriving_drive_emulator/ori_dist_hu4485c15b2113c9348d28a8e788915803_17092_7d54f7a282e1f0fa94a4b0fc530a81a7.webp 760w,
+               /project/selfdriving_drive_emulator/ori_dist_hu4485c15b2113c9348d28a8e788915803_17092_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_drive_emulator/ori_dist_hu4485c15b2113c9348d28a8e788915803_17092_a44665b874635e0c9cc60487c8cb7f05.webp&#34;
+               width=&#34;640&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;aug_dist.png&#34; srcset=&#34;
+               /project/selfdriving_drive_emulator/aug_dist_hu0ac2f68ff88682a27a81998e0a2aa4d5_12254_77a26e076989badc2c8627320e16549c.webp 400w,
+               /project/selfdriving_drive_emulator/aug_dist_hu0ac2f68ff88682a27a81998e0a2aa4d5_12254_961eb790b1f01d4f471cf77965b33009.webp 760w,
+               /project/selfdriving_drive_emulator/aug_dist_hu0ac2f68ff88682a27a81998e0a2aa4d5_12254_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_drive_emulator/aug_dist_hu0ac2f68ff88682a27a81998e0a2aa4d5_12254_77a26e076989badc2c8627320e16549c.webp&#34;
+               width=&#34;640&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;section-3-training-history-and-model-visualization&#34;&gt;Section 3: Training History and Model Visualization&lt;/h2&gt;
+&lt;p&gt;This figure shows the loss history during training.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;loss.png&#34; srcset=&#34;
+               /project/selfdriving_drive_emulator/loss_hu3078b3e4e80209cb97007719054332d0_36577_688a802913c33f1570e41cf3df90144b.webp 400w,
+               /project/selfdriving_drive_emulator/loss_hu3078b3e4e80209cb97007719054332d0_36577_dfd34cf8bf0f49e79797b5116c916408.webp 760w,
+               /project/selfdriving_drive_emulator/loss_hu3078b3e4e80209cb97007719054332d0_36577_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_drive_emulator/loss_hu3078b3e4e80209cb97007719054332d0_36577_688a802913c33f1570e41cf3df90144b.webp&#34;
+               width=&#34;640&#34;
+               height=&#34;480&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;I also visulized the trained model and tried to understand what features the model learned.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;vis.jpg&#34; srcset=&#34;
+               /project/selfdriving_drive_emulator/vis_hu2ad4cb61e4ffbc88ebfb6b5d15b86082_289580_148846ab6d261fc165320f2bb9e14322.webp 400w,
+               /project/selfdriving_drive_emulator/vis_hu2ad4cb61e4ffbc88ebfb6b5d15b86082_289580_d7e2dd43b33fdf771fbc2cad324bb206.webp 760w,
+               /project/selfdriving_drive_emulator/vis_hu2ad4cb61e4ffbc88ebfb6b5d15b86082_289580_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_drive_emulator/vis_hu2ad4cb61e4ffbc88ebfb6b5d15b86082_289580_148846ab6d261fc165320f2bb9e14322.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;190&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;section-4-conclusion-and-future-work&#34;&gt;Section 4: Conclusion and Future work&lt;/h2&gt;
+&lt;p&gt;In this project, I proposed a Convolutional Network to predict the angle of the steering wheel running in an emulator.&lt;/p&gt;
+&lt;p&gt;The trained model successful negatives the car. Even in the second track (more challenging than the first one), the model still performs great.&lt;/p&gt;
+&lt;p&gt;One of the possible drawback of the current model is taht it was only trained on the data collected from 2 tracks. Thus, it may cannot perform perfectly in other unseen scenario.&lt;/p&gt;
+&lt;p&gt;Thus, in the future, I would like to train the model using more data collected from different scens.&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Traffic Sign Recognition [Self Driving]</title>
       <link>http://xincoder.github.io/project/selfdriving_signclassification/</link>
-      <pubDate>Mon, 16 Jul 2018 00:00:00 -0700</pubDate>
-      
+      <pubDate>Mon, 16 Jul 2018 00:00:00 +0000</pubDate>
       <guid>http://xincoder.github.io/project/selfdriving_signclassification/</guid>
-      <description>Traffic Sign Recognition Programming Language:
- Python  The goals of this project are the following:
- Load the data set (see below for links to the project data set) Explore, summarize and visualize the data set Design, train and test a model architecture Use the model to make predictions on new images Analyze the softmax probabilities of the new images Summarize the results with a written report  Step1: Data Set Summary &amp;amp; Exploration 1.</description>
+      <description>&lt;h1 id=&#34;traffic-sign-recognition&#34;&gt;&lt;strong&gt;Traffic Sign Recognition&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The goals of this project are the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Load the data set (see below for links to the project data set)&lt;/li&gt;
+&lt;li&gt;Explore, summarize and visualize the data set&lt;/li&gt;
+&lt;li&gt;Design, train and test a model architecture&lt;/li&gt;
+&lt;li&gt;Use the model to make predictions on new images&lt;/li&gt;
+&lt;li&gt;Analyze the softmax probabilities of the new images&lt;/li&gt;
+&lt;li&gt;Summarize the results with a written report&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step1-data-set-summary--exploration&#34;&gt;Step1: Data Set Summary &amp;amp; Exploration&lt;/h2&gt;
+&lt;h4 id=&#34;1-a-basic-summary-of-the-data-set&#34;&gt;1. A basic summary of the data set.&lt;/h4&gt;
+&lt;p&gt;I use Pickle data load function to read our dataset, and then use basic python function to analyze the dataset. In total, we have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Training samples: 34,799&lt;/li&gt;
+&lt;li&gt;Validation samples: 4,410&lt;/li&gt;
+&lt;li&gt;Testing samples: 12,630&lt;/li&gt;
+&lt;li&gt;Each sample (image) has (32, 32, 3) shape.&lt;/li&gt;
+&lt;li&gt;We have 43 unique classes/labels:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ClassId&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;SignName&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ClassId&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;SignName&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ClassId&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;SignName&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Speed limit (20km/h)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Speed limit (30km/h)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Speed limit (50km/h)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Speed limit (60km/h)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Speed limit (70km/h)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Speed limit (80km/h)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;End of speed limit (80km/h)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;7&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Speed limit (100km/h)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Speed limit (120km/h)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;No passing&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;No passing for vehicles over 3.5 metric tons&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;11&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Right-of-way at the next intersection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;12&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Priority road&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;13&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Yield&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;14&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Stop&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;15&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;No vehicles&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;16&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Vehicles over 3.5 metric tons prohibited&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;17&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;No entry&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;18&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;General caution&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;19&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Dangerous curve to the left&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;20&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Dangerous curve to the right&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;21&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Double curve&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;22&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Bumpy road&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;23&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Slippery road&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;24&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Road narrows on the right&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;25&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Road work&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;26&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Traffic signals&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;27&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Pedestrians&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;28&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Children crossing&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;29&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Bicycles crossing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;30&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Beware of ice/snow&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;31&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Wild animals crossing&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;32&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;End of all speed and passing limits&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;33&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Turn right ahead&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;34&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Turn left ahead&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;35&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Ahead only&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;36&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Go straight or right&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;37&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Go straight or left&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;38&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Keep right&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;39&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Keep left&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;40&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Roundabout mandatory&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;41&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;End of no passing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;42&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;End of no passing by vehicles over 3.5 metric tons&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;class_samples.png&#34; srcset=&#34;
+               /project/selfdriving_signclassification/class_samples_huaeab329b455c9b7b8771b6f0046720b7_199239_27fbaf4a83f9a0f6db9b4b2cd7455b14.webp 400w,
+               /project/selfdriving_signclassification/class_samples_huaeab329b455c9b7b8771b6f0046720b7_199239_808420021f2ac3d70d632893fd03fae4.webp 760w,
+               /project/selfdriving_signclassification/class_samples_huaeab329b455c9b7b8771b6f0046720b7_199239_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_signclassification/class_samples_huaeab329b455c9b7b8771b6f0046720b7_199239_27fbaf4a83f9a0f6db9b4b2cd7455b14.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;569&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;2-here-is-an-exploratory-visualization-of-the-data-set&#34;&gt;2. Here is an exploratory visualization of the data set.&lt;/h4&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;data_bar.png&#34; srcset=&#34;
+               /project/selfdriving_signclassification/data_bar_hu0f5ca4597522f72be28732ee917c34a8_14178_fd2da047a815bcf5312296379f196a8d.webp 400w,
+               /project/selfdriving_signclassification/data_bar_hu0f5ca4597522f72be28732ee917c34a8_14178_c2a87ac5b95061ab139037a89aba4f5b.webp 760w,
+               /project/selfdriving_signclassification/data_bar_hu0f5ca4597522f72be28732ee917c34a8_14178_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_signclassification/data_bar_hu0f5ca4597522f72be28732ee917c34a8_14178_fd2da047a815bcf5312296379f196a8d.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;210&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step2-design-and-test-a-model-architecture&#34;&gt;Step2: Design and Test a Model Architecture&lt;/h3&gt;
+&lt;h4 id=&#34;1-image-data-preprocessing&#34;&gt;1. Image data preprocessing&lt;/h4&gt;
+&lt;p&gt;I use two methods to do data augmentation (preprocessing).&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Randomly rotation: all training images have 50% probability to be rotated within (-30, 30) angle. Rotation is needed considering that in daily life, the camera on a self-driving car may capture a traffice sign with a radom angle. Thus, by doing this help the model has the capability of handling such an application scenario.&lt;/li&gt;
+&lt;li&gt;Randomly crop: all training images have 50% probability to be cropped from (0.8, 1) of width and height. After being cropped, the images will be resized back to 32x32. Cropping is necessary because the captured traffic signs have variant sizes. Thus, using cropping adds more training data. In addition, randomly cropping provides some smaples with width and height shifts.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here are some processed images:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;augmentation.png&#34; srcset=&#34;
+               /project/selfdriving_signclassification/augmentation_hud2883a39eb3f88d7d2614760cad77eba_77230_1efd78925926b67073d5ccff0a6dbc84.webp 400w,
+               /project/selfdriving_signclassification/augmentation_hud2883a39eb3f88d7d2614760cad77eba_77230_21257824055c89dc97397fe1b6ef8fd2.webp 760w,
+               /project/selfdriving_signclassification/augmentation_hud2883a39eb3f88d7d2614760cad77eba_77230_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_signclassification/augmentation_hud2883a39eb3f88d7d2614760cad77eba_77230_1efd78925926b67073d5ccff0a6dbc84.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;157&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;2-model-architecture&#34;&gt;2. Model architecture&lt;/h4&gt;
+&lt;p&gt;My model consisted of the following layers:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Layer&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Input_Size&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Output_size&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Convolution(5x5)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;32x32x3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;28x28x64&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;(1x1) stride, VALID padding, Relu Activation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Convolution(3x3)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;28x28x64&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;28x28x64&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;(1x1) stride, SAME padding, Relu Activation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Pooling&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;28x28x64&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;14x14x6&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Convolution(5x5)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;14x14x64&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10x10x128&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;(1x1) stride, VALID padding, Relu Activation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Convolution(3x3)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10x10x128&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10x10x128&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;(1x1) stride, SAME padding, Relu Activation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Pooling&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10x10x128&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5x5x12&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Convolution(3x3)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5x5x128&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3x3x256&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;(1x1) stride, VALID padding, Relu Activation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Pooling&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3x3x256&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1x1x25&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Flatten&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1x1x256&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;256&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Fully Connected&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;256&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;128&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Relu Activation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Dropout layer&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Fully Connected&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;128&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;43&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Softmax Activation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;3-training-parameters&#34;&gt;3. Training parameters&lt;/h4&gt;
+&lt;p&gt;I use the following experimental settings to train my model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Optimizer: Adam&lt;/li&gt;
+&lt;li&gt;Initialial Learning Rate: 0.001&lt;/li&gt;
+&lt;li&gt;Batch Size: 128&lt;/li&gt;
+&lt;li&gt;Training Epochs: 100&lt;/li&gt;
+&lt;li&gt;Loss function: cross entropy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;4-accuracy&#34;&gt;4. Accuracy&lt;/h4&gt;
+&lt;p&gt;During training, I tracked the validation accuracy and only saved the weights achieved the highest validation accuracy. Within 100 training epochs, my architecture achieves the highest val_acc at 84 epoch. (All details about training process can be found in Cell [10])&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&#34;color:orange&#34;&gt;The accuracy on training set: &lt;strong&gt;99.9%&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color:orange&#34;&gt;The accuracy on validation set: &lt;strong&gt;96.2%&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color:orange&#34;&gt;The accuracy on testing set: &lt;strong&gt;93.4%&lt;/strong&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The followings are the reasons why I chose such a model for this task:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;In the first convolutional laeyrs, the model focuses on detecting fundamental features, e.g. lines, shapes, or textures. Thus, at the first two blocks (4 convolutional layers), I used two continuous convolutional layers to make sure that the model generates more useful basic features.&lt;/li&gt;
+&lt;li&gt;Following that, a block with one convolutional layer is used to generate semantic information, e.g. arrows, circles, and etc.. Comparing to the basic features, we have more semantic features, thus, more filters were used in this layer.&lt;/li&gt;
+&lt;li&gt;A fully connected layer is used to convert a feature map into a verctor for classification.&lt;/li&gt;
+&lt;li&gt;One Dropout layer is used to avoid overfitting.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;test-a-model-on-new-images&#34;&gt;Test a Model on New Images&lt;/h3&gt;
+&lt;h4 id=&#34;1-unseen-data-during-traing&#34;&gt;1. Unseen data during traing&lt;/h4&gt;
+&lt;p&gt;Here are five German traffic signs that I found on the web:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;online.png&#34; srcset=&#34;
+               /project/selfdriving_signclassification/online_hu6fbc8df78130d383a97b3112505cbaf4_42331_f1cb3965d8d23cfc9c158c93ff085305.webp 400w,
+               /project/selfdriving_signclassification/online_hu6fbc8df78130d383a97b3112505cbaf4_42331_b8d3ed3169cac4aae0de205079208ef6.webp 760w,
+               /project/selfdriving_signclassification/online_hu6fbc8df78130d383a97b3112505cbaf4_42331_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_signclassification/online_hu6fbc8df78130d383a97b3112505cbaf4_42331_f1cb3965d8d23cfc9c158c93ff085305.webp&#34;
+               width=&#34;378&#34;
+               height=&#34;93&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;2-prediction-results-on-these-new-traffic-signs&#34;&gt;2. Prediction results on these new traffic signs.&lt;/h4&gt;
+&lt;p&gt;Here are the results of the prediction:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Image Ground Truth&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Predicted Correctly&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Go straight or right&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Go straight or right&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Speed limit (50km/h)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Speed limit (50km/h)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Stop&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Yield&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Road work&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Road work&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Turn right ahead&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Turn right ahead&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. We can see it drops a lot comparing to the accuracy on our testing dataset. The reason is three-fold:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The training dataset is not balance. For example, class 2 (Speed limit (50km/h)) has 2010 training samples, while class 14 (Stop) only consistes of 330 training samples.&lt;/li&gt;
+&lt;li&gt;The downloaded images are much clearer than the images in our dataset, which may add more noise in the images.&lt;/li&gt;
+&lt;li&gt;5 images are not enough to evaluate the performance of a trained model.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;3-prediction-details&#34;&gt;3. Prediction details&lt;/h4&gt;
+&lt;p&gt;For the first image, the model is 100% sure that it is a &amp;ldquo;Go straight or right&amp;rdquo;. It is correctly predict this image.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Probability&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1.0000000&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;36 (Go straight or right)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2.8858561e-16&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3 (Speed limit (60km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2.1692284e-31&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0 (Speed limit (20km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;7.6920753e-32&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;20 (Dangerous curve to the right)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2.2140123e-32&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;28 (Children crossing)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For the second image, the model is 100% sure that it is a &amp;ldquo;Speed limit (50km/h)&amp;rdquo;. It is correctly predict this image.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Probability&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9.9999976e-01&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2 (Speed limit (50km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2.8747601e-07&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5 (Speed limit (80km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2.2901984e-10&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1 (Speed limit (30km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2.2646303e-18&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3 (Speed limit (60km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4.5397839e-35&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6 (End of speed limit (80km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For the third image, the model is 100% sure that it is a &amp;ldquo;Yield&amp;rdquo;, while the ground truth is &amp;ldquo;Stop&amp;rdquo;. There are only 690 &amp;ldquo;Stop&amp;rdquo; training samples in our dataset, while &amp;ldquo;Yield&amp;rdquo; has 1290 training images. This is caused by our un-balance training data.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Probability&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1.0000000e+00&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;13 (Yield)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4.3748559e-12&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;28 (Children crossing)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1.5492816e-12&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1 (Speed limit (30km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1.0894177e-12&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;38 (Keep right)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6.2159755e-13&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2 (Speed limit (50km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For the fourth image, the model is 100% sure that it is a &amp;ldquo;Road work&amp;rdquo;. It is correctly predict this image.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Probability&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1.0000000e+00&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.0000000e+00&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0 (Speed limit (20km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.0000000e+00&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1 (Speed limit (30km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.0000000e+00&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2 (Speed limit (50km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0.0000000e+00&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3 (Speed limit (60km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For the fourth image, the model is 100% sure that it is a &amp;ldquo;Turn right ahead&amp;rdquo;. It is correctly predict this image.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Probability&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Prediction&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9.9085110e-01&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;33 (Turn right ahead)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8.0864038e-03&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;14 (Stop)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1.0624588e-03&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4 (Speed limit (70km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2.1159234e-11&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;13 (Yield)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;7.8768702e-12&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2 (Speed limit (50km/h))&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;visualizing-the-model&#34;&gt;Visualizing the model&lt;/h3&gt;
+&lt;p&gt;I visulized the output of the first block. The circle and arrows are very clear.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;vis.png&#34; srcset=&#34;
+               /project/selfdriving_signclassification/vis_hua3ea79a7ed0037084cb57388786915d9_42768_505e78c24db2173b826452c6f6531006.webp 400w,
+               /project/selfdriving_signclassification/vis_hua3ea79a7ed0037084cb57388786915d9_42768_0baf066a6b144560a9f684552fdea062.webp 760w,
+               /project/selfdriving_signclassification/vis_hua3ea79a7ed0037084cb57388786915d9_42768_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_signclassification/vis_hua3ea79a7ed0037084cb57388786915d9_42768_505e78c24db2173b826452c6f6531006.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;751&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Find Lane Lines [Self Driving]</title>
       <link>http://xincoder.github.io/project/selfdriving_findline/</link>
-      <pubDate>Tue, 12 Jun 2018 00:00:00 -0700</pubDate>
-      
+      <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
       <guid>http://xincoder.github.io/project/selfdriving_findline/</guid>
-      <description>Finding Lane Lines on the Road
-Programming Language:
- Python  The goal of this project is to design a pipeline that finds lane lines on the road. 
-A. Pipeline. My pipline consists of 7 steps as follows:
- Color selection
- RGB image to gray image Gaussian Blur Edge detection (Canny) Select ROI Line detection (Hough) Extend detected lines  This pipeline works on images and videos.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Finding Lane Lines on the Road&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The goal of this project is to design a pipeline that finds lane lines on the road.
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/selfdriving_findline/result_demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;a-pipeline&#34;&gt;A. Pipeline.&lt;/h3&gt;
+&lt;p&gt;My pipline consists of 7 steps as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Color selection&lt;/li&gt;
+&lt;li&gt;RGB image to gray image&lt;/li&gt;
+&lt;li&gt;Gaussian Blur&lt;/li&gt;
+&lt;li&gt;Edge detection (Canny)&lt;/li&gt;
+&lt;li&gt;Select ROI&lt;/li&gt;
+&lt;li&gt;Line detection (Hough)&lt;/li&gt;
+&lt;li&gt;Extend detected lines&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span style=&#34;color:orange&#34;&gt;This pipeline works on images and videos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Color selection:&lt;/strong&gt; Color selection is used to filter color so that we can remove those pixels which may become noise. E.g. patches on the road.
+The following is a sample of the processed results:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Input image&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Color Selection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/input_hua0d4d4b24f4da3a102e4452ac738b95f_482720_4d57b223f2bbbcebf4e6ffd111e21adc.webp 400w,
+               /project/selfdriving_findline/input_hua0d4d4b24f4da3a102e4452ac738b95f_482720_3128d8e2c93ce5f6b99970a99933a43b.webp 760w,
+               /project/selfdriving_findline/input_hua0d4d4b24f4da3a102e4452ac738b95f_482720_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/input_hua0d4d4b24f4da3a102e4452ac738b95f_482720_4d57b223f2bbbcebf4e6ffd111e21adc.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/color_selection_hu31a2cb617c25f5bb400dc5a882cc8783_116050_f5c6d68c694ce22a805eab87af0d3a96.webp 400w,
+               /project/selfdriving_findline/color_selection_hu31a2cb617c25f5bb400dc5a882cc8783_116050_f1ef1831f9887fc08f6965770fcaf6f9.webp 760w,
+               /project/selfdriving_findline/color_selection_hu31a2cb617c25f5bb400dc5a882cc8783_116050_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/color_selection_hu31a2cb617c25f5bb400dc5a882cc8783_116050_f5c6d68c694ce22a805eab87af0d3a96.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;One can see that the lines of the current lane have already become very clear and there is no extra noise within the ROI (bottom middle part of the image).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.RGB image to gray image:&lt;/strong&gt; This is a preprocessing for the flowing operations, e.g. edge detection.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Color Selection&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Gray Image&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/color_selection_hu31a2cb617c25f5bb400dc5a882cc8783_116050_f5c6d68c694ce22a805eab87af0d3a96.webp 400w,
+               /project/selfdriving_findline/color_selection_hu31a2cb617c25f5bb400dc5a882cc8783_116050_f1ef1831f9887fc08f6965770fcaf6f9.webp 760w,
+               /project/selfdriving_findline/color_selection_hu31a2cb617c25f5bb400dc5a882cc8783_116050_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/color_selection_hu31a2cb617c25f5bb400dc5a882cc8783_116050_f5c6d68c694ce22a805eab87af0d3a96.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/gray_hu914336533fefe4f70747732bafdd6eb4_94606_da96734ce78f2726e158466e24e31e59.webp 400w,
+               /project/selfdriving_findline/gray_hu914336533fefe4f70747732bafdd6eb4_94606_bdedbfbf818647a62fc4d179bf3aceb3.webp 760w,
+               /project/selfdriving_findline/gray_hu914336533fefe4f70747732bafdd6eb4_94606_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/gray_hu914336533fefe4f70747732bafdd6eb4_94606_da96734ce78f2726e158466e24e31e59.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;3. Gaussian Blur:&lt;/strong&gt; This operation is also for edge detection. Using Gaussain Blur helps to remove noise from the current image.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. Edge detection (Canny):&lt;/strong&gt; We detect lines using Canny Transform.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Gaussian Blur&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Edge Detection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/gray_hu914336533fefe4f70747732bafdd6eb4_94606_da96734ce78f2726e158466e24e31e59.webp 400w,
+               /project/selfdriving_findline/gray_hu914336533fefe4f70747732bafdd6eb4_94606_bdedbfbf818647a62fc4d179bf3aceb3.webp 760w,
+               /project/selfdriving_findline/gray_hu914336533fefe4f70747732bafdd6eb4_94606_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/gray_hu914336533fefe4f70747732bafdd6eb4_94606_da96734ce78f2726e158466e24e31e59.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/edge_hu1633abf0146d20fa749c38f163246eef_100081_abd00d47d61f729162f5203289f3ef20.webp 400w,
+               /project/selfdriving_findline/edge_hu1633abf0146d20fa749c38f163246eef_100081_0d96b43550ab56b71f364a61f0732876.webp 760w,
+               /project/selfdriving_findline/edge_hu1633abf0146d20fa749c38f163246eef_100081_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/edge_hu1633abf0146d20fa749c38f163246eef_100081_abd00d47d61f729162f5203289f3ef20.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;5. Select ROI:&lt;/strong&gt; To remove the background, e.g. side of road or sky, we select a ROI that just in front of the driver (the bottom middle part of the current image).&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Edge Detection&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Select ROI&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/edge_hu1633abf0146d20fa749c38f163246eef_100081_abd00d47d61f729162f5203289f3ef20.webp 400w,
+               /project/selfdriving_findline/edge_hu1633abf0146d20fa749c38f163246eef_100081_0d96b43550ab56b71f364a61f0732876.webp 760w,
+               /project/selfdriving_findline/edge_hu1633abf0146d20fa749c38f163246eef_100081_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/edge_hu1633abf0146d20fa749c38f163246eef_100081_abd00d47d61f729162f5203289f3ef20.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/roi_hu08a859bdec93387bee731a63eaf2b693_62504_a0853cf6940b534ce1f9dea5b8ab18c4.webp 400w,
+               /project/selfdriving_findline/roi_hu08a859bdec93387bee731a63eaf2b693_62504_302f054446553a4eda4c32106c5e28e3.webp 760w,
+               /project/selfdriving_findline/roi_hu08a859bdec93387bee731a63eaf2b693_62504_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/roi_hu08a859bdec93387bee731a63eaf2b693_62504_a0853cf6940b534ce1f9dea5b8ab18c4.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;6. Line detection (Hough):&lt;/strong&gt; We use Hough Transform to detect lines. Instead of drawing the detected lines on the image, I implemented a function (detect_hough_line()) to return all detected lines, so that we can do further process.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Select ROI&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Line Detection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/roi_hu08a859bdec93387bee731a63eaf2b693_62504_a0853cf6940b534ce1f9dea5b8ab18c4.webp 400w,
+               /project/selfdriving_findline/roi_hu08a859bdec93387bee731a63eaf2b693_62504_302f054446553a4eda4c32106c5e28e3.webp 760w,
+               /project/selfdriving_findline/roi_hu08a859bdec93387bee731a63eaf2b693_62504_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/roi_hu08a859bdec93387bee731a63eaf2b693_62504_a0853cf6940b534ce1f9dea5b8ab18c4.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/detection_hu02570da8dff591db14e92b986bdd1dc3_85448_3300a8a4c164abe9efc79077defabde2.webp 400w,
+               /project/selfdriving_findline/detection_hu02570da8dff591db14e92b986bdd1dc3_85448_71702a8876f50fc524911f4d052677c9.webp 760w,
+               /project/selfdriving_findline/detection_hu02570da8dff591db14e92b986bdd1dc3_85448_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/detection_hu02570da8dff591db14e92b986bdd1dc3_85448_3300a8a4c164abe9efc79077defabde2.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;7. Extend detected lines:&lt;/strong&gt; The lines of a lane consists of solid lines and dashed lines. We want to use a long line to mark the boundaries (left line and right line) of the current lane.
+Thus:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I implemented a function (namely, extend_lines()) to extend the lines, so that all lines can be extended to the bottom of the image and as far as possible.&lt;/li&gt;
+&lt;li&gt;In this function, I also calculate the intersaction of these two lines, so that only the bottom part is marked with lines.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Line Detection&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Extended lines (1)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/line_detection_hu02570da8dff591db14e92b986bdd1dc3_21361_7b8a97d7df9976f915d26b580f984928.webp 400w,
+               /project/selfdriving_findline/line_detection_hu02570da8dff591db14e92b986bdd1dc3_21361_c11f9701bb62b6dd03eaedd45af7cda8.webp 760w,
+               /project/selfdriving_findline/line_detection_hu02570da8dff591db14e92b986bdd1dc3_21361_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/line_detection_hu02570da8dff591db14e92b986bdd1dc3_21361_7b8a97d7df9976f915d26b580f984928.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/extend_hu02570da8dff591db14e92b986bdd1dc3_117184_0f5b4d8eb70c7436d592d5b90fbc878e.webp 400w,
+               /project/selfdriving_findline/extend_hu02570da8dff591db14e92b986bdd1dc3_117184_9ace4cf4e1b0c4f4a55da19a339f2a3e.webp 760w,
+               /project/selfdriving_findline/extend_hu02570da8dff591db14e92b986bdd1dc3_117184_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/extend_hu02570da8dff591db14e92b986bdd1dc3_117184_0f5b4d8eb70c7436d592d5b90fbc878e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Calculate intersaction (2)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Merge with original image&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /project/selfdriving_findline/intersection_hu02570da8dff591db14e92b986bdd1dc3_98063_ce7b26c17c4697ae4d1576999e734aa7.webp 400w,
+               /project/selfdriving_findline/intersection_hu02570da8dff591db14e92b986bdd1dc3_98063_c8698d748162131f809baac9b81a697a.webp 760w,
+               /project/selfdriving_findline/intersection_hu02570da8dff591db14e92b986bdd1dc3_98063_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/intersection_hu02570da8dff591db14e92b986bdd1dc3_98063_ce7b26c17c4697ae4d1576999e734aa7.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;1.jpg&#34; srcset=&#34;
+               /project/selfdriving_findline/result_hud70679f95a7183b8632f028be4149f9c_613918_ced7f16a64ab10642ce2963542aa574c.webp 400w,
+               /project/selfdriving_findline/result_hud70679f95a7183b8632f028be4149f9c_613918_5c6da9ee5b193cb055d75d38179ab860.webp 760w,
+               /project/selfdriving_findline/result_hud70679f95a7183b8632f028be4149f9c_613918_1200x1200_fit_q75_h2_lanczos.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/selfdriving_findline/result_hud70679f95a7183b8632f028be4149f9c_613918_ced7f16a64ab10642ce2963542aa574c.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;428&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;b-potential-shortcomings-of-the-current-pipeline&#34;&gt;B. Potential shortcomings of the current pipeline&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;One potential shortcoming would be caused by the fixed parameters in the current solution, e.g. Gaussian Blur parameters, Edge Detection parameters, Line Detection parameters, and so on. Such manually designed fixed parameters may not work in any application sceneria, e.g. ranning day or night.&lt;/li&gt;
+&lt;li&gt;Another shortcoming would be caused by the first process (color selection). In real world, the color may change in different environment. Thus, in some specific environment, the current pipline may cannot detect any lines or detect too many lines (caused by noise).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;c-suggest-possible-improvements-to-this-pipeline&#34;&gt;C. Suggest possible improvements to this pipeline&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;For the first optential shortcoming, we would like to come up with an idea to adjust the parameters depening on the environment. Thus, the solution can be robust to the change of the environment.&lt;/li&gt;
+&lt;li&gt;For the second optential shortcoming, we can use the same strategy as the first suggest. By automatically adjusting the paramters of color selection, the method should work. In addition, we can also replace the color selection with other preprocessing methods to avoid the sensitivity of chosen parameters.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+</description>
     </item>
     
     <item>
       <title>CASHEIRS Demo [Research]</title>
       <link>http://xincoder.github.io/project/research_casheirs/</link>
-      <pubDate>Mon, 01 May 2017 00:00:00 -0700</pubDate>
-      
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       <guid>http://xincoder.github.io/project/research_casheirs/</guid>
-      <description>Programming Language:
- Python Java (Android Client) PHP (Web Interface)  This is a prototype of our CASHEIRS image retrieval system. The initial prototype system consists of a cloud server (a laptop) and a Samsung S5 phone as a data user&amp;rsquo;s mobile device. Samsung S5 has a Snapdragon 801 chip with Quad-core CPU@2.5GHz and 2GB RAM. The smartphone communicates with the server via a WiFi router. In the Android client software, Caffe APIs are called to extract CNN feature from a query image.</description>
+      <description>&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Java (Android Client)&lt;/li&gt;
+&lt;li&gt;PHP (Web Interface)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is a prototype of our CASHEIRS image retrieval system. The initial prototype system consists of a cloud server (a laptop) and a Samsung S5 phone as a data user&amp;rsquo;s mobile device. Samsung S5 has a Snapdragon 801 chip with Quad-core &lt;a href=&#34;mailto:CPU@2.5GHz&#34;&gt;CPU@2.5GHz&lt;/a&gt; and 2GB RAM. The smartphone communicates with the server via a WiFi router. In the Android client software, Caffe APIs are called to extract CNN feature from a query image. Then, this CNN feature is converted into 128bit binary code and later encrypted. To handle complex image transformations and minimize memory usage, &lt;a href=&#34;https://github.com/square/picasso&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Picasso&lt;/a&gt;, an image downloading library for Android, is used to download query results.&lt;/p&gt;
+&lt;p&gt;The following images show some query examples.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;imag1&#34; srcset=&#34;
+               /project/research_casheirs/1_hu2f7ad1a1cb4854741029206578e8c11a_2286289_32757f2455bacbcbb4bced13e99a2a39.webp 400w,
+               /project/research_casheirs/1_hu2f7ad1a1cb4854741029206578e8c11a_2286289_bc7bd8604a2fa8729dce010195fa7c3e.webp 760w,
+               /project/research_casheirs/1_hu2f7ad1a1cb4854741029206578e8c11a_2286289_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/research_casheirs/1_hu2f7ad1a1cb4854741029206578e8c11a_2286289_32757f2455bacbcbb4bced13e99a2a39.webp&#34;
+               width=&#34;428&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;imag2&#34; srcset=&#34;
+               /project/research_casheirs/2_hu0ff8067ffc5be317356ba4475451c042_1859040_206a849365fe58cbde19437031e88de4.webp 400w,
+               /project/research_casheirs/2_hu0ff8067ffc5be317356ba4475451c042_1859040_3ac5508248f57e2121d92ba81793e183.webp 760w,
+               /project/research_casheirs/2_hu0ff8067ffc5be317356ba4475451c042_1859040_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/research_casheirs/2_hu0ff8067ffc5be317356ba4475451c042_1859040_206a849365fe58cbde19437031e88de4.webp&#34;
+               width=&#34;428&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;imag3&#34; srcset=&#34;
+               /project/research_casheirs/3_hu47092bff32d3933d2020415a01782a02_2188498_74ca01ce86806537a41cc64ce53f821b.webp 400w,
+               /project/research_casheirs/3_hu47092bff32d3933d2020415a01782a02_2188498_0477879dcb36cf6b9f94143212052907.webp 760w,
+               /project/research_casheirs/3_hu47092bff32d3933d2020415a01782a02_2188498_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/research_casheirs/3_hu47092bff32d3933d2020415a01782a02_2188498_74ca01ce86806537a41cc64ce53f821b.webp&#34;
+               width=&#34;428&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;imag4&#34; srcset=&#34;
+               /project/research_casheirs/4_hu713238c877cc8e5161aecafdf9f6710c_2145523_24ff7f1b2c198d2cb46322a3e8450b63.webp 400w,
+               /project/research_casheirs/4_hu713238c877cc8e5161aecafdf9f6710c_2145523_0781f381a46c79f3e187be8f192e6f91.webp 760w,
+               /project/research_casheirs/4_hu713238c877cc8e5161aecafdf9f6710c_2145523_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/research_casheirs/4_hu713238c877cc8e5161aecafdf9f6710c_2145523_24ff7f1b2c198d2cb46322a3e8450b63.webp&#34;
+               width=&#34;428&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;imag5&#34; srcset=&#34;
+               /project/research_casheirs/5_hu9969634cad12fe2650c5e1cd9fd5987f_2198957_1ecb3e6d00bea92aee2bfb7b3890549f.webp 400w,
+               /project/research_casheirs/5_hu9969634cad12fe2650c5e1cd9fd5987f_2198957_8f5bd93e7bbc0e30f4ddb15c73cc9004.webp 760w,
+               /project/research_casheirs/5_hu9969634cad12fe2650c5e1cd9fd5987f_2198957_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/research_casheirs/5_hu9969634cad12fe2650c5e1cd9fd5987f_2198957_1ecb3e6d00bea92aee2bfb7b3890549f.webp&#34;
+               width=&#34;428&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;imag6&#34; srcset=&#34;
+               /project/research_casheirs/6_hu36923ebd86620d6e4811dc4ef84ef836_1239768_b01d1c3daf8756d72da1b9173b043d30.webp 400w,
+               /project/research_casheirs/6_hu36923ebd86620d6e4811dc4ef84ef836_1239768_7c83de8ff27e3778577bc16cfb531589.webp 760w,
+               /project/research_casheirs/6_hu36923ebd86620d6e4811dc4ef84ef836_1239768_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/research_casheirs/6_hu36923ebd86620d6e4811dc4ef84ef836_1239768_b01d1c3daf8756d72da1b9173b043d30.webp&#34;
+               width=&#34;428&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;My responsibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Proposed and designed an image retrieval system.&lt;/li&gt;
+&lt;li&gt;Implemeted the system including an Android Client, a Python Server and a PHP interface.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;Published paper:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Xin Li, Qinghan Xue, Mooi Choo Chuah (2017). &lt;a href=&#34;../../publication/2017infocom_casheirs/&#34;&gt;CASHEIRS: Cloud assisted scalable hierarchical encrypted based image retrieval system&lt;/a&gt;. INFOCOM 2017-IEEE Conference on Computer Communications (INFOCOM).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>Five-in-a-Row Game [Others]</title>
       <link>http://xincoder.github.io/project/others_fivestones/</link>
-      <pubDate>Thu, 05 Nov 2015 00:00:00 -0800</pubDate>
-      
+      <pubDate>Thu, 05 Nov 2015 00:00:00 +0000</pubDate>
       <guid>http://xincoder.github.io/project/others_fivestones/</guid>
-      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
- Python (Server) HTML5 (Interface) JaveScript  In this project, we designed and implemented a very simple AI for the Five-in-a-Row Game. Black plays first if white did not just win, and players alternate in placing a stone of their color on an empty intersection. The winner is the first player to get an unbroken row of five stones horizontally, vertically, or diagonally.</description>
+      <description>&lt;h1 id=&#34;detection-and-description-of-visual-attributes-for-vehicles-and-pedestria&#34;&gt;&lt;strong&gt;Detection and Description of Visual Attributes for Vehicles and Pedestria&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python (Server)&lt;/li&gt;
+&lt;li&gt;HTML5 (Interface)&lt;/li&gt;
+&lt;li&gt;JaveScript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this project, we designed and implemented a very simple AI for the Five-in-a-Row Game. Black plays first if white did not just win, and players alternate in placing a stone of their color on an empty intersection. The winner is the first player to get an unbroken row of five stones horizontally, vertically, or diagonally.&lt;/p&gt;
+&lt;p&gt;My responsibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Designed and implemented a JaveScript client embedded inside an HTML5 webpage that allows two players to play five-in-a-row game.&lt;/li&gt;
+&lt;li&gt;Designed and implemented a server application that judges which player wins in the end.&lt;/li&gt;
+&lt;li&gt;Implemented a Python AI program that can play against a single player. The AI program at least beats a player that randomly place stones on the board.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The following video shows a demo of our system.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/others_fivestones/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+</description>
     </item>
     
     <item>
       <title>Vehicles and Pedestrians Detection [Research]</title>
       <link>http://xincoder.github.io/project/research_vehicle_pedestrian/</link>
-      <pubDate>Mon, 01 Jun 2015 00:00:00 -0700</pubDate>
-      
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
       <guid>http://xincoder.github.io/project/research_vehicle_pedestrian/</guid>
-      <description>Detection and Description of Visual Attributes for Vehicles and Pedestrian Programming Language:
- C++ SQL  In this project, we designed and implemented a system to detect and track vehicles and pedestrains from traffic surveillance videos. Once a vehicle/pedestrain is detected/tracked, some visual descriptions, e.g. color, moving direction, etc., are analyzed. All information are stored into a local SQL database for retrieval in the future.
-My responsibilities:
- Proposed and implemented a detection system for vehicles.</description>
+      <description>&lt;h1 id=&#34;detection-and-description-of-visual-attributes-for-vehicles-and-pedestrian&#34;&gt;&lt;strong&gt;Detection and Description of Visual Attributes for Vehicles and Pedestrian&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C++&lt;/li&gt;
+&lt;li&gt;SQL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this project, we designed and implemented a system to detect and track vehicles and pedestrains from traffic surveillance videos. Once a vehicle/pedestrain is detected/tracked, some visual descriptions, e.g. color, moving direction, etc., are analyzed. All information are stored into a local SQL database for retrieval in the future.&lt;/p&gt;
+&lt;p&gt;My responsibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Proposed and implemented a detection system for vehicles.&lt;/li&gt;
+&lt;li&gt;Implemeted a tracking function.&lt;/li&gt;
+&lt;li&gt;Extract visual descriptions from detected vehicles.&lt;/li&gt;
+&lt;li&gt;Implemented objects retrieval functions.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The following video shows a demo of our system.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/research_vehicle_pedestrian/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+</description>
     </item>
     
     <item>
       <title>Family Video Surveillance System [Others]</title>
       <link>http://xincoder.github.io/project/others_family_surveillance/</link>
-      <pubDate>Sun, 01 Sep 2013 00:00:00 -0700</pubDate>
-      
+      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
       <guid>http://xincoder.github.io/project/others_family_surveillance/</guid>
-      <description>Detection and Description of Visual Attributes for Vehicles and Pedestria Programming Language:
- C++ (PC server: Object and Motion Detection, Alarm module) Java (Android Client) PHP (Web Interface)  In this project, we designed an embedded family video surveillance system. The system consists of two parts: (1) a PC server and (2)an Android client.
-The PC server can acquire, compress, and process camera frames. Once the PC server detected an abnormal condition, e.</description>
+      <description>&lt;h1 id=&#34;detection-and-description-of-visual-attributes-for-vehicles-and-pedestria&#34;&gt;&lt;strong&gt;Detection and Description of Visual Attributes for Vehicles and Pedestria&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C++ (PC server: Object and Motion Detection, Alarm module)&lt;/li&gt;
+&lt;li&gt;Java (Android Client)&lt;/li&gt;
+&lt;li&gt;PHP (Web Interface)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this project, we designed an embedded family video surveillance system. The system consists of two parts: &lt;strong&gt;(1) a PC server&lt;/strong&gt; and &lt;strong&gt;(2)an Android client&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The PC server can acquire, compress, and process camera frames. Once the PC server detected an abnormal condition, e.g. a moving people, it will send an alarm to the Android client.&lt;/p&gt;
+&lt;p&gt;The Android client can automatically receive the alarm information and download the corresponding video by on click.&lt;/p&gt;
+&lt;p&gt;My responsibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Designed a video survellance system that consists of ARM development board (camera), a PC server, and an Android client.&lt;/li&gt;
+&lt;li&gt;Implemented the main functions of the system: people detection, motion detection, alarm module.&lt;/li&gt;
+&lt;li&gt;Implemented an Android app to recieve the alarm from the server and download videos.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The following video shows a demo of our system.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/others_family_surveillance/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+</description>
     </item>
     
     <item>
       <title>Augmented Reality Cinema [Others]</title>
       <link>http://xincoder.github.io/project/others_ar/</link>
-      <pubDate>Thu, 01 Aug 2013 00:00:00 -0700</pubDate>
-      
+      <pubDate>Thu, 01 Aug 2013 00:00:00 +0000</pubDate>
       <guid>http://xincoder.github.io/project/others_ar/</guid>
-      <description>Augmented Reality Cinema Programming Language:
- C# (Unity) Unity Script (Unity)  In this project, we designed and implemented an augmented reality system based on tablet for Autodesk Maya. The app runs on an Android tablet records the trajectory of the virtual camera. In this way, movie directors do not need to manually set the trajectory of the virtual camera in Maya.
-My responsibilities:
- Developed an Android app to interactively record the trajectory of the virtual camera based on the device sensors&amp;rsquo; data.</description>
+      <description>&lt;h1 id=&#34;augmented-reality-cinema&#34;&gt;&lt;strong&gt;Augmented Reality Cinema&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C# (Unity)&lt;/li&gt;
+&lt;li&gt;Unity Script (Unity)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this project, we designed and implemented an augmented reality system based on tablet for Autodesk Maya. The app runs on an Android tablet records the trajectory of the virtual camera. In this way, movie directors do not need to manually set the trajectory of the virtual camera in Maya.&lt;/p&gt;
+&lt;p&gt;My responsibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Developed an Android app to interactively record the trajectory of the virtual camera based on the device sensors&amp;rsquo; data.&lt;/li&gt;
+&lt;li&gt;Implemented the function of replaying the trajectory based on the recorded data.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The following video shows a demo of our system.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/others_ar/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+</description>
     </item>
     
   </channel>

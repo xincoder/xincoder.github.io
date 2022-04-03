@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PHP | Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/tag/php/</link>
+      <atom:link href="http://xincoder.github.io/tag/php/index.xml" rel="self" type="application/rss+xml" />
+    <description>PHP</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 May 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://xincoder.github.io/media/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_3.png</url>
+      <title>PHP</title>
+      <link>http://xincoder.github.io/tag/php/</link>
+    </image>
+    
+    <item>
+      <title>CASHEIRS Demo [Research]</title>
+      <link>http://xincoder.github.io/project/research_casheirs/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/project/research_casheirs/</guid>
+      <description>&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Java (Android Client)&lt;/li&gt;
+&lt;li&gt;PHP (Web Interface)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is a prototype of our CASHEIRS image retrieval system. The initial prototype system consists of a cloud server (a laptop) and a Samsung S5 phone as a data user&amp;rsquo;s mobile device. Samsung S5 has a Snapdragon 801 chip with Quad-core &lt;a href=&#34;mailto:CPU@2.5GHz&#34;&gt;CPU@2.5GHz&lt;/a&gt; and 2GB RAM. The smartphone communicates with the server via a WiFi router. In the Android client software, Caffe APIs are called to extract CNN feature from a query image. Then, this CNN feature is converted into 128bit binary code and later encrypted. To handle complex image transformations and minimize memory usage, &lt;a href=&#34;https://github.com/square/picasso&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Picasso&lt;/a&gt;, an image downloading library for Android, is used to download query results.&lt;/p&gt;
+&lt;p&gt;The following images show some query examples.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;imag1&#34; srcset=&#34;
+               /project/research_casheirs/1_hu2f7ad1a1cb4854741029206578e8c11a_2286289_32757f2455bacbcbb4bced13e99a2a39.webp 400w,
+               /project/research_casheirs/1_hu2f7ad1a1cb4854741029206578e8c11a_2286289_bc7bd8604a2fa8729dce010195fa7c3e.webp 760w,
+               /project/research_casheirs/1_hu2f7ad1a1cb4854741029206578e8c11a_2286289_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/research_casheirs/1_hu2f7ad1a1cb4854741029206578e8c11a_2286289_32757f2455bacbcbb4bced13e99a2a39.webp&#34;
+               width=&#34;428&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;imag2&#34; srcset=&#34;
+               /project/research_casheirs/2_hu0ff8067ffc5be317356ba4475451c042_1859040_206a849365fe58cbde19437031e88de4.webp 400w,
+               /project/research_casheirs/2_hu0ff8067ffc5be317356ba4475451c042_1859040_3ac5508248f57e2121d92ba81793e183.webp 760w,
+               /project/research_casheirs/2_hu0ff8067ffc5be317356ba4475451c042_1859040_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/research_casheirs/2_hu0ff8067ffc5be317356ba4475451c042_1859040_206a849365fe58cbde19437031e88de4.webp&#34;
+               width=&#34;428&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;imag3&#34; srcset=&#34;
+               /project/research_casheirs/3_hu47092bff32d3933d2020415a01782a02_2188498_74ca01ce86806537a41cc64ce53f821b.webp 400w,
+               /project/research_casheirs/3_hu47092bff32d3933d2020415a01782a02_2188498_0477879dcb36cf6b9f94143212052907.webp 760w,
+               /project/research_casheirs/3_hu47092bff32d3933d2020415a01782a02_2188498_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/research_casheirs/3_hu47092bff32d3933d2020415a01782a02_2188498_74ca01ce86806537a41cc64ce53f821b.webp&#34;
+               width=&#34;428&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;imag4&#34; srcset=&#34;
+               /project/research_casheirs/4_hu713238c877cc8e5161aecafdf9f6710c_2145523_24ff7f1b2c198d2cb46322a3e8450b63.webp 400w,
+               /project/research_casheirs/4_hu713238c877cc8e5161aecafdf9f6710c_2145523_0781f381a46c79f3e187be8f192e6f91.webp 760w,
+               /project/research_casheirs/4_hu713238c877cc8e5161aecafdf9f6710c_2145523_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/research_casheirs/4_hu713238c877cc8e5161aecafdf9f6710c_2145523_24ff7f1b2c198d2cb46322a3e8450b63.webp&#34;
+               width=&#34;428&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;imag5&#34; srcset=&#34;
+               /project/research_casheirs/5_hu9969634cad12fe2650c5e1cd9fd5987f_2198957_1ecb3e6d00bea92aee2bfb7b3890549f.webp 400w,
+               /project/research_casheirs/5_hu9969634cad12fe2650c5e1cd9fd5987f_2198957_8f5bd93e7bbc0e30f4ddb15c73cc9004.webp 760w,
+               /project/research_casheirs/5_hu9969634cad12fe2650c5e1cd9fd5987f_2198957_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/research_casheirs/5_hu9969634cad12fe2650c5e1cd9fd5987f_2198957_1ecb3e6d00bea92aee2bfb7b3890549f.webp&#34;
+               width=&#34;428&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;imag6&#34; srcset=&#34;
+               /project/research_casheirs/6_hu36923ebd86620d6e4811dc4ef84ef836_1239768_b01d1c3daf8756d72da1b9173b043d30.webp 400w,
+               /project/research_casheirs/6_hu36923ebd86620d6e4811dc4ef84ef836_1239768_7c83de8ff27e3778577bc16cfb531589.webp 760w,
+               /project/research_casheirs/6_hu36923ebd86620d6e4811dc4ef84ef836_1239768_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;http://xincoder.github.io/project/research_casheirs/6_hu36923ebd86620d6e4811dc4ef84ef836_1239768_b01d1c3daf8756d72da1b9173b043d30.webp&#34;
+               width=&#34;428&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;My responsibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Proposed and designed an image retrieval system.&lt;/li&gt;
+&lt;li&gt;Implemeted the system including an Android Client, a Python Server and a PHP interface.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;Published paper:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Xin Li, Qinghan Xue, Mooi Choo Chuah (2017). &lt;a href=&#34;../../publication/2017infocom_casheirs/&#34;&gt;CASHEIRS: Cloud assisted scalable hierarchical encrypted based image retrieval system&lt;/a&gt;. INFOCOM 2017-IEEE Conference on Computer Communications (INFOCOM).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Family Video Surveillance System [Others]</title>
+      <link>http://xincoder.github.io/project/others_family_surveillance/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/project/others_family_surveillance/</guid>
+      <description>&lt;h1 id=&#34;detection-and-description-of-visual-attributes-for-vehicles-and-pedestria&#34;&gt;&lt;strong&gt;Detection and Description of Visual Attributes for Vehicles and Pedestria&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C++ (PC server: Object and Motion Detection, Alarm module)&lt;/li&gt;
+&lt;li&gt;Java (Android Client)&lt;/li&gt;
+&lt;li&gt;PHP (Web Interface)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this project, we designed an embedded family video surveillance system. The system consists of two parts: &lt;strong&gt;(1) a PC server&lt;/strong&gt; and &lt;strong&gt;(2)an Android client&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The PC server can acquire, compress, and process camera frames. Once the PC server detected an abnormal condition, e.g. a moving people, it will send an alarm to the Android client.&lt;/p&gt;
+&lt;p&gt;The Android client can automatically receive the alarm information and download the corresponding video by on click.&lt;/p&gt;
+&lt;p&gt;My responsibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Designed a video survellance system that consists of ARM development board (camera), a PC server, and an Android client.&lt;/li&gt;
+&lt;li&gt;Implemented the main functions of the system: people detection, motion detection, alarm module.&lt;/li&gt;
+&lt;li&gt;Implemented an Android app to recieve the alarm from the server and download videos.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The following video shows a demo of our system.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/others_family_surveillance/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

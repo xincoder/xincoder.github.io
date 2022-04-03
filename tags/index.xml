@@ -1,97 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Welcome to Xin&#39;s Homepage</title>
+    <title>Tags | Welcome to Xin&#39;s Homepage</title>
     <link>http://xincoder.github.io/tags/</link>
-    <description>Recent content in Tags on Welcome to Xin&#39;s Homepage</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 01 May 2017 00:00:00 -0700</lastBuildDate>
-    
-	<atom:link href="http://xincoder.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Android</title>
-      <link>http://xincoder.github.io/tags/android/</link>
-      <pubDate>Mon, 01 May 2017 00:00:00 -0700</pubDate>
-      
-      <guid>http://xincoder.github.io/tags/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cpp</title>
-      <link>http://xincoder.github.io/tags/cpp/</link>
-      <pubDate>Mon, 01 Jun 2015 00:00:00 -0700</pubDate>
-      
-      <guid>http://xincoder.github.io/tags/cpp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Others</title>
-      <link>http://xincoder.github.io/tags/others/</link>
-      <pubDate>Thu, 05 Nov 2015 00:00:00 -0800</pubDate>
-      
-      <guid>http://xincoder.github.io/tags/others/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PHP</title>
-      <link>http://xincoder.github.io/tags/php/</link>
-      <pubDate>Mon, 01 May 2017 00:00:00 -0700</pubDate>
-      
-      <guid>http://xincoder.github.io/tags/php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>http://xincoder.github.io/tags/python/</link>
-      <pubDate>Mon, 05 Nov 2018 00:00:00 -0800</pubDate>
-      
-      <guid>http://xincoder.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Research Project</title>
-      <link>http://xincoder.github.io/tags/research-project/</link>
-      <pubDate>Mon, 05 Nov 2018 00:00:00 -0800</pubDate>
-      
-      <guid>http://xincoder.github.io/tags/research-project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SQL</title>
-      <link>http://xincoder.github.io/tags/sql/</link>
-      <pubDate>Mon, 01 Jun 2015 00:00:00 -0700</pubDate>
-      
-      <guid>http://xincoder.github.io/tags/sql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Self Driving</title>
-      <link>http://xincoder.github.io/tags/self-driving/</link>
-      <pubDate>Sun, 02 Sep 2018 00:00:00 -0700</pubDate>
-      
-      <guid>http://xincoder.github.io/tags/self-driving/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Unity</title>
-      <link>http://xincoder.github.io/tags/unity/</link>
-      <pubDate>Thu, 01 Aug 2013 00:00:00 -0700</pubDate>
-      
-      <guid>http://xincoder.github.io/tags/unity/</guid>
-      <description></description>
-    </item>
+      <atom:link href="http://xincoder.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 05 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://xincoder.github.io/media/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_3.png</url>
+      <title>Tags</title>
+      <link>http://xincoder.github.io/tags/</link>
+    </image>
     
   </channel>
 </rss>

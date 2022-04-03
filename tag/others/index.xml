@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Others | Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/tag/others/</link>
+      <atom:link href="http://xincoder.github.io/tag/others/index.xml" rel="self" type="application/rss+xml" />
+    <description>Others</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 05 Nov 2015 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://xincoder.github.io/media/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_3.png</url>
+      <title>Others</title>
+      <link>http://xincoder.github.io/tag/others/</link>
+    </image>
+    
+    <item>
+      <title>Five-in-a-Row Game [Others]</title>
+      <link>http://xincoder.github.io/project/others_fivestones/</link>
+      <pubDate>Thu, 05 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/project/others_fivestones/</guid>
+      <description>&lt;h1 id=&#34;detection-and-description-of-visual-attributes-for-vehicles-and-pedestria&#34;&gt;&lt;strong&gt;Detection and Description of Visual Attributes for Vehicles and Pedestria&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python (Server)&lt;/li&gt;
+&lt;li&gt;HTML5 (Interface)&lt;/li&gt;
+&lt;li&gt;JaveScript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this project, we designed and implemented a very simple AI for the Five-in-a-Row Game. Black plays first if white did not just win, and players alternate in placing a stone of their color on an empty intersection. The winner is the first player to get an unbroken row of five stones horizontally, vertically, or diagonally.&lt;/p&gt;
+&lt;p&gt;My responsibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Designed and implemented a JaveScript client embedded inside an HTML5 webpage that allows two players to play five-in-a-row game.&lt;/li&gt;
+&lt;li&gt;Designed and implemented a server application that judges which player wins in the end.&lt;/li&gt;
+&lt;li&gt;Implemented a Python AI program that can play against a single player. The AI program at least beats a player that randomly place stones on the board.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The following video shows a demo of our system.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/others_fivestones/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Family Video Surveillance System [Others]</title>
+      <link>http://xincoder.github.io/project/others_family_surveillance/</link>
+      <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/project/others_family_surveillance/</guid>
+      <description>&lt;h1 id=&#34;detection-and-description-of-visual-attributes-for-vehicles-and-pedestria&#34;&gt;&lt;strong&gt;Detection and Description of Visual Attributes for Vehicles and Pedestria&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C++ (PC server: Object and Motion Detection, Alarm module)&lt;/li&gt;
+&lt;li&gt;Java (Android Client)&lt;/li&gt;
+&lt;li&gt;PHP (Web Interface)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this project, we designed an embedded family video surveillance system. The system consists of two parts: &lt;strong&gt;(1) a PC server&lt;/strong&gt; and &lt;strong&gt;(2)an Android client&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The PC server can acquire, compress, and process camera frames. Once the PC server detected an abnormal condition, e.g. a moving people, it will send an alarm to the Android client.&lt;/p&gt;
+&lt;p&gt;The Android client can automatically receive the alarm information and download the corresponding video by on click.&lt;/p&gt;
+&lt;p&gt;My responsibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Designed a video survellance system that consists of ARM development board (camera), a PC server, and an Android client.&lt;/li&gt;
+&lt;li&gt;Implemented the main functions of the system: people detection, motion detection, alarm module.&lt;/li&gt;
+&lt;li&gt;Implemented an Android app to recieve the alarm from the server and download videos.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The following video shows a demo of our system.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/others_family_surveillance/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Augmented Reality Cinema [Others]</title>
+      <link>http://xincoder.github.io/project/others_ar/</link>
+      <pubDate>Thu, 01 Aug 2013 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/project/others_ar/</guid>
+      <description>&lt;h1 id=&#34;augmented-reality-cinema&#34;&gt;&lt;strong&gt;Augmented Reality Cinema&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C# (Unity)&lt;/li&gt;
+&lt;li&gt;Unity Script (Unity)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this project, we designed and implemented an augmented reality system based on tablet for Autodesk Maya. The app runs on an Android tablet records the trajectory of the virtual camera. In this way, movie directors do not need to manually set the trajectory of the virtual camera in Maya.&lt;/p&gt;
+&lt;p&gt;My responsibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Developed an Android app to interactively record the trajectory of the virtual camera based on the device sensors&amp;rsquo; data.&lt;/li&gt;
+&lt;li&gt;Implemented the function of replaying the trajectory based on the recorded data.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The following video shows a demo of our system.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/others_ar/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

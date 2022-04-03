@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unity | Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/tag/unity/</link>
+      <atom:link href="http://xincoder.github.io/tag/unity/index.xml" rel="self" type="application/rss+xml" />
+    <description>Unity</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2013 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://xincoder.github.io/media/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_3.png</url>
+      <title>Unity</title>
+      <link>http://xincoder.github.io/tag/unity/</link>
+    </image>
+    
+    <item>
+      <title>Augmented Reality Cinema [Others]</title>
+      <link>http://xincoder.github.io/project/others_ar/</link>
+      <pubDate>Thu, 01 Aug 2013 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/project/others_ar/</guid>
+      <description>&lt;h1 id=&#34;augmented-reality-cinema&#34;&gt;&lt;strong&gt;Augmented Reality Cinema&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C# (Unity)&lt;/li&gt;
+&lt;li&gt;Unity Script (Unity)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this project, we designed and implemented an augmented reality system based on tablet for Autodesk Maya. The app runs on an Android tablet records the trajectory of the virtual camera. In this way, movie directors do not need to manually set the trajectory of the virtual camera in Maya.&lt;/p&gt;
+&lt;p&gt;My responsibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Developed an Android app to interactively record the trajectory of the virtual camera based on the device sensors&amp;rsquo; data.&lt;/li&gt;
+&lt;li&gt;Implemented the function of replaying the trajectory based on the recorded data.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The following video shows a demo of our system.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/others_ar/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

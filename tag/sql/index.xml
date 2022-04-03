@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL | Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/tag/sql/</link>
+      <atom:link href="http://xincoder.github.io/tag/sql/index.xml" rel="self" type="application/rss+xml" />
+    <description>SQL</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://xincoder.github.io/media/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_3.png</url>
+      <title>SQL</title>
+      <link>http://xincoder.github.io/tag/sql/</link>
+    </image>
+    
+    <item>
+      <title>Vehicles and Pedestrians Detection [Research]</title>
+      <link>http://xincoder.github.io/project/research_vehicle_pedestrian/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/project/research_vehicle_pedestrian/</guid>
+      <description>&lt;h1 id=&#34;detection-and-description-of-visual-attributes-for-vehicles-and-pedestrian&#34;&gt;&lt;strong&gt;Detection and Description of Visual Attributes for Vehicles and Pedestrian&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Programming Language:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C++&lt;/li&gt;
+&lt;li&gt;SQL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this project, we designed and implemented a system to detect and track vehicles and pedestrains from traffic surveillance videos. Once a vehicle/pedestrain is detected/tracked, some visual descriptions, e.g. color, moving direction, etc., are analyzed. All information are stored into a local SQL database for retrieval in the future.&lt;/p&gt;
+&lt;p&gt;My responsibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Proposed and implemented a detection system for vehicles.&lt;/li&gt;
+&lt;li&gt;Implemeted a tracking function.&lt;/li&gt;
+&lt;li&gt;Extract visual descriptions from detected vehicles.&lt;/li&gt;
+&lt;li&gt;Implemented objects retrieval functions.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The following video shows a demo of our system.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+&lt;video controls  &gt;
+  &lt;source src=&#34;http://xincoder.github.io/project/research_vehicle_pedestrian/demo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

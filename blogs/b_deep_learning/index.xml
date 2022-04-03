@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>B. Deep Learning | Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/blogs/b_deep_learning/</link>
+      <atom:link href="http://xincoder.github.io/blogs/b_deep_learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>B. Deep Learning</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 24 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://xincoder.github.io/media/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_3.png</url>
+      <title>B. Deep Learning</title>
+      <link>http://xincoder.github.io/blogs/b_deep_learning/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/b_deep_learning/environment/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/blogs/b_deep_learning/environment/</guid>
+      <description>&lt;p&gt;In this blog, we are going to use &lt;a href=&#34;https://keras.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Keras&lt;/a&gt;(A Python Deep Learning Library) to implement our deep learning model. It is compatible with Python 2.7-3.5. Keras uses &lt;a href=&#34;https://www.tensorflow.org/install/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tensorflow&lt;/a&gt;, &lt;a href=&#34;http://deeplearning.net/software/theano/install.html#install&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Theano&lt;/a&gt;, or &lt;a href=&#34;https://docs.microsoft.com/en-us/cognitive-toolkit/setup-cntk-on-your-machine&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CNTK&lt;/a&gt; as its backend engines, so only need to install one of them.&lt;/p&gt;
+&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Keras 2.0.6 (or higher version).&lt;/li&gt;
+&lt;li&gt;Python 2.7-3.5&lt;/li&gt;
+&lt;li&gt;Tensorflow or Theano or CNTK&lt;/li&gt;
+&lt;li&gt;HDF5&lt;/li&gt;
+&lt;li&gt;h5py&lt;/li&gt;
+&lt;li&gt;graphviz&lt;/li&gt;
+&lt;li&gt;pydot&lt;/li&gt;
+&lt;li&gt;cuDNN (only for running on GPU)&lt;/li&gt;
+&lt;li&gt;opencv&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;HDF5&lt;/strong&gt; and &lt;strong&gt;h5py&lt;/strong&gt; libraries are used to save our model to disk. &lt;strong&gt;graphviz&lt;/strong&gt; and &lt;strong&gt;pydot&lt;/strong&gt; libraries are needed only when you want to plot model graphs to files (.png or .pdf).&lt;/p&gt;
+&lt;p&gt;In addition, if your computer has one or multiple NVIDIA graph cards, you may want to install &lt;strong&gt;cuDNN&lt;/strong&gt; library to run Keras on GPU.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Next, I will show you how to setup the environment in &lt;a href=&#34;https://anaconda.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Anaconda&lt;/a&gt; on MacOS. (For other Operating Systems, please modify the corresponding links or commands.)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;# Open a terminal and type the following commands
+
+# Step 1: Download Anaconda
+&amp;gt; curl -O https://repo.continuum.io/archive/Anaconda3-4.4.0-MacOSX-x86_64.sh
+
+# Step 2: Install Anaconda (Use all default settings)
+&amp;gt; bash Anaconda3-4.4.0-MacOSX-x86_64.sh
+
+# Step 3: Restart your terminal
+
+# Step 4: Create a virtual environment. (so that it will not mess up the existing settings) 
+&amp;gt; conda create -n keras python=3.5
+
+# Step 5: Install Tensorflow CPU version on Mac
+&amp;gt; source activate keras
+&amp;gt; pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.3.0-py3-none-any.whl
+# If there is an error, please try it again.
+
+# Step 6: Install Keras
+&amp;gt; pip install keras
+
+# Step 7: Install other Dependencies
+&amp;gt; conda install HDF5
+&amp;gt; conda install h5py
+&amp;gt; pip install pydot
+&amp;gt; pip install graphviz
+&amp;gt; pip install pillow
+&amp;gt; conda install -c https://conda.anaconda.org/menpo opencv3
+
+# Step 8: Test
+&amp;gt; python
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.utils import plot_model
+model = Sequential()
+model.add(Dense(10, input_shape=(700, 1)))
+model.summary()
+plot_model(model, to_file=&#39;abc.pdf&#39;, show_shapes=True)
+exit()
+
+# If you get some error like: install graphviz, you can try this command:
+&amp;gt; brew install graphviz
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/b_deep_learning/neural_network/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/blogs/b_deep_learning/neural_network/</guid>
+      <description>&lt;p&gt;In this blog, we are going to use Neural Network to do image classification. The following figure shows a simple example of Neural Network. If you are interested in this field, please see this &lt;a href=&#34;https://neurophysics.ucsd.edu/courses/physics_171/annurev.neuro.28.061604.135703.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;review&lt;/a&gt; or recently this &lt;a href=&#34;http://www.sciencedirect.com/science/article/pii/S0959438814000130&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;review&lt;/a&gt;.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;nn.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-a-simple-neural-network-on-mnist-datasethttpyannlecuncomexdbmnist-as-an-example&#34;&gt;1. A simple Neural Network on &lt;a href=&#34;http://yann.lecun.com/exdb/mnist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MNIST dataset&lt;/a&gt; as an example.&lt;/h3&gt;
+&lt;p&gt;The MNIST database is a large database of handwritten digits. It contains 60,000 training images and 10,000 testing images. The Keras provides a convenience method for loading the MNIST dataset.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;# In this demo we design a Neural Network with 1 hidden layers: 
+#   Input layer (784 dimensions)
+#   layer 1 (1000 hidden neurons)
+#   layer 2 (10 outputs)
+
+import numpy
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.utils import np_utils
+
+# load data
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+# flatten 28*28 images to a 784 vector for each image
+num_pixels = X_train.shape[1] * X_train.shape[2]
+X_train = X_train.reshape(X_train.shape[0], num_pixels).astype(&#39;float32&#39;)
+X_test = X_test.reshape(X_test.shape[0], num_pixels).astype(&#39;float32&#39;)
+
+# normalize inputs from 0-255 to 0-1
+X_train = X_train / 255
+X_test = X_test / 255
+
+# one hot encode outputs
+y_train = np_utils.to_categorical(y_train)
+y_test = np_utils.to_categorical(y_test)
+num_classes = y_test.shape[1]
+
+# design model
+model = Sequential()
+model.add(Dense(1000, input_dim=num_pixels, activation=&#39;relu&#39;))
+model.add(Dense(num_classes, activation=&#39;softmax&#39;))
+
+# print out summary of the model
+print(model.summary())
+
+# Compile model
+model.compile(loss=&#39;categorical_crossentropy&#39;, optimizer=&#39;adam&#39;, metrics=[&#39;accuracy&#39;])
+
+# Fit the model
+model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=10, batch_size=200, verbose=2)
+
+# Final evaluation of the model
+scores = model.evaluate(X_test, y_test, verbose=0)
+print(&amp;quot;Baseline Error: %.2f%%&amp;quot; % (100-scores[1]*100))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-assignment&#34;&gt;2. Assignment&lt;/h3&gt;
+&lt;p&gt;Run the above code to double check your environment and get some sense about how it looks like while training a model. Design your own Neural Network to do Image Classification on &lt;strong&gt;Boat Dataset&lt;/strong&gt;. Boat Dataset consists of 5 different types of boats:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Training Dataset (249.6 MB) &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/training_images.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Class&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Number of images&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;aircraft_carrier&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;banana_boat&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;oil_tanker&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;passenger_ship&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;yacht&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;In total&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Testing Dataset (97.1 MB, 1000 images) &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/testing_images.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Train your model on training dataset and test the trained model on testing dataset.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hint&lt;/strong&gt;
+Try to understand the following API(s):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;# All images in the new dataset are colorful images (consist of Red, Blue, and Green channels) with different sizes. You may would like to use the following API to resize all images into the same size before doing flatten (line 15 in the above code). 
+image = cv2.imread(path) # load an image
+resized_image = cv2.resize(image, (new_height, new_width)) # resize an image
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To improve the performance of your model, you can try different values of the following parameters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; number of hidden layers (network structure)&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; number of neurons in each layer (network structure)&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; image size (preprocessing)&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; batch_size (training phase, model.compile)&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; optimizer (training phase, model.compile)&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; other settings you can dig out.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-submite-your-sulotion&#34;&gt;3. Submite your sulotion:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Your final python code. Please name it using your Lehigh ID. (&amp;lt;your_LehighID&amp;gt;.py)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; A short &amp;lt;your_LehighID&amp;gt;.pdf file. Simply describe what you did, what you got, and other things you want to report, e.g. what you have learned.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/b_deep_learning/convolutional_network/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/blogs/b_deep_learning/convolutional_network/</guid>
+      <description>&lt;p&gt;In this blog, we are going to use Convolutional Neural Network (CNN) to do image classification.
+The following figure shows the comparison between a 3-layer Neural Network and a simple Convolutional Neural Network. If you are interested in CNN, you can refer this paper which proposes &lt;a href=&#34;https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AlexNet&lt;/a&gt;.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;cnn.png&#34; alt=&#34;Screen Shot 2017-08-27 at 9.53.44 PM.png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-a-simple-convolutional-neural-network-on-mnist-datasethttpyannlecuncomexdbmnist-as-an-example&#34;&gt;1. A simple Convolutional Neural Network on &lt;a href=&#34;http://yann.lecun.com/exdb/mnist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MNIST dataset&lt;/a&gt; as an example.&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;import numpy
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Flatten
+from keras.layers.convolutional import Conv2D, MaxPooling2D
+
+# load data
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+# reshape to be [samples][pixels][width][height]
+X_train = X_train.reshape(X_train.shape[0], 28, 28, 1).astype(&#39;float32&#39;)
+X_test = X_test.reshape(X_test.shape[0], 28, 28, 1).astype(&#39;float32&#39;)
+
+# normalize inputs from 0-255 to 0-1
+X_train = X_train / 255
+X_test = X_test / 255
+# one hot encode outputs
+y_train = np_utils.to_categorical(y_train)
+y_test = np_utils.to_categorical(y_test)
+num_classes = y_test.shape[1]
+
+# create model
+model = Sequential()
+model.add(Conv2D(32, (5, 5), input_shape=(28, 28, 1), activation=&#39;relu&#39;))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.2))
+model.add(Flatten())
+model.add(Dense(128, activation=&#39;relu&#39;))
+model.add(Dense(num_classes, activation=&#39;softmax&#39;))
+# Compile model
+model.compile(loss=&#39;categorical_crossentropy&#39;, optimizer=&#39;adam&#39;, metrics=[&#39;accuracy&#39;])
+
+# Fit the model
+model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=10, batch_size=200, verbose=2)
+
+# Final evaluation of the model
+scores = model.evaluate(X_test, y_test, verbose=0)
+print(&amp;quot;Baseline Error: %.2f%%&amp;quot; % (100-scores[1]*100))	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-assignment&#34;&gt;2. Assignment&lt;/h3&gt;
+&lt;p&gt;Please run the above code before you design yours. You will notice that using a CNN model gains a higher accuracy than the Neural Netowork on MNIST dataset. Design your own CNN to do Image Classification on &lt;strong&gt;Boat Dataset&lt;/strong&gt;. Boat Dataset consists of 5 different types of boats:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Training Dataset (249.6 MB) &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/training_images.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Class&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Number of images&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;aircraft_carrier&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;banana_boat&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;oil_tanker&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;passenger_ship&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;yacht&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;In total&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2500&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;Testing Dataset (97.1 MB, 1000 images) &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/testing_images.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Train your model on training dataset and test the trained model on testing dataset.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hint&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Data augmentation (search how to do data augmentation in Keras)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Finetune a pre-trained CNN model. (refer to: keras.applications)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-submite-your-sulotion&#34;&gt;3. Submite your sulotion:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Your final python code. Please name it using your Lehigh ID. (&amp;lt;your_LehighID&amp;gt;.py)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; A short &amp;lt;your_LehighID&amp;gt;.pdf file. Simply describe what you did, what you got, and other things you want to report, e.g. what you have learned.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/b_deep_learning/image_caption/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/blogs/b_deep_learning/image_caption/</guid>
+      <description>&lt;p&gt;In this blog, we are going to use LSTMs (Long Short Term Memory Networks) to generate a caption for a given image. LSTMs are a special kind of Recurrent Neural Networks (RNN). If you are looking for some related papers, please refer to &lt;a href=&#34;https://arxiv.org/pdf/1411.4555.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper1&lt;/a&gt; and &lt;a href=&#34;https://arxiv.org/pdf/1411.4389.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper2&lt;/a&gt;. The following figure shows the solution of image caption generation proposed in &lt;a href=&#34;https://arxiv.org/pdf/1411.4389.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper2&lt;/a&gt;.
+&lt;img src=&#34;paper_figure.png&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;&lt;/p&gt;
+&lt;p&gt;Next, we will implement a simpler one. The following figure shows the architecture of the implemented model.&lt;/p&gt;
+&lt;!-- ![model.png](quiver-image-url/65B111ACB5D56D0CCA6D1E63B7D3070E.png =950x2230) --&gt;
+&lt;img src=&#34;model.png&#34; alt=&#34;drawing&#34; width=&#34;500&#34;/&gt;
+___
+### 1. Dataset
+We use the [flickr30k](http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/flickr30k_images.zip) dataset (4.39 GB) to train an image caption generator. The [flickr30k](http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/flickr30k_images.zip) dataset consists of 31,783 images and each one has 5 corresponding captions. We split this dataset into a training subset (21,783 images) and a testing subset (10,000 images). 
+&lt;hr&gt;
+&lt;h3 id=&#34;2-a-simple-code&#34;&gt;2. A simple code&lt;/h3&gt;
+&lt;p&gt;Please run the following command first:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Batch&#34;&gt;&amp;gt; pip install pillow
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, the following shows a simple demo code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;import os  
+import numpy as np 
+from keras.applications.vgg16 import VGG16, preprocess_input
+from keras.models import Sequential, Model
+from keras.layers import LSTM, Dense, Embedding, Merge, Flatten, RepeatVector, TimeDistributed, Concatenate
+from keras.applications.vgg16 import VGG16, preprocess_input
+from keras.preprocessing import image as Image
+from keras.preprocessing import sequence as Sequence
+from keras.callbacks import TensorBoard, ModelCheckpoint
+from keras.utils import plot_model, to_categorical
+from collections import Counter
+
+CUDA_VISIBLE_DEVICES=&#39;0&#39;
+os.environ[&amp;quot;CUDA_VISIBLE_DEVICES&amp;quot;] = CUDA_VISIBLE_DEVICES
+
+# If you are running on your own computer, please change the following paths to your local paths.
+# If you are running on HPC, you can keep the following paths.
+# IMAGE_ROOT = &#39;/Users/xincoder/Documents/Dataset/flickr30k_images/flickr30k_images&#39;
+# TRAIN_CAPTION_PATH = &#39;/Users/xincoder/Documents/Dataset/flickr30k_images/train.txt&#39;
+# TEST_CAPTION_PATH = &#39;/Users/xincoder/Documents/Dataset/flickr30k_images/test.txt&#39;
+
+IMAGE_ROOT = &#39;/share/ceph/mcc7cse498/xil915/flickr30k_images/flickr30k_images&#39;
+TRAIN_CAPTION_PATH = &#39;/share/ceph/mcc7cse498/xil915/flickr30k_images/train.txt&#39;
+TEST_CAPTION_PATH = &#39;/share/ceph/mcc7cse498/xil915/flickr30k_images/test.txt&#39;
+
+WORDS_PATH = &#39;words.txt&#39;
+SENTENCE_MAX_LENGTH = 100 # In this dataset, the maximum length is 84.
+EMBEDDING_SIZE = 256
+IMAGE_SIZE = 224
+
+CHECK_ROOT = &#39;checkpoint/&#39;
+if not os.path.exists(CHECK_ROOT):
+	os.makedirs(CHECK_ROOT)
+
+class Data_generator(object):
+	def __init__(self, pra_batch_size=20, pra_word_frequency=2):
+		self.word_frequency = pra_word_frequency # remove words whose frequency less than this value
+		self.train_image_names, self.train_image_captions, self.test_image_names, self.test_image_captions = self.get_name_caption()
+		self.train_image_captions_index = self.caption2index(self.train_image_captions)
+		self.test_image_captions_index = self.caption2index(self.test_image_captions)
+		self.batch_size = pra_batch_size # how many samples we want to train in each step
+		self.train_steps_epoch = len(self.train_image_names)//pra_batch_size # steps per epoch
+		self.test_steps_epoch = len(self.test_image_names)//pra_batch_size # steps per epoch
+		
+	def get_name_caption(self):
+		&#39;&#39;&#39;
+		Load training and testing data from files. 
+		We add a &amp;lt;SOS&amp;gt; and &amp;lt;EOS&amp;gt; to the beginning and the end of each sentence respectively.
+		(&amp;lt;SOS&amp;gt; stands for &amp;quot;start of sentence&amp;quot;, &amp;lt;EOS&amp;gt; stands for &amp;quot;end of sentence&amp;quot;)
+		Returns:
+			train_image_name_list: all paths of training images
+			train_caption_list: corresponding training captions
+			test_image_name_list: all paths of testing images
+			test_caption_list: corresponding testing captions
+		&#39;&#39;&#39;
+		with open(TRAIN_CAPTION_PATH, &#39;r&#39;) as reader:
+			content = [x.strip().split(&#39;\t&#39;) for x in reader.readlines()]
+			train_image_name_list = [os.path.join(IMAGE_ROOT, x[0].split(&#39;#&#39;)[0]) for x in content]
+			train_caption_list = [&#39;&amp;lt;SOS&amp;gt; {} &amp;lt;EOS&amp;gt;&#39;.format(x[1].lower()) for x in content]
+
+		with open(TEST_CAPTION_PATH, &#39;r&#39;) as reader:
+			content = [x.strip().split(&#39;\t&#39;) for x in reader.readlines()]
+			test_image_name_list = [os.path.join(IMAGE_ROOT, x[0].split(&#39;#&#39;)[0]) for x in content]
+			test_caption_list = [&#39;&amp;lt;SOS&amp;gt; {} &amp;lt;EOS&amp;gt;&#39;.format(x[1].lower()) for x in content]	
+
+		all_words = &#39; &#39;.join(train_caption_list+test_caption_list).split(&#39; &#39;)
+		words_num = Counter(all_words)
+		words = [x for x in words_num if words_num[x]&amp;gt;=self.word_frequency]
+		print(&#39;{} unique words (all).&#39;.format(len(words_num)))
+		print(&#39;{} unique words (count&amp;gt;={}).&#39;.format(len(words), self.word_frequency))
+
+		with open(WORDS_PATH, &#39;w&#39;) as writer:
+			writer.write(&#39;\n&#39;.join(words))
+
+		return train_image_name_list, train_caption_list, test_image_name_list, test_caption_list
+
+	def get_dictionary(self, pra_captions):
+		&#39;&#39;&#39; 
+		Generate a dictionary for all words in our dataset. 
+		Return:
+			words2index: word-&amp;gt;index dictionary 
+			index2words: index-&amp;gt;word dictionary
+		&#39;&#39;&#39;
+		if not os.path.exists(WORDS_PATH):
+			words = set(&#39; &#39;.join(pra_captions).split(&#39; &#39;))
+			with open(WORDS_PATH, &#39;w&#39;) as writer:
+				writer.write(&#39;\n&#39;.join(words))
+		else:
+			with open(WORDS_PATH, &#39;r&#39;) as reader:
+				words = [x.strip() for x in reader.readlines()]
+
+		self.voc_size = len(words)
+		words2index = dict((w, ind) for ind, w in enumerate(words, start=0))
+		index2words = dict((ind, w) for ind, w in enumerate(words, start=0))
+		return words2index, index2words
+
+	def caption2index(self, pra_captions):
+		words2index, index2words = self.get_dictionary(pra_captions)
+		captions = [x.split(&#39; &#39;) for x in pra_captions]
+		index_captions = [[words2index[w] for w in cap if w in words2index.keys()] for cap in captions]
+		return index_captions
+
+	def index2caption(self, pra_index):
+		words2index, index2words = self.get_dictionary(&#39;&#39;)
+		captions = [&#39; &#39;.join([index2words[w] for w in cap]) for cap in pra_index]
+		return captions	
+
+	def convert2onehot(self, pra_caption):
+		captions = np.zeros((len(pra_caption), self.voc_size))
+		for ind, cap in enumerate(pra_caption, start=0):
+			captions[ind, cap] = 1
+		return np.array(captions)
+
+	def get_epoch_steps(self):
+		return self.train_steps_epoch, self.test_steps_epoch
+
+	def generate(self, pra_train=True):
+		&#39;&#39;&#39;
+		This is a generator which is used to continuously generate training or testing data.
+			pra_train = True : generate training data
+			pra_train = False : generate testing data
+		&#39;&#39;&#39;
+		while True:
+			if pra_train:
+				# we shuffle training data at the beginning of each epoch.
+				shuffle_index = np.random.permutation(len(self.train_image_names))
+				image_name_list = np.array(self.train_image_names)[shuffle_index]
+				image_caption_list = np.array(self.train_image_captions)[shuffle_index]
+				image_caption_index_list = np.array(self.train_image_captions_index)[shuffle_index]
+			else:
+				image_name_list = self.test_image_names
+				image_caption_list = self.test_image_captions
+				image_caption_index_list = self.test_image_captions_index
+
+			image_caption_index_list = Sequence.pad_sequences(image_caption_index_list, maxlen=SENTENCE_MAX_LENGTH, padding=&#39;post&#39;)
+			
+			input_image_list = []
+			input_caption_list = []
+			target_caption_list = []
+			for index, (image_name, image_caption) in enumerate(zip(image_name_list, image_caption_index_list), start=1):
+				# image
+				input_image = Image.img_to_array(Image.load_img(image_name, target_size=(IMAGE_SIZE, IMAGE_SIZE, 3)))
+				input_caption_onehot = self.convert2onehot(image_caption)
+				target_caption_onehot = np.zeros_like(input_caption_onehot)
+				target_caption_onehot[:-1] = input_caption_onehot[1:]
+				
+				input_image_list.append(input_image)
+				input_caption_list.append(input_caption_onehot)
+				target_caption_list.append(target_caption_onehot)
+
+				if len(input_image_list) == self.batch_size:
+					tmp_images = np.array(input_image_list)
+					tmp_captions = np.array(input_caption_list)
+					tmp_targets = np.array(target_caption_list)
+					input_image_list = []
+					input_caption_list = []
+					target_caption_list = []
+					yield [preprocess_input(tmp_images), tmp_captions], tmp_targets
+
+
+class Image_Caption(object):
+	def __init__(self, pra_voc_size):
+		self.voc_size = pra_voc_size
+
+		# Model design start from here.
+		# we use the VGG16 as the base model to extract CNN feature from an image
+		base_model = VGG16(weights=&#39;imagenet&#39;, include_top=True)
+		base_model = Model(inputs=base_model.input, outputs=base_model.get_layer(&#39;fc2&#39;).output)
+		for layer in base_model.layers[1:]:
+			layer.trainable = False
+
+		# add a fully connected layer on the top of our base model 
+		# and repeat it several times, so that it has the same shape as our language model
+		image_model = Sequential()
+		image_model.add(base_model)
+		image_model.add(Dense(EMBEDDING_SIZE, activation=&#39;relu&#39;))
+		image_model.add(RepeatVector(SENTENCE_MAX_LENGTH))
+		
+		# we use an Embedding layer to generate a good representation for captions.
+		language_model = Sequential()
+		# language_model.add(Embedding(self.voc_size, EMBEDDING_SIZE, input_length=SENTENCE_MAX_LENGTH))
+		language_model.add(LSTM(128, input_shape=(SENTENCE_MAX_LENGTH, self.voc_size), return_sequences=True))
+		language_model.add(TimeDistributed(Dense(128)))
+
+
+		# after merging CNN feature (image) and embedded vector (caption), we feed them into a LSTM model
+		# at its end, we use a fully connected layer with softmax activation to convert the output into probability 
+		model = Sequential()
+		model.add(Merge([image_model, language_model], mode=&#39;concat&#39;))
+		# model.add(Concatenate([image_model, language_model]))
+		model.add(LSTM(1000, return_sequences=True))
+		# model.add(Dense(self.voc_size, activation=&#39;softmax&#39;, name=&#39;final_output&#39;))
+		model.add(TimeDistributed(Dense(self.voc_size, activation=&#39;softmax&#39;)))
+
+		# draw the model and save it to a file.
+		# plot_model(model, to_file=&#39;model.pdf&#39;, show_shapes=True)
+		
+		self.model = model
+		self.model.compile(loss=&#39;categorical_crossentropy&#39;, optimizer=&#39;rmsprop&#39;, metrics=[&#39;accuracy&#39;])
+
+	def train_model(self, pra_datagen):
+		# callback: draw curve on TensorBoard
+		tensorboard = TensorBoard(log_dir=&#39;log&#39;, histogram_freq=0, write_graph=True, write_images=True)
+		# callback: save the weight with the highest validation accuracy
+		filepath=os.path.join(CHECK_ROOT, &#39;weights-improvement-{val_acc:.4f}-{epoch:04d}.hdf5&#39;)
+		checkpoint = ModelCheckpoint(filepath, monitor=&#39;val_acc&#39;, verbose=2, save_best_only=True, mode=&#39;max&#39;)
+
+		# train model 
+		self.model.fit_generator(
+			pra_datagen.generate(True), 
+			steps_per_epoch=pra_datagen.get_epoch_steps()[0], 
+			epochs=5, 
+			validation_data=pra_datagen.generate(False), 
+			validation_steps=pra_datagen.get_epoch_steps()[1],
+			callbacks=[tensorboard, checkpoint])
+	
+if __name__ == &#39;__main__&#39;:
+	my_generator = Data_generator()
+	model = Image_Caption(my_generator.voc_size)
+	model.train_model(my_generator)
+
+	# for [img, cap], tar in my_generator.generate():
+	# 	print(img.shape, cap.shape, tar.shape)
+	# 	print(np.argmax(cap[0, 0]), np.argmax(tar[0, 0]))
+	# 	print(np.argmax(cap[0, 1]), np.argmax(tar[0, 0]))
+	# 	print(&#39;&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-assignment&#34;&gt;2. Assignment&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Run the above code to train the model and use it as a baseline.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Modify the above code to improve the accuracy.&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Add a function to generate a sentence for a given image.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt;
+To improve the accuracy, you can try:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;different base models. (refer to: keras.applications)&lt;/li&gt;
+&lt;li&gt;different RNNs. (refer to: keras.layers.recurrent)&lt;/li&gt;
+&lt;li&gt;data augmentation by randomly rotating, fliping, or shifting training images.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-submite-your-sulotion&#34;&gt;3. Submite your sulotion:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Your final python code. Please name it using your Lehigh ID. (&amp;lt;your_LehighID&amp;gt;.py)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; A short &amp;lt;your_LehighID&amp;gt;.pdf file. Simply describe what you did, what you got, and other things you want to report, e.g. what you have learned.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-train-your-model-on-hpc&#34;&gt;4. Train your model on HPC&lt;/h3&gt;
+&lt;p&gt;It will take weeks (or months) if you only use the CPU on your laptops to train the model. Considering this, Prof. Chuah has already applied Lehigh University Research Computing (HPC) resource for all of you. (You may have already received an email from &lt;a href=&#34;root@polaris.cc.lehigh.edu&#34;&gt;root@polaris.cc.lehigh.edu&lt;/a&gt;). Please run your code on your own computer first to make sure that there is no error before you run it on HPC.&lt;/p&gt;
+&lt;p&gt;You can access HPC via SSH.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For Windows users: please download &lt;a href=&#34;http://www.putty.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Putty&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;For Mac users: you can use SSH in a terminal.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The username and password for HPC is your LehighID and the corresponding password. For example, my LehighID id &lt;strong&gt;xil915&lt;/strong&gt;, then I can access HPC using the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;ssh &amp;lt;your_LehighID&amp;gt;@sol.cc.lehigh.edu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;All training and testing data have been saved in a shared directory:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;/share/ceph/.../.../flickr30k_images
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once you login, you need to create two files in your own directories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;your python code, namely image_caption.py.&lt;/li&gt;
+&lt;li&gt;a bash file, namely run.sh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Save the following script into your run.sh:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;#!/bin/tcsh
+#SBATCH --partition=imlab-gpu 
+#SBATCH --time=100:00:00 # maximum time
+#SBATCH --nodes=1 # 1 CPU can be be paired with only 1 GPU
+#SBATCH --ntasks-per-node=1
+#SBATCH --gres=gpu:1 # Need both GPUs, use --gres=gpu:2
+#SBATCH --job-name xin_image_caption
+#SBATCH --output=&amp;quot;log.%j.%N.out&amp;quot;
+
+module load python/cse498
+python image_caption.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Run your code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;sbatch run.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This command will sumbit your job to a waitinglist. Please use the following command to check the status of your jobs:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;&amp;gt; squeue # list all jobs
+&amp;gt; squeue -u xil915 # your LehighID, only list your job(s).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is my output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;[xil915@sol CSE498]$ squeue -u xil915
+    JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+    187364 imlab-gpu xin_imag   xil915 PD       0:00      1 (Priority)
+# ST == PD : this job is pending
+# ST == R : this job is running
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Cancel your job using:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;&amp;gt; scancel 187364 # JOBID
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When your job is running, all standard outputs will be saved in to file namely, log.*.out (e.g. log.187364.sol-b411.out). You can print it out using:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;&amp;gt; cat log.187364.sol-b411.out
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;span-stylecolororange-help-span&#34;&gt;&lt;span style=&#34;color:orange&#34;&gt; HELP !!!&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Considering that the long waiting list on HPC, I provide a pre-trained model using my demo code to you.&lt;/p&gt;
+&lt;p&gt;During your model is training, you can use my pre-trained model to test your implemented function. (generating a sentence for a given image)&lt;/p&gt;
+&lt;p&gt;Downloads: &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/xin_weights.hdf5&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pre-trained model&lt;/a&gt;, &lt;a href=&#34;http://carina.cse.lehigh.edu/Data_Analytics_Course/resources/words.txt&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;words index&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The pre-trained model only was trained for 2 epochs.&lt;/li&gt;
+&lt;li&gt;The words index is a file which list the indices of words.
+(&lt;span style=&#34;color:red&#34;&gt; A good result is not expected using this pre-trained model, considering that this is only trained for 2 epochs.&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Load weights:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;model.load_weights(filepath)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span style=&#34;color:orange&#34;&gt;Please note it in your report, if you use this pre-trained model to generate the final results.&lt;/span&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/b_deep_learning/train_classifier/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/blogs/b_deep_learning/train_classifier/</guid>
+      <description>&lt;h3 id=&#34;how-to-train-an-object-classifier-using-our-own-images&#34;&gt;How to train an object classifier using our own images&lt;/h3&gt;
+&lt;h3 id=&#34;1-info&#34;&gt;1. Info:&lt;/h3&gt;
+&lt;p&gt;I prepared two python scripts (&lt;a href=&#34;retrain.py&#34;&gt;retrain.py&lt;/a&gt;, &lt;a href=&#34;predict.py&#34;&gt;predict.py&lt;/a&gt;) for this task.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;retrain.py&#34;&gt;retrain.py&lt;/a&gt;: used to train the classifier.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;predict.py&#34;&gt;predict.py&lt;/a&gt;: used to load the trained model and test on new images.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-prepare-training-and-testing-data&#34;&gt;2. Prepare training and testing data:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Training Data:&lt;/strong&gt; Let&amp;rsquo;s assume that we have two classes, namely &amp;ldquo;cat&amp;rdquo; and &amp;ldquo;dog&amp;rdquo;. We just need to make sure that there are two sub-folders in &amp;ldquo;training_images&amp;rdquo; folder. Each sub-folder only consists of its own images.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-plaintext&#34;&gt;|- training_images
+    |- cat
+        |- image_0.jpg
+        |- image_1.jpg
+        ...
+    |- dog
+        |- image_2.jpg
+        |- image_3.jpg
+        ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Testing Data:&lt;/strong&gt; All testing images are put in one folder, e.g. &amp;ldquo;testing_images&amp;rdquo;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-plaintext&#34;&gt;|- testing_images
+    |- image_0.jpg
+    |- image_1.jpg
+    |- image_2.jpg
+    |- image_3.jpg
+    ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-train-a-classifier&#34;&gt;3. Train a classifier&lt;/h3&gt;
+&lt;p&gt;Assume that both &amp;ldquo;training_images&amp;rdquo; and &amp;ldquo;testing_images&amp;rdquo; are in this folder:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; ls
+models/ predict.py  retrain.py  testing_images/  training_images/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, we can type the following command to starting training process:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; python retrain.py \
+--bottleneck_dir=./bottlenecks \
+--how_many_training_steps=50000 \ 
+--model_dir=./inception \
+--output_graph=./models/retrained_graph.pb \
+--output_labels=./models/retrained_labels.txt \
+--summaries_dir=./retrain_logs \
+--validation_batch_size=5000 \
+--image_dir=training_images # this is the folder of training data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After this training process finished, it saves the trained model in &amp;ldquo;./models&amp;rdquo;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;&amp;gt; ls models
+retrained_graph.pb    retrained_labels.txt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-predict-new-images-using-trained-model&#34;&gt;4. Predict new images using trained model&lt;/h3&gt;
+&lt;p&gt;Type the following command in a terminal to run the testing code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;&amp;gt; python predict.py \
+--models_folder=&#39;./models&#39; \
+--test_image_folder=&#39;./testing_images&#39; \
+--display_image=False
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/b_deep_learning/model_on_android/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/blogs/b_deep_learning/model_on_android/</guid>
+      <description>&lt;h3 id=&#34;how-to-use-a-pre-trained-mode-on-an-android-device&#34;&gt;How to use a pre-trained mode on an Android device&lt;/h3&gt;
+&lt;p&gt;In previous chapter, we discussed how to train an object classifier using our own images. At the end, we got trained model and labels file (retrained_graph.pb, retrained_labels.txt).&lt;/p&gt;
+&lt;p&gt;In this chapter, We are going to load pre-trained classifer in our Android app. Unfortunately, we can not use the trained model on Android directly. We need to optimize it using a tool, namely &amp;ldquo;optimize_for_inference&amp;rdquo;, provided by Tensorflow.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-build-tool-optimize_for_inference&#34;&gt;1. Build tool &amp;ldquo;optimize_for_inference&amp;rdquo;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Download Tensorflow source code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/tensorflow/tensorflow.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install bazel so that we can use it to build &amp;ldquo;optimize_for_inference&amp;rdquo;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;echo &amp;quot;deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8&amp;quot; | sudo tee /etc/apt/sources.list.d/bazel.list
+curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install bazel
+sudo apt-get upgrade bazel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Build &amp;ldquo;optimize_for_inference&amp;rdquo;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd tensorflow
+./configure # We can choose all default settings
+bazel build tensorflow/python/tools:optimize_for_inference # this process takes a while, be patient
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-optimize-trained-model&#34;&gt;2. Optimize trained model&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s assume that our pre-trained model is &lt;strong&gt;&amp;lt;folder_path&amp;gt;/retrained_graph.pb&lt;/strong&gt;. Then, we can use the following command to optimize the model and save it as &lt;strong&gt;&amp;lt;folder_path&amp;gt;/retrained_graph_android.pb&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;bazel-bin/tensorflow/python/tools/optimize_for_inference \
+--input=&amp;lt;folder_path&amp;gt;/retrained_graph.pb \
+--output=&amp;lt;folder_path&amp;gt;/retrained_graph_android.pb \
+--input_names=Mul \
+--output_names=final_result
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-modify-tensorflow-android-demo&#34;&gt;3. Modify Tensorflow Android Demo&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Download Android Demo:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/Nilhcem/tensorflow-classifier-android.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If we import this project into Android Studio, compile and run, the demo will load a pre-trained classifier which can recognize 1000 classes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Load our own model:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Delete the previous ImageNet model from &lt;strong&gt;assets/&lt;/strong&gt; folder.&lt;/li&gt;
+&lt;li&gt;Copy our optimized trained model &lt;strong&gt;retrained_graph_android.pb&lt;/strong&gt; and label file &lt;strong&gt;retrained_labels.txt&lt;/strong&gt; into &lt;strong&gt;assets/&lt;/strong&gt; folder.&lt;/li&gt;
+&lt;li&gt;Open &lt;strong&gt;ClassifierActivity.java&lt;/strong&gt; and set the following variables:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;  private static final int INPUT_SIZE = 299; 
+  private static final int IMAGE_MEAN = 128; 
+  private static final float IMAGE_STD = 128; 
+  private static final String INPUT_NAME = &amp;quot;Mul&amp;quot;;
+  private static final String OUTPUT_NAME = &amp;quot;final_result&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Compile and run. The demo will open the camera and show the confidence score of each corresponding class.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/b_deep_learning/boat_classifier/</link>
+      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/blogs/b_deep_learning/boat_classifier/</guid>
+      <description>&lt;p&gt;In this chapter, I list all materials related to the trained classifier which is used to classify an image into 5 different types of boats:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;iceboat&lt;/li&gt;
+&lt;li&gt;shrimper&lt;/li&gt;
+&lt;li&gt;patrol boat&lt;/li&gt;
+&lt;li&gt;fishing boat&lt;/li&gt;
+&lt;li&gt;weather ship&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;0-trained-model&#34;&gt;0. Trained model&lt;/h3&gt;
+&lt;p&gt;The trained model consists of two files:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://carina.cse.lehigh.edu/Xincoder_readme/resources/retrained_graph.pb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;retrained_graph.pb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://carina.cse.lehigh.edu/Xincoder_readme/resources/retrained_labels.txt&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;retrained_labels.txt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;1-downloaded-dataset&#34;&gt;1. Downloaded Dataset&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Training dataset (475.6 MB) &lt;a href=&#34;http://carina.cse.lehigh.edu/Xincoder_readme/resources/training_images.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Class&lt;/strong&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;strong&gt;Number of images&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;iceboat&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1692&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;shrimper&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2380&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;patrol_boat&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1820&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;fishing_boat&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1320&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;weather_ship&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1101&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;In total&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8313&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;Testing dataset (34.7 MB, 1532 images) &lt;a href=&#34;http://carina.cse.lehigh.edu/Xincoder_readme/resources/testing_images.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-test-trained-model&#34;&gt;2. Test trained model&lt;/h3&gt;
+&lt;p&gt;After we downloaded the trained model and Testing dataset, can use &lt;a href=&#34;../train_classifier/predict.py&#34;&gt;this code&lt;/a&gt; to test this model by type the following command in a terminal:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;&amp;gt; python predict.py \
+--models_folder=&#39;./models&#39; \
+--test_image_folder=&#39;./testing_images&#39; \
+--display_image=False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;fig_probability.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;3-use-trained-model-on-android&#34;&gt;3. Use trained model on Android&lt;/h3&gt;
+&lt;p&gt;This android demo loads our trained boat classifier and classify the camera video frame.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Android apk file (103.4 MB): &lt;a href=&#34;http://carina.cse.lehigh.edu/Xincoder_readme/resources/Xin_Boat_Demo.apk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Xin_Boat_Demo.apk&lt;/a&gt; (I only tested this app on our ASUS NEXUS 7 Tablet.)&lt;/li&gt;
+&lt;li&gt;Source Code (392.1 MB): &lt;a href=&#34;http://carina.cse.lehigh.edu/Xincoder_readme/resources/tensorflow-classifier-android.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tensorflow-classifier-android.zip&lt;/a&gt; (already contained trained model)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This figure is the screenshot:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;demo.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;if-you-do-not-want-to-know-more-details-about-how-did-i-collect-the-data-you-can-skip-the-following-part-of-this-chapter&#34;&gt;If you do not want to know more details about how did I collect the data, you can skip the following part of this chapter.&lt;/h3&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;image-collection&#34;&gt;Image Collection&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;All training images are downloaded from &lt;a href=&#34;http://www.image-net.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ImageNet&lt;/a&gt;. In order to make it easier, I wrote a python script (&lt;a href=&#34;http://carina.cse.lehigh.edu/Xincoder_readme/resources/download_image.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;download_image.py&lt;/a&gt;) to download images automatically. (PS: some time the it takes a long time to access ImageNet, which causes a time out error of the script. We need to login the ImageNet (easy to register an account) in our browser first.)&lt;/li&gt;
+&lt;li&gt;There are some links not accessable any more, which results in some downloaded files are not images. Thus, I wrote another python script (&lt;a href=&#34;http://carina.cse.lehigh.edu/Xincoder_readme/resources/remove.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;remove.py&lt;/a&gt;) to remove them. In addition, some images are error message and we need to manually remove them.&lt;/li&gt;
+&lt;li&gt;I used &lt;a href=&#34;https://github.com/codebox/image_augmentor&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this tool&lt;/a&gt; to augment the training images.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

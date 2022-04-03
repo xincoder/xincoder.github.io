@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A. Server Setup | Welcome to Xin&#39;s Homepage</title>
+    <link>http://xincoder.github.io/blogs/a_server_setup/</link>
+      <atom:link href="http://xincoder.github.io/blogs/a_server_setup/index.xml" rel="self" type="application/rss+xml" />
+    <description>A. Server Setup</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 24 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://xincoder.github.io/media/icon_hufdd866d90d76849587aac6fbf27da1ac_464_512x512_fill_lanczos_center_3.png</url>
+      <title>A. Server Setup</title>
+      <link>http://xincoder.github.io/blogs/a_server_setup/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/a_server_setup/panda_list/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/blogs/a_server_setup/panda_list/</guid>
+      <description>&lt;p&gt;I built a server with 2 Nvidia Titan Xp for my research. The following table shows the details of my own sever:&lt;/p&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Hardware&lt;/th&gt;
+&lt;th&gt;Detail&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Quantity&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Price&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CPU&lt;/td&gt;
+&lt;td&gt;Intel - Xeon E5-2630 V4 2.2GHz 10-Core Processor&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$679.99&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Liquid CPU Cooler&lt;/td&gt;
+&lt;td&gt;NZXT - Kraken X62 Liquid CPU Cooler&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$156.29&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Memory&lt;/td&gt;
+&lt;td&gt;Corsair - Vengeance LPX 32GB (2 x 16GB) DDR4-2400 Memory&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$347.02&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MotherBoard&lt;/td&gt;
+&lt;td&gt;Asus - ROG STRIX X99 GAMING ATX LGA2011-3 Motherboard&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$306.74&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Graphics Card&lt;/td&gt;
+&lt;td&gt;NVIDIA GeForce Titan X Pascal 12GB GDDR5X&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$2,400.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;SLI Bridge&lt;/td&gt;
+&lt;td&gt;ASUS ROG SLI High-Bandwidth Bridge with Aura Sync RGB 3 Slot (ROG-SLI-HB-BRIDGE-3SLOT)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$49.99&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;SSD&lt;/td&gt;
+&lt;td&gt;Intel 535 Series 240GB SATA III 6Gb/s 2.5 Solid State Drive&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$69.99&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;SSD&lt;/td&gt;
+&lt;td&gt;Samsung 850 EVO 1TB 2.5-Inch SATA III Internal SSD (MZ-75E1T0B/AM)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$599.98&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Power Supply&lt;/td&gt;
+&lt;td&gt;Corsair HXi Series, HX1000i 1000 Watt Fully Modular Power Supply&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$219.99&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Case&lt;/td&gt;
+&lt;td&gt;Phanteks - Enthoo Evolv ATX ATX Mid Tower Case&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$175.29&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Keyboard &amp;amp; Mouse&lt;/td&gt;
+&lt;td&gt;Microsoft Wireless Desktop 900 Keyboard &amp;amp; Mouse Combo&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$29.99&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Monitor&lt;/td&gt;
+&lt;td&gt;Dell UltraSharp U2414H 24-Inch Screen LED Monitor&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$214.72&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Wireless Adapter&lt;/td&gt;
+&lt;td&gt;Panda Wireless PAU06 300Mbps N USB Adapter&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$19.99&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;UPS&lt;/td&gt;
+&lt;td&gt;APC - SMT1500 UPS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$419.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Before Tax:&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$5,688.98&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Tax:&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$341.34&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;In Total:&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$6,030.32&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xincoder.github.io/blogs/a_server_setup/setup_environment/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
+      <guid>http://xincoder.github.io/blogs/a_server_setup/setup_environment/</guid>
+      <description>&lt;p&gt;After building a sever, I did the following operations to setup the environment.&lt;/p&gt;
+&lt;h3 id=&#34;1-create-a-usb-ubuntu-installer-on-mac&#34;&gt;1. Create a USB ubuntu Installer (on Mac)&lt;/h3&gt;
+&lt;p&gt;Create a bootable USB on MacOS, so that we can use it to install &lt;a href=&#34;https://www.ubuntu.com/download/desktop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ubuntu 16.04&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;# Eject the USB from your MAC
+cd ~/Downloads
+# rename the ISO file with a shorter name
+hdiutil convert -format UDRW -o ubuntu.iso  ubuntu-16.04.3-desktop-amd64.iso
+mv ubuntu.iso.dmg ubuntu.iso
+diskutil list
+
+# Plug in the USB and figure out the disk ID.
+diskutil list
+diskutil unmountDisk /dev/disk3 # disk3 is my USB
+sudo dd if=./ubuntu.iso of=/dev/rdisk3 bs=1m # disk3 is my USB
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-install-cuda&#34;&gt;2. Install CUDA&lt;/h3&gt;
+&lt;p&gt;Download Nvidia display driver from &lt;a href=&#34;https://www.geforce.com/drivers&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nvidia&lt;/a&gt;. (NVIDIA-Linux_*.run)
+Download CUDA &amp;ldquo;runfile&amp;rdquo; from &lt;a href=&#34;https://developer.nvidia.com/cuda-downloads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nvidia&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;# Install SSH server
+sudo apt-get install openssh-server
+
+# Turn off the lightdm 
+sudo service lightdm stop
+sudo apt-get install vim
+sudo apt-get install dkms build-essential linux-headers-generic
+sudo vi /etc/modprobe.d/blacklist.conf
+# insert the following lines to the end:
+blacklist nouveau
+#blacklist lbm-nouveau
+#options nouveau modeset=0
+#alias nouveau off
+#alias lbm-nouveau off
+
+#&amp;gt; echo options nouveau modeset=0 | sudo tee -a /etc/modprobe.d/nouveau-kms.conf
+sudo update-initramfs -u
+
+sudo reboot
+sudo service lightdm stop
+sudo ./NVIDIA-Linux-x86_64-390.48.run --no-x-check --no-nouveau-check --no-opengl-files
+sudo reboot
+sudo ./cuda_9.0.176_384.81_linux.run --no-opengl-libs
+# This time, do not install driver, do not choose opengl and X configuration
+
+vi ~/.bashrc
+# insert the following lines to the end:
+export LD_LIBRARY_PATH=&amp;quot;/usr/local/cuda-8.0/lib64/&amp;quot;
+export CUDA_BIN=/usr/local/cuda-8.0/bin
+export CUDA_LIB=/usr/local/cuda-8.0/lib64
+export PATH=${CUDA_BIN}:$PATH
+
+# &amp;gt; sudo reboot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-enable-nvidia-driver&#34;&gt;3. Enable Nvidia Driver&lt;/h3&gt;
+&lt;p&gt;After reboot, open &lt;strong&gt;&amp;ldquo;Additional Drivers&amp;rdquo;&lt;/strong&gt; and choose &amp;ldquo;Using Nvidia binary driver&amp;rdquo;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-install-cudnn&#34;&gt;4. Install CuDNN&lt;/h3&gt;
+&lt;p&gt;Download &lt;a href=&#34;https://developer.nvidia.com/cudnn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CuDNN 6.0&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;tar -zxvf cudnn-8.0-linux-x64-v6.0tgz
+cd cuda
+sudo cp lib* /usr/local/cuda-8.0/lib64/
+sudo cp cudnn.h /usr/local/cuda-8.0/include/
+cd /usr/local/cuda-8.0/lib64
+# update links
+sudo rm libcudnn.so libcudnn.so.6
+sudo ln -s libcudnn.so.6.0.21 libcudnn.so.6
+sudo ln -s libcudnn.so.6 libcudnn.so
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;5-install-keras&#34;&gt;5. Install Keras&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;# Step 1: Download Anaconda
+# On Linux
+wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
+# On MacOS
+curl -O https://repo.continuum.io/archive/Anaconda3-4.4.0-MacOSX-x86_64.sh
+
+# Step 2: Install Anaconda (Use all default settings)
+bash Anaconda3-4.4.0-MacOSX-x86_64.sh
+
+# Step 3: Restart your terminal
+
+# Step 4: Create a virtual environment. (so that it will not mess up the existing settings) 
+conda create -n keras python=3.5
+
+# Step 5: Install Tensorflow 
+source activate keras
+# GPU version on Linux
+pip install tensorflow-gpu
+# CPU version on Mac
+pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.3.0-py3-none-any.whl
+# If there is an error, please try it again.
+
+# Step 6: Install Keras
+# on MacOs
+brew install graphviz 
+# On Linux
+sudo apt-get install python-pydot python-pydot-ng graphviz 
+
+pip install keras
+
+# Step 7: Install other Dependencies
+conda install HDF5
+conda install h5py
+pip install pydot
+pip install graphviz
+pip install pillow
+pip install opencv-python
+# conda install -c https://conda.anaconda.org/menpo opencv3
+# for visualize the model 
+pip install quiver_engine 
+pip install keras-vis
+
+# Step 8: Test
+python
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;from keras.models import Sequential
+from keras.layers import Dense
+from keras.utils import plot_model
+model = Sequential()
+model.add(Dense(10, input_shape=(700, 1)))
+model.summary()
+plot_model(model, to_file=&#39;abc.pdf&#39;, show_shapes=True)
+exit()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;6-install-other-dependencies&#34;&gt;6. Install other dependencies&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;# moviepy
+pip install moviepy
+# If there is a ffmpeg error, please add the following lines at the top of your python file:
+    import imageio
+    imageio.plugins.ffmpeg.download()
+
+# ERROR
+# This error can ben due to the fact that ImageMagick is not installed on your computer. 
+# on ubuntu
+sudo apt-get install libmagickwand-dev
+# on mac
+brew install imagemagick
+sudo vi /etc/ImageMagick-6/policy.xml
+comment: &amp;lt;policy domain=&amp;quot;path&amp;quot; rights=&amp;quot;none&amp;quot; pattern=&amp;quot;@*&amp;quot; /&amp;gt;
+
+
+# to ensure TextClip works
+brew install imagemagick
+
+# BeautifulSoup4 | bs4
+pip install BeautifulSoup4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;7-install-sublime&#34;&gt;7. Install Sublime&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;# On Linux (need to pay?)
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+
+echo &amp;quot;deb https://download.sublimetext.com/ apt/stable/&amp;quot; | sudo tee /etc/apt/sources.list.d/sublime-text.list
+# OR
+echo &amp;quot;deb https://download.sublimetext.com/ apt/dev/&amp;quot; | sudo tee /etc/apt/sources.list.d/sublime-text.list
+
+sudo apt-get update
+sudo apt-get install sublime-text
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;8-setup-logmein&#34;&gt;8. Setup LogmeIn&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;wget http://www.vpn.net/installers/logmein-hamachi_2.1.0.165-1_amd64.deb
+sudo dpkg -i logmein-hamachi_2.1.0.165-1_amd64.deb 
+sudo hamachi login
+sudo hamachi attach ***@gmail.com
+sudo hamachi create &amp;lt;server_name&amp;gt; &amp;lt;password&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;9-setup-openai&#34;&gt;9. Setup OpenAI&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;conda create -n openai python=3.5
+source activate openai
+pip install gym
+# if you want to use Breakout-ram-v0, please install atari
+pip install gym[atari]
+
+# Install tensorflow, keras, and keras-rl
+pip install tensorflow
+pip install keras
+pip install keras-rl
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, you can try the following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;import numpy as np
+import gym
+from keras.models import Sequential
+from keras.layers import Dense, Activation, Flatten
+from keras.optimizers import Adam
+from rl.agents import DDPGAgent, SARSAAgent, DQNAgent
+from rl.policy import BoltzmannQPolicy
+from rl.memory import SequentialMemory
+
+ENV_NAME = &#39;Breakout-ram-v0&#39; 
+
+# Get the environment and extract the number of actions.
+env = gym.make(ENV_NAME)
+np.random.seed(123)
+env.seed(123)
+nb_actions = env.action_space.n
+
+# Next, we build a very simple model.
+model = Sequential()
+model.add(Flatten(input_shape=(1,) + env.observation_space.shape))
+model.add(Dense(16))
+model.add(Activation(&#39;relu&#39;))
+model.add(Dense(16))
+model.add(Activation(&#39;relu&#39;))
+model.add(Dense(16))
+model.add(Activation(&#39;relu&#39;))
+model.add(Dense(nb_actions))
+model.add(Activation(&#39;linear&#39;))
+print(model.summary())
+
+# Finally, we configure and compile our agent. You can use every built-in Keras optimizer and even the metrics!
+memory = SequentialMemory(limit=50000, window_length=1)
+policy = BoltzmannQPolicy()
+dqn = SARSAAgent(model=model, nb_actions=nb_actions, nb_steps_warmup=10, policy=policy)
+dqn.compile(Adam(lr=1e-3), metrics=[&#39;mae&#39;])
+
+# Okay, now it&#39;s time to learn something! We visualize the training here for show, but this slows down training quite a lot. You can always safely abort the training prematurely using Ctrl + C.
+dqn.fit(env, nb_steps=50000, visualize=True, verbose=2)
+
+# After training is done, we save the final weights.
+dqn.save_weights(&#39;dqn_{}_weights.h5f&#39;.format(ENV_NAME), overwrite=True)
+
+# Finally, evaluate our algorithm for 5 episodes.
+dqn.test(env, nb_episodes=5, visualize=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pip install tensorflow keras
+conda install HDF5 h5py
+pip install pydot graphviz pillow quiver_engine keras-vis opencv-python moviepy BeautifulSoup4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pip install mxnet-cu80mkl
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;automatically-mount-hdssd&#34;&gt;Automatically mount HD/SSD&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Type the following command to get the UUID of your HD/SSD.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo blkid
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;``&lt;/p&gt;
+&lt;p&gt;The output looks similar as the follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/dev/sda2: LABEL=&amp;quot;Data&amp;quot; UUID=&amp;quot;1438008138******&amp;quot; TYPE=&amp;quot;ntfs&amp;quot; PARTLABEL=&amp;quot;Basic data partition&amp;quot; PARTUUID=&amp;quot;39e88529-****-****-****-************&amp;quot;
+/dev/sdb2: LABEL=&amp;quot;BigData&amp;quot; UUID=&amp;quot;3868FD7668******&amp;quot; TYPE=&amp;quot;ntfs&amp;quot; PARTLABEL=&amp;quot;Basic data partition&amp;quot; PARTUUID=&amp;quot;dec90a31-****-****-****-************&amp;quot;
+/dev/sdc1: UUID=&amp;quot;4a76c292-3384-4480-9672-4c8ab9******&amp;quot; TYPE=&amp;quot;swap&amp;quot; PARTUUID=&amp;quot;7bd24d17-****-****-****-************&amp;quot;
+/dev/sdc2: UUID=&amp;quot;447c124c-baf5-4a24-a2c7-ac413f******&amp;quot; TYPE=&amp;quot;ext4&amp;quot; PARTUUID=&amp;quot;a96835ae-****-****-****-************&amp;quot;
+/dev/sdc3: UUID=&amp;quot;88bd1683-c1fd-4097-b3c9-71998d******&amp;quot; TYPE=&amp;quot;ext4&amp;quot; PARTUUID=&amp;quot;7184ca16-****-****-****-************&amp;quot;
+/dev/sda1: PARTLABEL=&amp;quot;Microsoft reserved partition&amp;quot; PARTUUID=&amp;quot;d52eb0c9-****-****-****-************&amp;quot;
+/dev/sdb1: PARTLABEL=&amp;quot;Microsoft reserved partition&amp;quot; PARTUUID=&amp;quot;bc7c1633-****-****-****-************&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add the corresponding info. to &lt;strong&gt;/etc/fstab&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo vi /etc/fstab
+# add the following info. to the end of the file
+UUID=1438008138****** /data/Data ntfs defaults 0 2
+UUID=3868FD7668****** /data/BigData ntfs defaults 0 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It will automatically mount these two HDs/SSDs at the next boot.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;use-remote-jupyter-on-local&#34;&gt;Use remote jupyter on local&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Bash&#34;&gt;ssh -L 8000:localhost:8888 username@IP
+
+jupyter notebook --no-browser --port=8889
+ssh -N -L localhost:8888:localhost:8889 user@remote_host
+### list ssh  
+    ps aux | grep ssh
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
